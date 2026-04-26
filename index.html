@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PMP Training & Mentoring â PMEC | Where Project Leaders Are Made</title>
+  <meta name="description" content="Earn your PMP certification with PMEC's 35-hour accredited training or personalized mentoring program. Structured. Expert-led. Built for working professionals in Georgia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* âââ RESET & BASE âââââââââââââââââââââââââââââââââââ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 16px;
+      color: #2D3748;
+      background: #F4F6FA;
+      line-height: 1.7;
+    }
+
+    /* âââ TOKENS ââââââââââââââââââââââââââââââââââââââââââ */
+    :root {
+      --navy:      #1A2F5A;
+      --gold:      #D4A843;
+      --steel:     #2E6DA4;
+      --charcoal:  #2D3748;
+      --offwhite:  #F4F6FA;
+      --lightgray: #E8ECF2;
+      --white:     #ffffff;
+    }
+
+    /* 
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .gold-rule {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin: 16px 0 24px;
+    }
+    .gold-rule.centered { margin: 16px auto 24px; }
+
+    /* 
+    .btn {S ââââââââââââââââââââââââââââââââââââââââââ */
+    .btn {
+      display: inline-block;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 14px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.18s, transform 0.18s;
+      border: none;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-outline-white {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.65);
+      color: var(--white);
+    }
+    .btn-outline-navy {
+      background: transparent;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+    }
+
+    /* âââ NAV ââââââââââââââââââââââââââââââââââââââââââââââ */
+    header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid rgba(212,168,67,0.3);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .nav-logo .org-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.8px;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .nav-logo .org-tagline {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2.2px;
+      color: var(--gold);
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    .nav-divider {
+      width: 1px;
+      height: 32px;
+      background: rgba(212,168,67,0.4);
+      margin: 0 18px;
+    }
+    .nav-logo-wrap { display: flex; align-items: center; }
+    .nav-badge {
+      width: 36px;
+      height: 36px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta a {
+      color: var(--navy);
+      background: var(--gold);
+      padding: 8px 18px;
+      border-radius: 3px;
+      font-size: 12.5px;
+    }
+
+    /* âââ HERO âââââââââââââââââââââââââââââââââââââââââââââ */
+    .hero {
+      background: var(--navy);
+      padding: 80px 24px 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(46,109,164,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+    }
+    .hero-badge span {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.18;
+      max-width: 720px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.72);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-ctas .btn {
+      font-size: 14px;
+      padding: 15px 34px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 56px;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat .num {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+    .hero-stat .label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.8px;
+      margin-top: 5px;
+      display: block;
+    }
+    .hero-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+      align-self: stretch;
+    }
+
+    /* âââ PROGRAMMES âââââââââââââââââââââââââââââââââââââââ */
+    .programmes {
+      padding: 88px 24px;
+      background: var(--offwhite);
+    }
+    .programmes-intro {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .programmes-intro h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .programmes-intro p {
+      font-size: 17px;
+      color: var(--charcoal);
+      max-width: 580px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--lightgray);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 8px 32px rgba(26,47,90,0.10); }
+    .card-header {
+      background: var(--navy);
+      padding: 32px 36px 28px;
+      position: relative;
+    }
+    .card-tag {
+      display: inline-block;
+      background: rgba(212,168,67,0.18);
+      border: 1px solid rgba(212,168,67,0.45);
+      color: var(--gold);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .card-header h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .card-header p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+    .card-body { padding: 32px 36px; flex: 1; display: flex; flex-direction: column; }
+    .feature-list {
+      list-style: none;
+      margin-bottom: 28px;
+      flex: 1;
+    }
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 14.5px;
+      color: var(--charcoal);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--lightgray);
+      line-height: 1.55;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(26,47,90,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .feature-list .icon svg {
+      width: 10px; height: 10px;
+    }
+    .card-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .meta-chip {
+      background: var(--offwhite);
+      border: 1px solid var(--lightgray);
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .meta-chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+    /* âââ WHY PMEC âââââââââââââââââââââââââââââââââââââââââ */
+    .why {
+      background: var(--navy);
+      padding: 80px 24px;
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .why-header h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .why-header p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .why-item {
+      text-align: center;
+      padding: 28px 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+    }
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .why-icon svg { width: 22px; height: 22px; }
+    .why-item h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .why-item p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.6;
+    }
+
+    /* âââ FORM SECTION âââââââââââââââââââââââââââââââââââââ */
+    .form-section {
+      padding: 88px 24px;
+      background: var(--offwhite);
+    }
+    .form-section-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .form-section-header h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .form-section-header p {
+      font-size: 16px;
+      color: var(--charcoal);
+      opacity: 0.75;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .form-tabs {
+      display: flex;
+      gap: 0;
+      max-width: 560px;
+      margin: 0 auto 44px;
+      border: 1px solid var(--lightgray);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .form-tab {
+      flex: 1;
+      padding: 14px 20px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      background: var(--white);
+      color: rgba(26,47,90,0.45);
+      letter-spacing: 0.3px;
+      transition: all 0.2s;
+    }
+    .form-tab.active {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .form-tab:not(.active):hover {
+      background: var(--offwhite);
+      color: var(--navy);
+    }
+    .form-pane { display: none; }
+    .form-pane.active { display: block; }
+    .form-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--lightgray);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(26,47,90,0.06);
+    }
+    .form-intro {
+      background: var(--navy);
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .form-intro-text h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+    .form-intro-text p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.62);
+    }
+    .form-intro-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: rgba(212,168,67,0.15);
+      border: 1px solid rgba(212,168,67,0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-iframe-wrap {
+      padding: 0;
+    }
+    .form-iframe-wrap iframe {
+      width: 100%;
+      border: none;
+      display: block;
+      min-height: 680px;
+    }
+    /* Placeholder shown when no iframe src is set */
+    .form-placeholder {
+      padding: 52px 36px;
+      text-align: center;
+    }
+    .form-placeholder .placeholder-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--offwhite);
+      border: 2px dashed var(--lightgray);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+    .form-placeholder h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .form-placeholder p {
+      font-size: 13.5px;
+      color: var(--charcoal);
+      opacity: 0.6;
+      max-width: 360px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+    .form-placeholder code {
+      display: inline-block;
+      background: var(--offwhite);
+      border: 1px solid var(--lightgray);
+      border-radius: 3px;
+      padding: 2px 8px;
+      font-size: 12px;
+      color: var(--steel);
+      margin-top: 12px;
+    }
+
+    /* âââ PROCESS STRIP ââââââââââââââââââââââââââââââââââââ */
+    .process {
+      background: var(--white);
+      padding: 72px 24px;
+      border-top: 1px solid var(--lightgray);
+      border-bottom: 1px solid var(--lightgray);
+    }
+    .process h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: calc(12.5% + 8px);
+      right: calc(12.5% + 8px);
+      height: 1px;
+      background: var(--lightgray);
+    }
+    .step {
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num.gold { background: var(--gold); color: var(--navy); }
+    .step h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .step p {
+      font-size: 12.5px;
+      color: var(--charcoal);
+      opacity: 0.65;
+      line-height: 1.55;
+    }
+
+    /* âââ FOOTER âââââââââââââââââââââââââââââââââââââââââââ */
+    footer {
+      background: var(--navy);
+      padding: 48px 24px 32px;
+      border-top: 3px solid rgba(212,168,67,0.4);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .footer-brand .org-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--white);
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
+    .footer-brand .org-tagline {
+      font-size: 10.5px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    .footer-brand .atp-note {
+      margin-top: 10px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px;
+    }
+    .footer-links h5 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* âââ MOBILE âââââââââââââââââââââââââââââââââââââââââââ */
+    @media (max-width: 768px) {
+      .cards { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+      .steps::before { display: none; }
+      .nav-links { display: none; }
+      .hero { padding: 56px 20px 64px; }
+      .hero-stats { gap: 28px; }
+      .hero-divider { display: none; }
+      .form-intro { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ HEADER -->
+  <header>
+    <nav>
+      <div class="nav-logo-wrap">
+        <!-- Inline icon badge (reversed) -->
+        <svg class="nav-badge" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" fill="rgba(255,255,255,0.06)"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#D4A843" stroke-width="1.2"/>
+          <!-- Book pages -->
+          <path d="M24 35 L8 16 C12 9 19 8 22 9 L24 35 Z" fill="white" opacity="0.14"/>
+          <path d="M24 35 L40 16 C36 9 29 8 26 9 L24 35 Z" fill="white" opacity="0.24"/>
+          <line x1="8" y1="35" x2="40" y2="35" stroke="#D4A843" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="9" x2="24" y2="35" stroke="#D4A843" stroke-width="1.8"/>
+          <polygon points="24,4 19,12 29,12" fill="#D4A843"/>
+        </svg>
+        <div class="nav-divider"></div>
+        <div class="nav-logo">
+          <span class="org-name">PROJECT MANAGEMENT EXCELLENCE CENTRE</span>
+          <span class="org-tagline">Where Project Leaders Are Made</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#why-pmec">Why PMEC</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li class="nav-cta"><a href="#apply">Apply Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <div class="dot"></div>
+        <span>PMI ATP Candidate &nbsp;Â·&nbsp; Tbilisi, Georgia</span>
+      </div>
+      <h1>Stop guessing.<br>Start preparing.<br>Earn your <em>PMP.</em></h1>
+      <p class="hero-sub">
+        Structured training and personal mentoring for working professionals ready to certify. Built for the 2025+ PMI Exam Content Outline.
+      </p>
+      <div class="hero-ctas">
+        <a href="#apply" class="btn btn-gold">Start Your PMP Journey</a>
+        <a href="#programmes" class="btn btn-outline-white">See the Programmes</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">35</span>
+          <span class="label">Contact hours (PDUs)<br>PMI-required for eligibility</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <span class="num">3</span>
+          <span class="label">Months to exam-ready<br>structured curriculum</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <span class="num">1:1</span>
+          <span class="label">Personal mentoring<br>for certification journey</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ PROGRAMMES -->
+  <section class="programmes" id="programmes">
+    <div class="container">
+      <div class="programmes-intro">
+        <span class="section-label">Our Programmes</span>
+        <h2>Two ways to earn your PMP.</h2>
+        <div class="gold-rule centered"></div>
+        <p>Choose the programme that fits your situation â or combine both for the full certification track.</p>
+      </div>
+      <div class="cards">
+
+        <!-- CARD 1: 35-Hour Training -->
+        <div class="card" id="training">
+          <div class="card-header">
+            <div class="card-tag">35-Hour Programme</div>
+            <h3>PMP Exam Preparation Training</h3>
+            <p>The structured, PMI-aligned classroom programme that satisfies the mandatory 35 contact hours and builds the knowledge to pass on your first attempt.</p>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <div class="meta-chip"><div class="dot"></div> 35 Contact Hours / PDUs</div>
+              <div class="meta-chip"><div class="dot"></div> Live Instructor-led</div>
+              <div class="meta-chip"><div class="dot"></div> Weeknight &amp; Weekend</div>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                PMI 2025 ECO-aligned curriculum covering predictive, agile, and hybrid delivery
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Certified, experienced instructors with active PMP credentials
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Full exam-simulation practice sets with performance feedback
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                PMI application guidance included â no guesswork on eligibility or forms
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Cohort accountability â learn alongside peers who share your goal
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Official certificate of completion issued by PMEC (35 PDU-eligible hours)
+              </li>
+            </ul>
+            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;">Apply for Training</a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Mentoring -->
+        <div class="card" id="mentoring">
+          <div class="card-header">
+            <div class="card-tag">Personal Mentoring</div>
+            <h3>PMP Certification Journey Mentoring</h3>
+            <p>One-on-one expert mentoring throughout your entire certification journey â from eligibility check to exam day and beyond.</p>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <div class="meta-chip"><div class="dot"></div> 1:1 Sessions</div>
+              <div class="meta-chip"><div class="dot"></div> Flexible Schedule</div>
+              <div class="meta-chip"><div class="dot"></div> Full Journey Support</div>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Free eligibility assessment â confirm your hours and education meet PMI requirements
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Personalized study plan built around your schedule and weak areas
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                PMI application review â your mentor checks every field before you submit
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Bi-weekly 1:1 coaching sessions with a PMP-certified mentor
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Resource guidance â which books, mock exams, and practice tools actually work
+              </li>
+              <li>
+                <div class="icon">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                Ongoing support up to and after exam day â including re-attempt strategy if needed
+              </li>
+            </ul>
+            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;">Apply for Mentoring</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ WHY PMEC -->
+  <section class="why" id="why-pmec">
+    <div class="why-inner">
+      <div class="why-header">
+        <span class="section-label" style="display:block;text-align:center;margin-bottom:12px;">Why Choose PMEC</span>
+        <h2>Built for professionals who are serious about passing.</h2>
+        <div class="gold-rule centered"></div>
+        <p>We do not run generic courses. Every element of our programme is designed to get working professionals certified.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 2L13.5 8H20L14.5 12L17 18L11 14L5 18L7.5 12L2 8H8.5L11 2Z"/>
+            </svg>
+          </div>
+          <h4>PMI-Aligned Content</h4>
+          <p>Curriculum matches the 2025 Exam Content Outline exactly. We update when PMI updates.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="11" cy="8" r="4"/><path d="M4 19c0-3.3 3.1-6 7/6s7 2.7 7 6"/>
+            </svg>
+          </div>
+          <h4>Certified Instructors</h4>
+          <p>Every trainer holds an active PMP credential and brings real project delivery experience.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h16"/><path d="M9 21V9"/>
+            </svg>
+          </div>
+          <h4>Built for Busy Schedules</h4>
+          <p>Weeknight and weekend sessions. Your job does not stop â your preparation should not either.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 16v4M4.93 4.93l2.83 2.83M14.24 14.24l2.83 2.83M2 12h4M16 12h4M4.93 19.07l2.83-2.83M14.24 7.76l2.83-2.83"/>
+            </svg>
+          </div>
+          <h4>Accountability System</h4>
+          <p>Cohort-based learning and personal check-ins mean you will not abandon your preparation halfway.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ HOW IT WORKS -->
+  <section class="process" id="process">
+    <div class="container">
+      <h2 style="font-family:'Montserrat',Arial,sans-serif;">Your path from application to certification</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Submit Your Application</h4>
+          <p>Complete the form below. Free eligibility check included â no commitment required.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Eligibility Assessment</h4>
+          <p>Our team reviews your experience and confirms your PMI application requirements within 48 hours.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Programme Kickoff</h4>
+          <p>Join your cohort or begin your 1:1 mentoring. Structured from day one.</p>
+        </div>
+        <div class="step">
+          <div class="step-num gold">â</div>
+          <h4>Earn Your PMP</h4>
+          <p>Pass the exam and join a growing community of certified project leaders in Georgia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ APPLICATION FORM -->
+  <section class="form-section" id="apply">
+    <div class="container">
+      <div class="form-section-header">
+        <span class="section-label">Apply Now</span>
+        <h2>Start your certification journey.</h2>
+        <div class="gold-rule centered"></div>
+        <p>Select your programme and complete the short application. We will follow up within 48 hours.</p>
+      </div>
+
+      <!-- Programme Tabs -->
+      <div class="form-tabs">
+        <button class="form-tab active" onclick="switchTab('training')">
+          35-Hour PMP Training
+        </button>
+        <button class="form-tab" onclick="switchTab('mentoring')">
+          Certification Mentoring
+        </button>
+      </div>
+
+      <!-- Training Form Pane -->
+      <div class="form-pane active" id="pane-training">
+        <div class="form-wrapper">
+          <div class="form-intro">
+            <div class="form-intro-icon">
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h16"/><path d="M9 21V9"/>
+              </svg>
+            </div>
+            <div class="form-intro-text">
+              <h3>Apply: 35-Hour PMP Exam Preparation Training</h3>
+              <p>Takes about 3 minutes &nbsp;Â·&nbsp; Free eligibility check included &nbsp;Â·&nbsp; No payment at this stage</p>
+            </div>
+          </div>
+          <div class="form-iframe-wrap">
+            <!--
+              âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+              â  REPLACE THE src BELOW WITH YOUR GOOGLE FORM EMBED URL      â
+              â                                                              â
+              â  In Google Forms: Send â Embed â Copy the iframe src URL    â
+              â  It will look like:                                          â
+              â  https://docs.google.com/forms/d/e/XXXXXXXX/viewform?       (
+              â  embedded=true                                               â
+              â                                                              â
+              â  Then delete the <div class="form-placeholder"> block and   â
+              â  uncomment the <iframe> tag below.                           â
+              âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+              <iframe
+                src="YOUR_GOOGLE_FORM_EMBED_URL_HERE"
+                title="Apply for 35-Hour PMP Training">
+              </iframe>
+            -->
+            <div class="form-placeholder">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2E6DA4" stroke-width="1.5" stroke-linecap="round" width="24" height="24">
+                  <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <h4>Google Form â PMP Training Application</h4>
+              <p>Replace this placeholder with your embedded Google Form link. Instructions are in the HTML comments above this block.</p>
+              <code>src="https://docs.google.com/forms/d/e/.../viewform?embedded=true"</code>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentoring Form Pane -->
+      <div class="form-pane" id="pane-mentoring">
+        <div class="form-wrapper">
+          <div class="form-intro">
+            <div class="form-intro-icon">
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" width="20" height="20">
+                <circle cx="11" cy="8" r="4"/><path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6"/>
+              </svg>
+            </div>
+            <div class="form-intro-text">
+              <h3>Apply: PMP Certification Journey Mentoring</h3>
+              <p>Takes about 3 minutes &nbsp;Â·&nbsp; Free eligibility check included &nbsp;Â·&nbsp; No payment at this stage</p>
+            </div>
+          </div>
+          <div class="form-iframe-wrap">
+            <!--
+              âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+              â  REPLACE THE src BELOW WITH YOUR GOOGLE FORM EMBED URL      â
+              â  (Mentoring application form)                                â
+              â                                                              â
+              â  In Google Forms: Send â Embed â Copy the iframe src URL    â
+              âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+              <iframe
+                src="YOUR_GOOGLE_FORM_EMBED_URL_HERE"
+                title="Apply for PMP Certification Mentoring">
+              </iframe>
+            -->
+            <div class="form-placeholder">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2E6DA4" stroke-width="1.5" stroke-linecap="round" width="24" height="24">
+                  <circle cx="12" cy="8" r="5"/><path d="M3 21c0-4.4 4-8 9-8s9 3.6 9 8"/>
+                </svg>
+              </div>
+              <h4>Google Form â Mentoring Application</h4>
+              <p>Replace this placeholder with your embedded Google Form link. Instructions are in the HTML comments above this block.</p>
+              <code>src="https://docs.google.com/forms/d/e/.../viewform?embedded=true"</code>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="org-name">PROJECT MANAGEMENT EXCELLENCE CENTRE</div>
+        <div class="org-tagline">Where Project Leaders Are Made</div>
+        <div class="atp-note">PMI ATP Candidate Organization &nbsp;Â·&nbsp; Tbilisi, Georgia</div>
+      </div>
+      <div class="footer-links">
+        <h5>Programmes</h5>
+        <ul>
+          <li><a href="#training">35-Hour PMP Training</a></li>
+          <li><a href="#mentoring">Certification Mentoring</a></li>
+          <li><a href="#apply">Apply Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Organisation</h5>
+        <ul>
+          <li><a href="#why-pmec">Why PMEC</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="mailto:info@pmec.ge">info@pmec.ge</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Project Management Excellence Centre. All rights reserved.</span>
+      <span style="font-style:italic; color:rgba(212,168,67,0.5)">PMI and PMP are registered trademarks of Project Management Institute, Inc.</span>
+    </div>
+  </footer>
+
+  <!-- ââââââââââââââââââââââââââââââââââââââââââââââ JS -->
+  <script>
+    function switchTab(tab) {
+      // Update tab buttons
+      document.querySelectorAll('.form-tab').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && tab === 'training') || (i === 1 && tab === 'mentoring'));
+      });
+      // Show / hide panes
+      document.querySelectorAll('.form-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === 'pane-' + tab);
+      });
+    }
+
+    // Allow card CTA buttons to pre-select the right tab
+    document.querySelectorAll('a[href="#apply"]').forEach(link => {
+      link.addEventListener('click', function() {
+        const section = this.closest('[id]');
+        if (section && section.id === 'mentoring') switchTab('mentoring');
+        else switchTab('training');
+      });
+    });
+  </script>
+
+</body>
+</html>
