@@ -765,17 +765,11 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--steel) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 48px;
-      font-weight: 700;
-      color: var(--white);
+      object-fit: cover;
+      object-position: center top;
       margin-bottom: 20px;
       box-shadow: 0 8px 40px rgba(26,47,90,0.22);
-      letter-spacing: 2px;
+      display: block;
     }
     .trainer-name-block { width: 100%; }
     .trainer-fullname {
@@ -851,7 +845,7 @@
     @media (max-width: 768px) {
       .trainer-inner { grid-template-columns: 1fr; gap: 36px; }
       .trainer-photo-col { flex-direction: row; text-align: left; gap: 20px; align-items: flex-start; position: static; }
-      .trainer-avatar { width: 96px; height: 96px; font-size: 28px; flex-shrink: 0; margin-bottom: 0; }
+      .trainer-avatar { width: 96px; height: 96px; flex-shrink: 0; margin-bottom: 0; }
       .trainer-name-block { text-align: left; }
     }
   </style>
@@ -1135,7 +1129,7 @@
 
       <!-- Photo column -->
       <div class="trainer-photo-col">
-        <div class="trainer-avatar">NM</div>
+        <img class="trainer-avatar" src="trainer.jpg" alt="Nikoloz Melkadze — PMP Trainer" />
         <div class="trainer-name-block">
           <div class="trainer-fullname">Nikoloz Melkadze</div>
           <span class="trainer-pmp-badge">PMP&#174; &middot; Assoc. CIPD</span><br/>
