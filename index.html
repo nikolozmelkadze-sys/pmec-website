@@ -708,6 +708,37 @@
       transition: color 0.15s;
     }
     .footer-links a:hover { color: var(--gold); }
+    /* ─── WHATSAPP FLOAT ────────────────────────────────── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 20px 13px 16px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      transition: transform 0.18s, box-shadow 0.18s;
+      white-space: nowrap;
+    }
+    .wa-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+    }
+    .wa-float svg { flex-shrink: 0; }
+    @media (max-width: 480px) {
+      .wa-float { padding: 13px; border-radius: 50%; bottom: 20px; right: 20px; }
+      .wa-float span { display: none; }
+    }
+
     .footer-bottom {
       max-width: 1100px;
       margin: 32px auto 0;
@@ -1290,28 +1321,4 @@
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════════════ JS -->
-  <script>
-    function switchTab(tab) {
-      // Update tab buttons
-      document.querySelectorAll('.form-tab').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0 && tab === 'training') || (i === 1 && tab === 'mentoring'));
-      });
-      // Show / hide panes
-      document.querySelectorAll('.form-pane').forEach(pane => {
-        pane.classList.toggle('active', pane.id === 'pane-' + tab);
-      });
-    }
-
-    // Allow card CTA buttons to pre-select the right tab
-    document.querySelectorAll('a[href="#apply"]').forEach(link => {
-      link.addEventListener('click', function() {
-        const section = this.closest('[id]');
-        if (section && section.id === 'mentoring') switchTab('mentoring');
-        else switchTab('training');
-      });
-    });
-  </script>
-
-</body>
-</html>
+  <!-- ════════════════════════════════════════════�
