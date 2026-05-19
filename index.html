@@ -1243,6 +1243,653 @@
       100% { transform: rotate(360deg); }
     }
 
+    /* ─── STUDY SUITE ────────────────────────────────── */
+    .study-suite {
+      background: var(--white);
+      padding: 80px 24px;
+      border-top: 1px solid var(--lightgray);
+      border-bottom: 1px solid var(--lightgray);
+    }
+    .suite-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .suite-tab-btn {
+      background: var(--offwhite);
+      border: 1.5px solid var(--lightgray);
+      padding: 12px 24px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--charcoal);
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .suite-tab-btn:hover {
+      background: var(--lightgray);
+      border-color: var(--navy);
+      color: var(--navy);
+      transform: translateY(-1px);
+    }
+    .suite-tab-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(26,47,90,0.15);
+    }
+    .suite-panes {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .suite-pane {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .suite-pane.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Podcast player styles */
+    .podcast-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 25px rgba(26,47,90,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .podcast-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 90% 10%, rgba(212,168,67,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .podcast-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .podcast-art {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--gold) 0%, #B98E2E 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(212,168,67,0.3);
+      flex-shrink: 0;
+    }
+    .podcast-art svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--navy);
+    }
+    .podcast-info h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .podcast-info p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      margin: 0;
+    }
+    .podcast-player {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .podcast-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 4px 10px rgba(212,168,67,0.4);
+    }
+    .play-btn:hover {
+      transform: scale(1.06);
+      background: #e2b956;
+    }
+    .play-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--navy);
+    }
+    .playback-speed {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .playback-speed:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .volume-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .volume-btn {
+      background: transparent;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .volume-btn:hover {
+      opacity: 1;
+    }
+    .volume-slider {
+      width: 80px;
+      accent-color: var(--gold);
+      height: 4px;
+      cursor: pointer;
+    }
+    .timeline-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .time-stamp {
+      font-family: monospace;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      width: 38px;
+    }
+    .podcast-progress-bar {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+    }
+    .podcast-progress-filled {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 3px;
+      width: 0%;
+      position: relative;
+    }
+    .podcast-progress-handle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--white);
+      position: absolute;
+      top: 50%;
+      right: -6px;
+      transform: translateY(-50%);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: none;
+    }
+    .podcast-progress-bar:hover .podcast-progress-handle {
+      display: block;
+    }
+
+    /* Quiz styles */
+    .quiz-container {
+      background: var(--white);
+      border: 1.5px solid var(--lightgray);
+      border-radius: 12px;
+      padding: 36px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    }
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--lightgray);
+      padding-bottom: 16px;
+    }
+    .quiz-progress-label {
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--navy);
+    }
+    .quiz-hint-btn {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--steel);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .quiz-hint-btn:hover {
+      text-decoration: underline;
+    }
+    .quiz-progress-track {
+      width: 100%;
+      height: 6px;
+      background: var(--offwhite);
+      border-radius: 3px;
+      margin-bottom: 28px;
+      overflow: hidden;
+    }
+    .quiz-progress-bar {
+      height: 100%;
+      background: var(--gold);
+      width: 8.3%;
+      transition: width 0.3s ease;
+    }
+    .quiz-question {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .quiz-option {
+      background: var(--offwhite);
+      border: 1.5px solid var(--lightgray);
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 400;
+      color: var(--charcoal);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .quiz-option:hover:not(.disabled) {
+      background: var(--lightgray);
+      border-color: var(--navy);
+      transform: translateX(4px);
+    }
+    .quiz-option.selected {
+      background: rgba(46,109,164,0.06);
+      border-color: var(--steel);
+    }
+    .quiz-option.correct {
+      background: rgba(40,167,69,0.08) !important;
+      border-color: #28a745 !important;
+      color: #155724 !important;
+      font-weight: 600;
+    }
+    .quiz-option.incorrect {
+      background: rgba(220,53,69,0.08) !important;
+      border-color: #dc3545 !important;
+      color: #721c24 !important;
+    }
+    .quiz-feedback-icon {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .quiz-rationale-box {
+      margin-top: 24px;
+      background: rgba(212,168,67,0.08);
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      animation: slideDown 0.3s ease;
+    }
+    .quiz-rationale-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .quiz-rationale-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--charcoal);
+    }
+    .quiz-hint-box {
+      margin-bottom: 20px;
+      background: rgba(46,109,164,0.05);
+      border-left: 4px solid var(--steel);
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      animation: slideDown 0.2s ease;
+      font-size: 13px;
+      color: var(--charcoal);
+    }
+    .quiz-controls {
+      margin-top: 28px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Quiz results styles */
+    .quiz-results-card {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 0.4s ease;
+    }
+    .results-score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(212,168,67,0.12);
+      border: 3px solid var(--gold);
+      margin: 0 auto 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .results-score-val {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .results-score-max {
+      font-size: 14px;
+      color: var(--charcoal);
+      opacity: 0.8;
+    }
+    .results-recommendation {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 580px;
+      margin: 0 auto 28px;
+      color: var(--charcoal);
+    }
+    .results-recommendation strong {
+      color: var(--navy);
+    }
+    .results-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Flashcard styles */
+    .flashcard-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .flashcard-wrapper {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 520px;
+      height: 280px;
+      cursor: pointer;
+    }
+    .flashcard-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+    .flashcard-wrapper:hover .flashcard-card {
+      box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+    }
+    .flashcard-card.flipped {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1.5px solid var(--lightgray);
+    }
+    .card-front {
+      background: var(--white);
+      color: var(--navy);
+    }
+    .card-back {
+      background: var(--navy);
+      color: var(--white);
+      transform: rotateY(180deg);
+      border-color: var(--navy);
+    }
+    .card-front::after {
+      content: '⚡ Click to Flip';
+      position: absolute;
+      bottom: 20px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      opacity: 0.8;
+    }
+    .card-back::after {
+      content: '↩ Click to Flip';
+      position: absolute;
+      bottom: 20px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      opacity: 0.8;
+    }
+    .card-face p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .card-front p {
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .card-back p {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-weight: 400;
+    }
+    .flashcard-controls {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 520px;
+      justify-content: space-between;
+    }
+    .flashcard-btn {
+      background: var(--white);
+      border: 1.5px solid var(--lightgray);
+      color: var(--charcoal);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .flashcard-btn:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    .flashcard-indicator {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .flashcard-action-btn {
+      background: transparent;
+      border: none;
+      color: var(--steel);
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .flashcard-action-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Roadmap viewer styles */
+    .roadmap-wrapper {
+      background: var(--white);
+      border: 1.5px solid var(--lightgray);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    }
+    .roadmap-preview-box {
+      width: 100%;
+      height: 400px;
+      background: var(--offwhite);
+      border-radius: 8px;
+      border: 1px dashed var(--lightgray);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .roadmap-preview-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+    .roadmap-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Lightbox Modal styles */
+    .roadmap-lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(26,47,90,0.95);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      animation: fadeIn 0.3s ease;
+    }
+    .roadmap-lightbox.active {
+      display: flex;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 32px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+    .lightbox-content-box {
+      max-width: 90%;
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 8px;
+      background: var(--white);
+      padding: 10px;
+    }
+    .lightbox-content-box img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .suite-tabs { gap: 8px; }
+      .suite-tab-btn { padding: 10px 16px; font-size: 12.5px; }
+      .podcast-card { padding: 24px; }
+      .podcast-header { gap: 14px; }
+      .podcast-art { width: 64px; height: 64px; }
+      .podcast-art svg { width: 32px; height: 32px; }
+      .podcast-info h3 { font-size: 17px; }
+      .quiz-container { padding: 24px; }
+      .quiz-question { font-size: 15px; }
+      .quiz-option { padding: 14px 16px; font-size: 13.5px; }
+      .flashcard-wrapper { height: 240px; }
+      .card-face { padding: 24px; }
+      .card-face p { font-size: 14.5px; }
+    }
+
     /* Mobile media overrides for table/grid */
     @media (max-width: 900px) {
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -1732,6 +2379,183 @@
       </div>
     </div>
   </section>
+
+  <!-- ══════════════════════════════════════════════ STUDY SUITE -->
+  <section class="study-suite" id="study-suite">
+    <div class="container">
+      <div class="programmes-intro">
+        <span class="section-label">
+          <span class="lang-en">NotebookLM Study Suite</span>
+          <span class="lang-ka">NotebookLM სასწავლო სივრცე</span>
+        </span>
+        <h2>
+          <span class="lang-en">Interactive PMP Prep Suite</span>
+          <span class="lang-ka">ინტერაქტიული PMP მოსამზადებელი პორტალი</span>
+        </h2>
+        <div class="gold-rule centered"></div>
+        <p>
+          <span class="lang-en">Reinforce your knowledge with AI-driven interactive study tools, podcast reviews, and readiness diagnostics.</span>
+          <span class="lang-ka">განამტკიცეთ თქვენი ცოდნა ხელოვნური ინტელექტის ინტერაქტიული სასწავლო ხელსაწყოებით, პოდკასტებითა და მზაობის დიაგნოსტიკით.</span>
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="suite-tabs">
+        <button class="suite-tab-btn active" id="tab-btn-podcast" onclick="switchSuiteTab('podcast')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.09 18.66 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-6H9V9h4v2z"/></svg>
+          <span class="lang-en">🎧 Audio Overview</span>
+          <span class="lang-ka">🎧 აუდიო მიმოხილვა</span>
+        </button>
+        <button class="suite-tab-btn" id="tab-btn-quiz" onclick="switchSuiteTab('quiz')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span class="lang-en">📝 Readiness Quiz</span>
+          <span class="lang-ka">📝 მზაობის ქვიზი</span>
+        </button>
+        <button class="suite-tab-btn" id="tab-btn-flashcards" onclick="switchSuiteTab('flashcards')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+          <span class="lang-en">⚡ Concept Flashcards</span>
+          <span class="lang-ka">⚡ სასწავლო ბარათები</span>
+        </button>
+        <button class="suite-tab-btn" id="tab-btn-roadmap" onclick="switchSuiteTab('roadmap')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+          <span class="lang-en">🗺️ PMP Roadmap</span>
+          <span class="lang-ka">🗺️ PMP გზამკვლევი</span>
+        </button>
+      </div>
+
+      <!-- Tab Panes -->
+      <div class="suite-panes">
+        <!-- 1. Podcast Player Pane -->
+        <div class="suite-pane active" id="suite-pane-podcast">
+          <div class="podcast-card">
+            <div class="podcast-header">
+              <div class="podcast-art">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+              </div>
+              <div class="podcast-info">
+                <h3>
+                  <span class="lang-en">Building PMP Leaders with PMEC Georgia</span>
+                  <span class="lang-ka">PMP ლიდერების აღზრდა PMEC-თან ერთად</span>
+                </h3>
+                <p>
+                  <span class="lang-en">NotebookLM Deep Dive Audio Overview</span>
+                  <span class="lang-ka">NotebookLM-ის სიღრმისეული აუდიო მიმოხილვა</span>
+                </p>
+              </div>
+            </div>
+
+            <audio id="podcast-audio" src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFRGFXuyWG80OCPQIQzmDZSTu3RVN0X0j1V_Vto3RXh4uapFWhKQm2fPulvk20kgOhHkpgJ9jNjwzvtwVr9NSNLdkBstPMQAHsnnH85WowpUPkxR9ElZ2MRCOcpOWQTa99MHkBu35i7CRY08eb8YcWOWcmqG-o=m140-dv"></audio>
+
+            <div class="podcast-player">
+              <div class="timeline-wrap">
+                <span class="time-stamp" id="podcast-time-current">0:00</span>
+                <div class="podcast-progress-bar" id="podcast-progress-bar">
+                  <div class="podcast-progress-filled" id="podcast-progress-filled">
+                    <div class="podcast-progress-handle"></div>
+                  </div>
+                </div>
+                <span class="time-stamp" id="podcast-time-duration">0:00</span>
+              </div>
+
+              <div class="podcast-controls">
+                <button class="playback-speed" id="podcast-speed-btn" onclick="togglePlaybackSpeed()">1.0x</button>
+                
+                <button class="play-btn" id="podcast-play-btn" onclick="togglePodcastPlay()">
+                  <svg viewBox="0 0 24 24" id="podcast-play-icon" style="width: 24px; height: 24px; fill: var(--navy);">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="podcast-pause-icon" style="display:none; width: 24px; height: 24px; fill: var(--navy);">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                  </svg>
+                </button>
+
+                <div class="volume-control">
+                  <button class="volume-btn" onclick="toggleMute()" aria-label="Mute audio">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" id="volume-icon">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                  </button>
+                  <input type="range" class="volume-slider" id="podcast-volume" min="0" max="1" step="0.1" value="0.8" oninput="setPodcastVolume(this.value)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Quiz Pane -->
+        <div class="suite-pane" id="suite-pane-quiz">
+          <div class="quiz-container" id="quiz-container">
+            <!-- Dynamic quiz markup will be inserted here by JavaScript -->
+          </div>
+        </div>
+
+        <!-- 3. Flashcards Pane -->
+        <div class="suite-pane" id="suite-pane-flashcards">
+          <div class="flashcard-container">
+            <div class="flashcard-wrapper" onclick="flipFlashcard()">
+              <div class="flashcard-card" id="flashcard-card">
+                <div class="card-face card-front">
+                  <p id="flashcard-front-text">Front</p>
+                </div>
+                <div class="card-face card-back">
+                  <p id="flashcard-back-text">Back</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-controls">
+              <button class="flashcard-btn" onclick="prevFlashcard()" aria-label="Previous card">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+              </button>
+              
+              <div class="flashcard-indicator">
+                <span class="lang-en">Card</span><span class="lang-ka">ბარათი</span> 
+                <span id="flashcard-index">1</span> / 10
+              </div>
+
+              <button class="flashcard-action-btn" onclick="shuffleFlashcards()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg>
+                <span class="lang-en">Shuffle</span><span class="lang-ka">არევა</span>
+              </button>
+
+              <button class="flashcard-btn" onclick="nextFlashcard()" aria-label="Next card">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Roadmap Pane -->
+        <div class="suite-pane" id="suite-pane-roadmap">
+          <div class="roadmap-wrapper">
+            <div class="roadmap-preview-box" onclick="openRoadmapLightbox()">
+              <img src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" alt="PMP Certification Roadmap Preview">
+            </div>
+            <div class="roadmap-actions">
+              <button class="btn btn-secondary" onclick="openRoadmapLightbox()">
+                <span class="lang-en">🔍 View Fullscreen Roadmap</span>
+                <span class="lang-ka">🔍 სრული გზამკვლევის ნახვა</span>
+              </button>
+              <a href="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span class="lang-en">📥 Download Roadmap (High Res)</span>
+                <span class="lang-ka">📥 გზამკვლევის ჩამოტვირთვა (მაღალი რეზოლუციით)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Lightbox Modal -->
+  <div class="roadmap-lightbox" id="roadmap-lightbox" onclick="closeRoadmapLightbox()">
+    <button class="lightbox-close" onclick="closeRoadmapLightbox()">&times;</button>
+    <div class="lightbox-content-box" onclick="event.stopPropagation()">
+      <img src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" alt="PMP Certification Roadmap Fullscreen">
+    </div>
+  </div>
 
   <!-- ══════════════════════════════════════════════ TESTIMONIALS -->
   <section class="testimonials" id="testimonials">
@@ -2482,6 +3306,728 @@
     // Lazy load and handle iframe loading spinners
     const loadedIframes = new Set();
     
+    // ─── STUDY SUITE DATA ──────────────────────────────
+    const PMP_QUIZ_DATA = [
+      {
+        question_en: "In the context of 'Creating a High-Performing Team' (Module 1), which activity is central to establishing how team members interact and resolve issues?",
+        question_ka: "Module 1-ის („მაღალეფექტური გუნდის შექმნა“) კონტექსტში, რომელი აქტივობაა ცენტრალური გუნდის წევრების ურთიერთქმედებისა და პრობლემების გადაჭრის წესების დასადგენად?",
+        options_en: [
+          "Defining team ground rules and negotiating agreements",
+          "Conducting a line-by-line expert application review",
+          "Executing project tasks using predictive methodologies",
+          "Assessing the organizational culture for compliance"
+        ],
+        options_ka: [
+          "გუნდის ძირითადი წესების განსაზღვრა და შეთანხმებების გაფორმება",
+          "სააპლიკაციო ფორმის დეტალური განხილვა ექსპერტთან ერთად",
+          "პროექტის ამოცანების შესრულება პრედიქტიული მეთოდოლოგიების გამოყენებით",
+          "ორგანიზაციული კულტურის შეფასება შესაბამისობისთვის"
+        ],
+        correctIndex: 0,
+        rationale_en: "Establishing ground rules and formal agreements is a foundational step in Module 1 to ensure team alignment and manage expectations.",
+        rationale_ka: "გუნდის წესებისა და ფორმალური შეთანხმებების დადგენა არის Module 1-ის ფუნდამენტური ნაბიჯი გუნდის გასწორებისა და მოლოდინების მართვისთვის.",
+        hint_en: "Consider the foundational steps required to build trust and standard operating procedures within a new group.",
+        hint_ka: "გაითვალისწინეთ ფუნდამენტური ნაბიჯები, რომლებიც საჭიროა ნდობისა და სტანდარტული ოპერაციული პროცედურების შესაქმნელად."
+      },
+      {
+        question_en: "Which module in the PMEC syllabus focuses on the financial and temporal planning aspects, such as managing the budget and schedule?",
+        question_ka: "PMEC-ის სილაბუსის რომელი მოდული ფოკუსირდება ფინანსურ და დროით დაგეგმვაზე, როგორიცაა ბიუჯეტისა და გრაფიკის მართვა?",
+        options_en: [
+          "Module 1: Creating a High-Performing Team",
+          "Module 2: Starting the Project",
+          "Module 3: Doing the Work",
+          "Module 5: Keeping the Business in Mind"
+        ],
+        options_ka: [
+          "მოდული 1: მაღალეფექტური გუნდის შექმნა",
+          "მოდული 2: პროექტის დაწყება",
+          "მოდული 3: სამუშაოს შესრულება",
+          "მოდული 5: ბიზნესის გათვალისწინება"
+        ],
+        correctIndex: 1,
+        rationale_en: "Module 2 covers the initiation and planning phases, including scope, budget, schedule, and quality management.",
+        rationale_ka: "მოდული 2 მოიცავს ინიცირებისა და დაგეგმვის ფაზებს, მათ შორის მასშტაბის, ბიუჯეტის, გრაფიკისა და ხარისხის მართვას.",
+        hint_en: "This phase involves setting the roadmap and resource constraints before full-scale execution begins.",
+        hint_ka: "ეს ფაზა მოიცავს გზამკვლევისა და რესურსების შეზღუდვების დადგენას სრულმასშტაბიანი შესრულების დაწყებამდე."
+      },
+      {
+        question_en: "According to the syllabus for 'Doing the Work' (Module 3), how should project changes be managed?",
+        question_ka: "„სამუშაოს შესრულების“ (მოდული 3) სილაბუსის მიხედვით, როგორ უნდა იმართოს პროექტის ცვლილებები?",
+        options_en: [
+          "By strictly avoiding all changes to maintain the original project baseline",
+          "Using predictive, agile, or hybrid delivery methods",
+          "By delegating all change decisions to the 1:1 mentor",
+          "Exclusively through emotional intelligence and collaboration techniques"
+        ],
+        options_ka: [
+          "ყველა ცვლილების მკაცრი თავიდან არიდებით, რათა შენარჩუნდეს პროექტის საწყისი ბაზისი",
+          "პრედიქტიული, ეჯაილ ან ჰიბრიდული მიწოდების მეთოდების გამოყენებით",
+          "ცვლილებების შესახებ ყველა გადაწყვეტილების 1:1 მენტორზე დელეგირებით",
+          "ექსკლუზიურად ემოციური ინტელექტისა და თანამშრომლობის ტექნიკების მეშვეობით"
+        ],
+        correctIndex: 1,
+        rationale_en: "Module 3 emphasizes managing changes flexibly across different delivery frameworks to suit the project needs.",
+        rationale_ka: "მოდული 3 ხაზს უსვამს ცვლილებების მოქნილად მართვას სხვადასხვა მეთოდოლოგიებში, პროექტის საჭიროებების შესაბამისად.",
+        hint_en: "Think about the different frameworks mentioned that allow for flexibility in project execution.",
+        hint_ka: "იფიქრეთ სხვადასხვა ჩარჩოებზე, რომლებიც პროექტის შესრულებისას მოქნილობის საშუალებას იძლევა."
+      },
+      {
+        question_en: "What is a key focus of Module 4: 'Keeping the Team on Track'?",
+        question_ka: "რა არის მოდული 4-ის („გუნდის შენარჩუნება სწორ გზაზე“) მთავარი ფოკუსი?",
+        options_en: [
+          "Managing project budget and resource procurement",
+          "Leadership, collaboration, and emotional intelligence",
+          "Finalizing the project closure and official documentation",
+          "Confirming PMI eligibility requirements and hours"
+        ],
+        options_ka: [
+          "პროექტის ბიუჯეტისა და რესურსების შესყიდვების მართვა",
+          "ლიდერობა, თანამშრომლობა და ემოციური ინტელექტი",
+          "პროექტის დახურვის დასრულება და ოფიციალური დოკუმენტაცია",
+          "PMI-ის უფლებამოსილების მოთხოვნებისა და საათების დადასტურება"
+        ],
+        correctIndex: 1,
+        rationale_en: "This module emphasizes the soft skills and leadership qualities needed to maintain team momentum and performance.",
+        rationale_ka: "ეს მოდული ხაზს უსვამს გუნდის მოტივაციისა და მუშაობის შესანარჩუნებლად საჭირო რბილ უნარებსა და ლიდერულ თვისებებს.",
+        hint_en: "This module deals with the interpersonal dynamics required to maintain consistent productivity.",
+        hint_ka: "ეს მოდული ეხება ინტერპერსონალურ დინამიკას, რომელიც საჭიროა მუდმივი პროდუქტიულობის შესანარჩუნებლად."
+      },
+      {
+        question_en: "Module 5, 'Keeping the Business in Mind,' emphasizes which of the following project leadership responsibilities?",
+        question_ka: "მოდული 5 („ბიზნესის გათვალისწინება“) ხაზს უსვამს პროექტის ლიდერის შემდეგი პასუხისმგებლობებიდან რომელს?",
+        options_en: [
+          "Defining team ground rules and conflict resolution strategies",
+          "Engaging stakeholders and managing project risk",
+          "Supporting organizational change and delivering business value",
+          "Analyzing weak areas through 1:1 mock exam simulations"
+        ],
+        options_ka: [
+          "გუნდის წესებისა და კონფლიქტების გადაჭრის სტრატეგიების განსაზღვრა",
+          "დაინტერესებული მხარეების ჩართვა და პროექტის რისკების მართვა",
+          "ორგანიზაციული ცვლილებების მხარდაჭერა და ბიზნეს ღირებულების მიწოდება",
+          "სუსტი მხარეების ანალიზი 1:1 იმიტირებული გამოცდის სიმულაციების მეშვეობით"
+        ],
+        correctIndex: 2,
+        rationale_en: "Module 5 focuses on aligning project outcomes with the broader business environment and strategic goals.",
+        rationale_ka: "მოდული 5 ფოკუსირდება პროექტის შედეგების შესაბამისობაზე ფართო ბიზნეს გარემოსთან და სტრატეგიულ მიზნებთან.",
+        hint_en: "Look for concepts that link the specific project to the success of the parent organization.",
+        hint_ka: "მოძებნეთ კონცეფციები, რომლებიც აკავშირებს კონკრეტულ პროექტს მშობელი ორგანიზაციის წარმატებასთან."
+      },
+      {
+        question_en: "When comparing the two PMEC paths, what unique feature does the Personal Mentoring track offer regarding the PMI application?",
+        question_ka: "ორი PMEC გზის შედარებისას, რა უნიკალურ მახასიათებელს გთავაზობთ ინდივიდუალური მენტორინგის პროგრამა PMI-ის აპლიკაციასთან დაკავშირებით?",
+        options_en: [
+          "A general guide on how to fill out the application forms",
+          "A line-by-line expert review before the application is submitted",
+          "Automatic approval by PMI without a review period",
+          "Exemption from the 35-hour mandatory PDU requirement"
+        ],
+        options_ka: [
+          "ზოგადი გზამკვლევი სააპლიკაციო ფორმების შევსების შესახებ",
+          "ექსპერტის მიერ ხაზობრივი (დეტალური) განხილვა განაცხადის გაგზავნამდე",
+          "PMI-ის მიერ ავტომატური დამტკიცება განხილვის პერიოდის გარეშე",
+          "სავალდებულო 35-საათიანი PDU მოთხოვნისგან გათავისუფლება"
+        ],
+        correctIndex: 1,
+        rationale_en: "The Mentoring track provides high-touch, individual support for the application to minimize errors.",
+        rationale_ka: "მენტორინგის გზა უზრუნველყოფს ინდივიდუალურ მხარდაჭერას აპლიკაციისთვის, რათა მინიმუმამდე იქნეს დაყვანილი შეცდომები.",
+        hint_en: "One path offers cohort-based guidance, while the other offers direct, individualized scrutiny of documents.",
+        hint_ka: "ერთი გზა გთავაზობთ ჯგუფურ ხელმძღვანელობას, ხოლო მეორე - დოკუმენტების პირდაპირ, ინდივიდუალურ შემოწმებას."
+      },
+      {
+        question_en: "A project manager is currently identifying potential risks and planning how to engage stakeholders. Which syllabus module is most relevant to these activities?",
+        question_ka: "პროექტის მენეჯერი ამჟამად ახდენს პოტენციური რისკების იდენტიფიცირებას და გეგმავს, როგორ ჩართოს დაინტერესებული მხარეები. რომელი მოდულია ყველაზე მეტად რელევანტური ამ აქტივობებისთვის?",
+        options_en: [
+          "Module 2: Starting the Project",
+          "Module 3: Doing the Work",
+          "Module 4: Keeping the Team on Track",
+          "Module 5: Keeping the Business in Mind"
+        ],
+        options_ka: [
+          "მოდული 2: პროექტის დაწყება",
+          "მოდული 3: სამუშაოს შესრულება",
+          "მოდული 4: გუნდის შენარჩუნება სწორ გზაზე",
+          "მოდული 5: ბიზნესის გათვალისწინება"
+        ],
+        correctIndex: 1,
+        rationale_en: "Risk management and stakeholder engagement are core components of the execution phase covered in Module 3.",
+        rationale_ka: "რისკების მართვა და დაინტერესებულ მხარეთა ჩართულობა არის შესრულების ფაზის ძირითადი კომპონენტები, რომლებიც მოცემულია მოდულ 3-ში.",
+        hint_en: "Think about the phase of the project where you are actively executing tasks and managing external influences.",
+        hint_ka: "იფიქრეთ პროექტის იმ ფაზაზე, სადაც აქტიურად ასრულებთ ამოცანებს და მართავთ გარე გავლენებს."
+      },
+      {
+        question_en: "The PMEC program claims to be 'Built for the 2025+ PMI Exam Content Outline.' Why is this significant for a candidate?",
+        question_ka: "PMEC პროგრამა აცხადებს, რომ არის „შექმნილი 2025+ წლის PMI გამოცდის შინაარსის შესაბამისად“. რატომ არის ეს მნიშვნელოვანი კანდიდატისთვის?",
+        options_en: [
+          "It means the curriculum focuses exclusively on Agile methodologies",
+          "It ensures the training reflects the most current standards and exam updates from PMI",
+          "It guarantees that candidates will receive a 5M GEL budget for their projects",
+          "It indicates the course is only available in Tbilisi, Georgia"
+        ],
+        options_ka: [
+          "ეს ნიშნავს, რომ სასწავლო პროგრამა ფოკუსირებულია ექსკლუზიურად ეჯაილ (Agile) მეთოდოლოგიებზე",
+          "ეს უზრუნველყოფს, რომ ტრენინგი ასახავს PMI-ის უახლეს სტანდარტებსა და საგამოცდო განახლებებს",
+          "ეს იძლევა გარანტიას, რომ კანდიდატები მიიღებენ 5 მილიონ ლარიან ბიუჯეტს თავიანთი პროექტებისთვის",
+          "ეს მიუთითებს იმაზე, რომ კურსი ხელმისაწვდომია მხოლოდ თბილისში, საქართველოში"
+        ],
+        correctIndex: 1,
+        rationale_en: "The curriculum must match the current ECO to ensure candidates are prepared for the specific questions they will face.",
+        rationale_ka: "სასწავლო პროგრამა უნდა შეესაბამებოდეს მიმდინარე ECO-ს, რათა კანდიდატები მომზადებულები იყვნენ იმ კონკრეტული კითხვებისთვის, რომლებსაც გამოცდაზე შეხვდებიან.",
+        hint_en: "Certification exams are based on specific, periodically updated frameworks provided by the governing body.",
+        hint_ka: "სასერტიფიკატო გამოცდები ეფუძნება მმართველი ორგანოს მიერ მოწოდებულ კონკრეტულ, პერიოდულად განახლებად ჩარჩოებს."
+      },
+      {
+        question_en: "If a professional is overwhelmed by the volume of material and needs a 'personalized study plan,' which PMEC offering is most appropriate?",
+        question_ka: "თუ პროფესიონალი გადატვირთულია მასალის მოცულობით და სჭირდება „პერსონალური სასწავლო გეგმა“, PMEC-ის რომელი შემოთავაზებაა ყველაზე შესაფერისი?",
+        options_en: [
+          "35-Hour PMP Exam Preparation Training",
+          "PMP Certification Journey Mentoring",
+          "Corporate Training Request",
+          "Module 5: Keeping the Business in Mind"
+        ],
+        options_ka: [
+          "35-საათიანი PMP საგამოცდო მოსამზადებელი ტრენინგი",
+          "PMP სერტიფიცირების გზის მენტორინგი",
+          "კორპორატიული ტრენინგის მოთხოვნა",
+          "მოდული 5: ბიზნესის გათვალისწინება"
+        ],
+        correctIndex: 1,
+        rationale_en: "Mentoring focuses on 1:1 sessions and a study plan built specifically around the individual's schedule and weak areas.",
+        rationale_ka: "მენტორინგი ფოკუსირდება 1:1 სესიებსა და სასწავლო გეგმაზე, რომელიც სპეციალურად შედგენილია ინდივიდის გრაფიკისა და სუსტი მხარეების გარშემო.",
+        hint_en: "Consider the difference between learning in a group versus working with a private coach.",
+        hint_ka: "გაითვალისწინეთ განსხვავება ჯგუფში სწავლასა და კერძო მწვრთნელთან (მენტორთან) მუშაობას შორის."
+      },
+      {
+        question_en: "Within Module 1, 'negotiating agreements' is listed as a skill. What is the primary purpose of this skill in a high-performing team?",
+        question_ka: "Module 1-ში „შეთანხმებებზე მოლაპარაკება“ მითითებულია, როგორც უნარი. რა არის ამ უნარის მთავარი მიზანი მაღალეფექტურ გუნდში?",
+        options_en: [
+          "To ensure the project stays within the organizational compliance rules",
+          "To empower team members and manage conflict effectively",
+          "To define the project's total budget and schedule",
+          "To assess the eligibility of the project manager for the PMP exam"
+        ],
+        options_ka: [
+          "იმის უზრუნველყოფა, რომ პროექტი დარჩეს ორგანიზაციული შესაბამისობის წესებში",
+          "გუნდის წევრების გაძლიერება და კონფლიქტების ეფექტურად მართვა",
+          "პროექტის მთლიანი ბიუჯეტისა და გრაფიკის განსაზღვრა",
+          "PMP გამოცდისთვის პროექტის მენეჯერის უფლებამოსილების შეფასება"
+        ],
+        correctIndex: 1,
+        rationale_en: "Negotiation is used within the team to reach consensus and resolve internal friction to maintain performance.",
+        rationale_ka: "მოლაპარაკება გამოიყენება გუნდში კონსენსუსის მისაღწევად და შიდა ხახუნის გადასაჭრელად მუშაობის შესანარჩუნებლად.",
+        hint_en: "Focus on how interpersonal negotiation affects the internal health of a project team.",
+        hint_ka: "ფოკუსირება იმაზე, თუ როგორ მოქმედებს ინტერპერსონალური მოლაპარაკება პროექტის გუნდის შიდა ჯანმრთელობაზე."
+      },
+      {
+        question_en: "Module 4 involves 'performance monitoring.' How does this differ from the monitoring in Module 2?",
+        question_ka: "მოდული 4 მოიცავს „შესრულების მონიტორინგს“. რით განსხვავდება ეს მოდული 2-ში არსებული მონიტორინგისგან?",
+        options_en: [
+          "Module 4 focuses on team behavior and leadership, while Module 2 focuses on schedule and budget",
+          "There is no difference; they are the same monitoring tasks",
+          "Module 4 monitoring is only for Agile projects",
+          "Module 2 monitoring is only performed by the mentor"
+        ],
+        options_ka: [
+          "მოდული 4 ფოკუსირდება გუნდის ქცევასა და ლიდერობაზე, ხოლო მოდული 2 ფოკუსირდება გრაფიკსა და ბიუჯეტზე",
+          "არანაირი განსხვავება არ არის; ისინი ერთი და იგივე მონიტორინგის ამოცანებია",
+          "მოდული 4-ის მონიტორინგი მხოლოდ ეჯაილ (Agile) პროექტებისთვისაა",
+          "მოდული 2-ის მონიტორინგი ხორციელდება მხოლოდ მენტორის მიერ"
+        ],
+        correctIndex: 0,
+        rationale_en: "Module 4 is about people and their performance, whereas Module 2 is about project artifacts like scope and schedule.",
+        rationale_ka: "მოდული 4 ეხება ადამიანებს და მათ შესრულებას, ხოლო მოდული 2 ეხება პროექტის არტეფაქტებს, როგორიცაა მასშტაბი და გრაფიკი.",
+        hint_en: "Differentiate between tracking the progress of 'the plan' and the progress of 'the people' executing it.",
+        hint_ka: "განასხვავეთ ერთმანეთისგან „გეგმის“ პროგრესის თვალყურის დევნება და მისი შემსრულებელი „ადამიანების“ პროგრესი."
+      },
+      {
+        question_en: "In the PMEC process, what is the first step a candidate takes after submitting their application?",
+        question_ka: "PMEC პროცესში, რა არის პირველი ნაბიჯი, რომელსაც კანდიდატი დგამს განაცხადის წარდგენის შემდეგ?",
+        options_en: [
+          "Join a cohort for classroom learning",
+          "Eligibility Assessment",
+          "Exam-simulation practice sets",
+          "Earning the PMP credential"
+        ],
+        options_ka: [
+          "კლასში სწავლისთვის ჯგუფში გაწევრიანება",
+          "უფლებამოსილების შეფასება (Eligibility Assessment)",
+          "საგამოცდო სიმულაციური პრაქტიკული ნაკრებები",
+          "PMP სერტიფიკატის მოპოვება"
+        ],
+        correctIndex: 1,
+        rationale_en: "The PMEC team reviews professional experience against PMI criteria within 48 hours of submission.",
+        rationale_ka: "PMEC-ის გუნდი განიხილავს პროფესიულ გამოცდილებას PMI-ის კრიტერიუმებთან შესაბამისობაზე წარდგენიდან 48 საათის განმავლობაში.",
+        hint_en: "The first step involves verifying if the candidate meets the official requirements to take the exam.",
+        hint_ka: "პირველი ნაბიჯი გულისხმობს იმის შემოწმებას, აკმაყოფილებს თუ არა კანდიდატი გამოცდაზე გასვლის ოფიციალურ მოთხოვნებს."
+      }
+    ];
+
+    const PMP_FLASHCARDS_DATA = [
+      {
+        front_en: "How many contact hours (PDUs) are mandatory for PMP exam eligibility according to PMI requirements?",
+        front_ka: "რამდენი საკონტაქტო საათია (PDU) სავალდებულო PMP გამოცდაზე გასასვლელად PMI მოთხოვნების მიხედვით?",
+        back_en: "35 hours.",
+        back_ka: "35 საათი."
+      },
+      {
+        front_en: "Which project delivery methods are explicitly covered in the PMI 2025 Exam Content Outline?",
+        front_ka: "პროექტის მიწოდების რომელი მეთოდებია პირდაპირ გათვალისწინებული PMI 2025 წლის Exam Content Outline-ში?",
+        back_en: "Predictive, agile, and hybrid methods.",
+        back_ka: "პრედიქტიული, ეჯაილ და ჰიბრიდული მეთოდები."
+      },
+      {
+        front_en: "What is the primary objective of Module 1: Creating a High-Performing Team?",
+        front_ka: "რა არის Module 1-ის („მაღალეფექტური გუნდის შექმნა“) მთავარი მიზანი?",
+        back_en: "Defining ground rules, negotiating agreements, and managing conflict.",
+        back_ka: "ძირითადი წესების განსაზღვრა, შეთანხმებებზე მოლაპარაკება და კონფლიქტების მართვა."
+      },
+      {
+        front_en: "Module 2: Starting the Project focuses on managing scope, budget, schedule, quality, and project _____.",
+        front_ka: "მოდული 2: პროექტის დაწყება ფოკუსირდება მასშტაბის, ბიუჯეტის, გრაფიკის, ხარისხისა და პროექტის _____ მართვაზე.",
+        back_en: "Closure.",
+        back_ka: "დახურვაზე."
+      },
+      {
+        front_en: "Which module in the PMEC curriculum covers the management of project risks and changes?",
+        front_ka: "PMEC-ის სასწავლო პროგრამის რომელი მოდული მოიცავს პროექტის რისკებისა და ცვლილებების მართვას?",
+        back_en: "Module 3 (Doing the Work).",
+        back_ka: "მოდული 3 (სამუშაოს შესრულება)."
+      },
+      {
+        front_en: "What soft skill is a core component of Module 4: Keeping the Team on Track?",
+        front_ka: "რომელი რბილი უნარია Module 4-ის („გუნდის შენარჩუნება სწორ გზაზე“) ძირითადი კომპონენტი?",
+        back_en: "Emotional intelligence.",
+        back_ka: "ემოციური ინტელექტი."
+      },
+      {
+        front_en: "Module 5: Keeping the Business in Mind emphasizes compliance, organizational culture, and _____.",
+        front_ka: "მოდული 5: ბიზნესის გათვალისწინება ხაზს უსვამს შესაბამისობას (კომპლაენსს), ორგანიზაციულ კულტურასა და _____.",
+        back_en: "Business value delivery.",
+        back_ka: "ბიზნეს ღირებულების მიწოდებას."
+      },
+      {
+        front_en: "What is a distinct advantage of the Personal Mentoring program regarding the PMI application process?",
+        front_ka: "რა არის ინდივიდუალური მენტორინგის პროგრამის აშკარა უპირატესობა PMI-ის სააპლიკაციო პროცესთან დაკავშირებით?",
+        back_en: "Line-by-line expert review before submission.",
+        back_ka: "სააპლიკაციო ფორმის დეტალური შემოწმება გაგზავნამდე."
+      },
+      {
+        front_en: "The 35-Hour Programme is delivered through which format to accommodate working professionals?",
+        front_ka: "რა ფორმატით ხორციელდება 35-საათიანი პროგრამა მომუშავე პროფესიონალების ხელშესაწყობად?",
+        back_en: "Live instructor-led sessions on weeknights and weekends.",
+        back_ka: "ლაივ ტრენინგები ინსტრუქტორთან ერთად საღამოობითა და უქმეებზე."
+      },
+      {
+        front_en: "What is the typical timeframe suggested to go from starting the structured curriculum to being exam-ready?",
+        front_ka: "რა არის შემოთავაზებული ტიპური დროის პერიოდი სტრუქტურირებული კურსის დაწყებიდან გამოცდისთვის მზადყოფნამდე?",
+        back_en: "3 months.",
+        back_ka: "3 თვე."
+      }
+    ];
+
+    // ─── INTERACTIVE ENGINE STATE ─────────────────────
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let selectedOptionIndex = -1;
+    let isOptionChosen = false;
+
+    let currentFlashcardIndex = 0;
+    let isCardFlipped = false;
+    let flashcardOrder = Array.from({ length: PMP_FLASHCARDS_DATA.length }, (_, i) => i);
+
+    // ─── TAB SWITCHER ────────────────────────────────
+    function switchSuiteTab(tabId) {
+      // Toggle button classes
+      document.querySelectorAll('.suite-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.id === `tab-btn-${tabId}`);
+      });
+      // Toggle pane classes
+      document.querySelectorAll('.suite-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === `suite-pane-${tabId}`);
+      });
+
+      // Pause audio if switching away from podcast tab
+      if (tabId !== 'podcast') {
+        const audio = document.getElementById('podcast-audio');
+        if (audio && !audio.paused) {
+          audio.pause();
+          updatePodcastPlayState(false);
+        }
+      }
+    }
+
+    // ─── PORTABLE PODCAST PLAYER ─────────────────────
+    const audio = document.getElementById('podcast-audio');
+    const speedBtn = document.getElementById('podcast-speed-btn');
+    const playBtn = document.getElementById('podcast-play-btn');
+    const playIcon = document.getElementById('podcast-play-icon');
+    const pauseIcon = document.getElementById('podcast-pause-icon');
+    const progressBar = document.getElementById('podcast-progress-bar');
+    const progressFilled = document.getElementById('podcast-progress-filled');
+    const timeCurrent = document.getElementById('podcast-time-current');
+    const timeDuration = document.getElementById('podcast-time-duration');
+    const volumeSlider = document.getElementById('podcast-volume');
+    const volumeIcon = document.getElementById('volume-icon');
+
+    let previousVolume = 0.8;
+    let playbackSpeeds = [1.0, 1.25, 1.5, 2.0];
+    let currentSpeedIndex = 0;
+
+    function formatTime(secs) {
+      if (isNaN(secs)) return "0:00";
+      const m = Math.floor(secs / 60);
+      const s = Math.floor(secs % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    function updatePodcastPlayState(isPlaying) {
+      if (isPlaying) {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+      } else {
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+      }
+    }
+
+    function togglePodcastPlay() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          updatePodcastPlayState(true);
+        }).catch(err => console.log("Audio play deferred: ", err));
+      } else {
+        audio.pause();
+        updatePodcastPlayState(false);
+      }
+    }
+
+    function togglePlaybackSpeed() {
+      currentSpeedIndex = (currentSpeedIndex + 1) % playbackSpeeds.length;
+      const speed = playbackSpeeds[currentSpeedIndex];
+      audio.playbackRate = speed;
+      speedBtn.textContent = `${speed.toFixed(2).replace('.00', '')}x`;
+    }
+
+    function setPodcastVolume(val) {
+      audio.volume = val;
+      audio.muted = (val === "0");
+      updateVolumeUI(val);
+    }
+
+    function toggleMute() {
+      if (audio.muted) {
+        audio.muted = false;
+        audio.volume = previousVolume;
+        volumeSlider.value = previousVolume;
+      } else {
+        previousVolume = audio.volume > 0 ? audio.volume : 0.8;
+        audio.muted = true;
+        audio.volume = 0;
+        volumeSlider.value = 0;
+      }
+      updateVolumeUI(volumeSlider.value);
+    }
+
+    function updateVolumeUI(val) {
+      const vol = parseFloat(val);
+      if (vol === 0) {
+        volumeIcon.innerHTML = `<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>`;
+      } else if (vol < 0.5) {
+        volumeIcon.innerHTML = `<path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/>`;
+      } else {
+        volumeIcon.innerHTML = `<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>`;
+      }
+    }
+
+    if (audio) {
+      audio.addEventListener('timeupdate', () => {
+        if (!audio.duration) return;
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progressFilled.style.width = `${pct}%`;
+        timeCurrent.textContent = formatTime(audio.currentTime);
+      });
+
+      audio.addEventListener('durationchange', () => {
+        timeDuration.textContent = formatTime(audio.duration);
+      });
+
+      audio.addEventListener('ended', () => {
+        updatePodcastPlayState(false);
+        progressFilled.style.width = '0%';
+        timeCurrent.textContent = '0:00';
+      });
+
+      // Seek logic on click
+      if (progressBar) {
+        progressBar.addEventListener('click', (e) => {
+          const rect = progressBar.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const percentage = clickX / rect.width;
+          audio.currentTime = percentage * audio.duration;
+        });
+      }
+    }
+
+    // ─── PMP READINESS QUIZ ENGINE ───────────────────
+    function renderCurrentQuizQuestion() {
+      const lang = document.body.classList.contains('ka-active') ? 'ka' : 'en';
+      const container = document.getElementById('quiz-container');
+      if (!container) return;
+
+      if (currentQuizIndex >= PMP_QUIZ_DATA.length) {
+        showQuizResults(lang);
+        return;
+      }
+
+      const q = PMP_QUIZ_DATA[currentQuizIndex];
+      const questionText = lang === 'ka' ? q.question_ka : q.question_en;
+      const options = lang === 'ka' ? q.options_ka : q.options_en;
+      const hint = lang === 'ka' ? q.hint_ka : q.hint_en;
+
+      let progressPct = ((currentQuizIndex) / PMP_QUIZ_DATA.length) * 100;
+
+      let html = `
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-filled" style="width: ${progressPct}%;"></div>
+        </div>
+        <div class="quiz-header-status">
+          <span class="quiz-q-num">${lang === 'ka' ? 'კითხვა' : 'Question'} ${currentQuizIndex + 1} / ${PMP_QUIZ_DATA.length}</span>
+          <span class="quiz-hint-trigger" onclick="toggleQuizHint()">💡 ${lang === 'ka' ? 'მინიშნება' : 'Hint'}</span>
+        </div>
+
+        <div class="quiz-hint-box" id="quiz-hint-box">
+          <p>${hint}</p>
+        </div>
+
+        <h3 class="quiz-question">${questionText}</h3>
+
+        <div class="quiz-options">
+      `;
+
+      options.forEach((optText, idx) => {
+        let optClass = "quiz-option";
+        if (isOptionChosen) {
+          if (idx === q.correctIndex) {
+            optClass += " correct";
+          } else if (idx === selectedOptionIndex) {
+            optClass += " incorrect";
+          } else {
+            optClass += " disabled";
+          }
+        }
+        html += `
+          <button class="${optClass}" onclick="selectQuizOption(${idx})" ${isOptionChosen ? 'disabled' : ''}>
+            <span class="option-letter">${String.fromCharCode(65 + idx)}</span>
+            <span class="option-text">${optText}</span>
+          </button>
+        `;
+      });
+
+      html += `</div>`;
+
+      if (isOptionChosen) {
+        const rationale = lang === 'ka' ? q.rationale_ka : q.rationale_en;
+        const explanationTitle = lang === 'ka' ? 'განმარტება:' : 'Explanation:';
+        const nextButtonText = currentQuizIndex === PMP_QUIZ_DATA.length - 1 
+          ? (lang === 'ka' ? 'შედეგების ნახვა 📊' : 'View Results 📊')
+          : (lang === 'ka' ? 'შემდეგი კითხვა ➡️' : 'Next Question ➡️');
+
+        html += `
+          <div class="quiz-explanation-box">
+            <strong>${explanationTitle}</strong>
+            <p>${rationale}</p>
+          </div>
+          <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="nextQuizQuestion()">
+            ${nextButtonText}
+          </button>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function toggleQuizHint() {
+      const hintBox = document.getElementById('quiz-hint-box');
+      if (hintBox) {
+        hintBox.classList.toggle('active');
+      }
+    }
+
+    function selectQuizOption(idx) {
+      if (isOptionChosen) return;
+      isOptionChosen = true;
+      selectedOptionIndex = idx;
+      
+      const q = PMP_QUIZ_DATA[currentQuizIndex];
+      if (idx === q.correctIndex) {
+        quizScore++;
+      }
+
+      renderCurrentQuizQuestion();
+    }
+
+    function nextQuizQuestion() {
+      currentQuizIndex++;
+      isOptionChosen = false;
+      selectedOptionIndex = -1;
+      renderCurrentQuizQuestion();
+    }
+
+    function showQuizResults(lang) {
+      const container = document.getElementById('quiz-container');
+      if (!container) return;
+
+      const percentage = Math.round((quizScore / PMP_QUIZ_DATA.length) * 100);
+      const passed = quizScore >= 8;
+
+      let titleText = "", descText = "", ctaLabel = "", targetTab = "";
+
+      if (passed) {
+        titleText = lang === 'ka' 
+          ? "გილოცავთ! თქვენ მზად ხართ ლიდერობისთვის! 🎉" 
+          : "Congratulations! You're Ready to Lead! 🎉";
+        descText = lang === 'ka'
+          ? `თქვენ დააგროვეთ ${quizScore}-დან ${PMP_QUIZ_DATA.length} ქულა (${percentage}%). თქვენ გაქვთ ძლიერი ბაზისი. ჩვენი ინდივიდუალური მენტორინგის პროგრამა იდეალურია თქვენთვის, რათა დახვეწოთ აპლიკაცია და ჩააბაროთ გამოცდა პირველივე ცდაზე.`
+          : `You scored ${quizScore} out of ${PMP_QUIZ_DATA.length} (${percentage}%). You possess a strong baseline! Our 1:1 Personal Mentoring path is ideal to polish your application details and guarantee a first-attempt pass.`;
+        ctaLabel = lang === 'ka'
+          ? "მოითხოვეთ ინდივიდუალური მენტორინგი 🤝"
+          : "Request Personal Mentoring 🤝";
+        targetTab = "mentoring";
+      } else {
+        titleText = lang === 'ka'
+          ? "შესანიშნავი დასაწყისია! მოდით გავაძლიეროთ თქვენი ცოდნა 📚"
+          : "Great Start! Let's Build Your Core Knowledge 📚";
+        descText = lang === 'ka'
+          ? `თქვენ დააგროვეთ ${quizScore}-დან ${PMP_QUIZ_DATA.length} ქულა (${percentage}%). გირჩევთ დაიწყოთ ჩვენი სტრუქტურირებული 35-საათიანი მოსამზადებელი პროგრამით, რათა სიღრმისეულად შეისწავლოთ სასერტიფიკატო მოდულები.`
+          : `You scored ${quizScore} out of ${PMP_QUIZ_DATA.length} (${percentage}%). We recommend building a robust baseline via our structured 35-Hour PMP Preparation Training.`;
+        ctaLabel = lang === 'ka'
+          ? "დარეგისტრირდით 35-საათიან პროგრამაზე 🎓"
+          : "Enroll in the 35-Hour Programme 🎓";
+        targetTab = "training";
+      }
+
+      // Render Spotify/premium results screen with circular SVG progress chart
+      const strokeDashoffset = 251.2 - (251.2 * percentage) / 100;
+
+      container.innerHTML = `
+        <div class="quiz-results-screen">
+          <div class="score-circle-wrapper">
+            <svg class="score-ring" width="100" height="100">
+              <circle class="score-ring-bg" cx="50" cy="50" r="40" stroke-width="8"></circle>
+              <circle class="score-ring-progress" cx="50" cy="50" r="40" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="${strokeDashoffset}"></circle>
+            </svg>
+            <div class="score-text-val">${percentage}%</div>
+          </div>
+
+          <h3 class="results-title">${titleText}</h3>
+          <p class="results-desc">${descText}</p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 24px;">
+            <button class="btn btn-primary" onclick="handleQuizCta('${targetTab}')">${ctaLabel}</button>
+            <button class="btn btn-secondary" onclick="restartQuiz()">${lang === 'ka' ? 'თავიდან დაწყება 🔄' : 'Retake Quiz 🔄'}</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function handleQuizCta(tab) {
+      switchTab(tab);
+      const applySection = document.getElementById('apply');
+      if (applySection) {
+        applySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function restartQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      selectedOptionIndex = -1;
+      isOptionChosen = false;
+      renderCurrentQuizQuestion();
+    }
+
+    // ─── CONCEPT FLASHCARDS ENGINE ───────────────────
+    function renderCurrentFlashcard() {
+      const lang = document.body.classList.contains('ka-active') ? 'ka' : 'en';
+      const frontTextEl = document.getElementById('flashcard-front-text');
+      const backTextEl = document.getElementById('flashcard-back-text');
+      const indexEl = document.getElementById('flashcard-index');
+      const cardEl = document.getElementById('flashcard-card');
+
+      if (!frontTextEl || !backTextEl || !indexEl) return;
+
+      // Make sure cards are unflipped when loading new ones
+      if (isCardFlipped && cardEl) {
+        cardEl.classList.remove('flipped');
+        isCardFlipped = false;
+        // Wait for flip transition to finish before changing text
+        setTimeout(() => {
+          setFlashcardTexts(lang);
+        }, 150);
+      } else {
+        setFlashcardTexts(lang);
+      }
+    }
+
+    function setFlashcardTexts(lang) {
+      const frontTextEl = document.getElementById('flashcard-front-text');
+      const backTextEl = document.getElementById('flashcard-back-text');
+      const indexEl = document.getElementById('flashcard-index');
+
+      const mappedIdx = flashcardOrder[currentFlashcardIndex];
+      const card = PMP_FLASHCARDS_DATA[mappedIdx];
+
+      frontTextEl.textContent = lang === 'ka' ? card.front_ka : card.front_en;
+      backTextEl.textContent = lang === 'ka' ? card.back_ka : card.back_en;
+      indexEl.textContent = currentFlashcardIndex + 1;
+    }
+
+    function flipFlashcard() {
+      const cardEl = document.getElementById('flashcard-card');
+      if (cardEl) {
+        cardEl.classList.toggle('flipped');
+        isCardFlipped = !isCardFlipped;
+      }
+    }
+
+    function nextFlashcard() {
+      currentFlashcardIndex = (currentFlashcardIndex + 1) % PMP_FLASHCARDS_DATA.length;
+      renderCurrentFlashcard();
+    }
+
+    function prevFlashcard() {
+      currentFlashcardIndex = (currentFlashcardIndex - 1 + PMP_FLASHCARDS_DATA.length) % PMP_FLASHCARDS_DATA.length;
+      renderCurrentFlashcard();
+    }
+
+    function shuffleFlashcards() {
+      // Fisher-Yates shuffle
+      for (let i = flashcardOrder.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [flashcardOrder[i], flashcardOrder[j]] = [flashcardOrder[j], flashcardOrder[i]];
+      }
+      currentFlashcardIndex = 0;
+      renderCurrentFlashcard();
+    }
+
+    // ─── ROADMAP LIGHTBOX CONTROL ────────────────────
+    function openRoadmapLightbox() {
+      const lightbox = document.getElementById('roadmap-lightbox');
+      if (lightbox) {
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Stop background scrolling
+      }
+    }
+
+    function closeRoadmapLightbox() {
+      const lightbox = document.getElementById('roadmap-lightbox');
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore background scrolling
+      }
+    }
+
+    // ─── MAIN LANGUAGE CONTROLLER INJECTION ──────────
     function switchTab(tab) {
       // Update the select dropdown if it's not already matching
       const selector = document.getElementById('programme-select');
@@ -2579,6 +4125,10 @@
 
       // Save user preference
       localStorage.setItem('pmec_lang', lang);
+
+      // Re-render dynamically translated interactive suite components
+      renderCurrentQuizQuestion();
+      renderCurrentFlashcard();
     }
 
     // Run tab setup on DOM ready to lazy load first tab and init language
@@ -2586,6 +4136,10 @@
       const savedLang = localStorage.getItem('pmec_lang') || 'en';
       setLanguage(savedLang);
       switchTab('training');
+      
+      // Initialize study suite engines
+      renderCurrentQuizQuestion();
+      renderCurrentFlashcard();
     });
   </script>
 
