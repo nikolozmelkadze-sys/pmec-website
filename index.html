@@ -1231,6 +1231,12 @@
         <button class="form-tab" onclick="switchTab('mentoring')">
           Certification Mentoring
         </button>
+        <button class="form-tab" onclick="switchTab('contact')">
+          Contact &amp; Inquiry
+        </button>
+        <button class="form-tab" onclick="switchTab('corporate')">
+          Corporate Training
+        </button>
       </div>
 
       <!-- Training Form Pane -->
@@ -1287,6 +1293,60 @@
         </div>
       </div>
 
+      <!-- Contact / Inquiry Form Pane -->
+      <div class="form-pane" id="pane-contact">
+        <div class="form-wrapper">
+          <div class="form-intro">
+            <div class="form-intro-icon">
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <rect x="2" y="4" width="18" height="14" rx="2"/><path d="M2 7l9 6 9-6"/>
+              </svg>
+            </div>
+            <div class="form-intro-text">
+              <h3>Contact &amp; General Inquiry</h3>
+              <p>Questions about programmes, eligibility, scheduling, or pricing? Send us a message and we will respond within 24 hours.</p>
+            </div>
+          </div>
+          <div class="form-iframe-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
+              title="Contact PMEC"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Corporate Training Form Pane -->
+      <div class="form-pane" id="pane-corporate">
+        <div class="form-wrapper">
+          <div class="form-intro">
+            <div class="form-intro-icon">
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <rect x="2" y="7" width="18" height="13" rx="1"/><path d="M7 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="11" y1="11" x2="11" y2="15"/><line x1="9" y1="13" x2="13" y2="13"/>
+              </svg>
+            </div>
+            <div class="form-intro-text">
+              <h3>Corporate Training Request</h3>
+              <p>Looking to certify your team? Request a tailored proposal for group cohorts, in-house delivery, or corporate PMP preparation programmes.</p>
+            </div>
+          </div>
+          <div class="form-iframe-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
+              title="Corporate Training Request"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1294,6 +1354,15 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:40px;height:40px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;">
+          <circle cx="24" cy="24" r="22" fill="rgba(255,255,255,0.06)"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#D4A843" stroke-width="1.2"/>
+          <path d="M24 35 L8 16 C12 9 19 8 22 9 L24 35 Z" fill="white" opacity="0.14"/>
+          <path d="M24 35 L40 16 C36 9 29 8 26 9 L24 35 Z" fill="white" opacity="0.24"/>
+          <line x1="8" y1="35" x2="40" y2="35" stroke="#D4A843" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="9" x2="24" y2="35" stroke="#D4A843" stroke-width="1.8"/>
+          <polygon points="24,4 19,12 29,12" fill="#D4A843"/>
+        </svg>
         <div class="org-name">PROJECT MANAGEMENT EXCELLENCE CENTRE</div>
         <div class="org-tagline">Where Project Leaders Are Made</div>
         <div class="atp-note">PMI ATP Candidate Organization &nbsp;·&nbsp; Tbilisi, Georgia</div>
@@ -1321,4 +1390,41 @@
     </div>
   </footer>
 
-  <!-- ════════════════════════════════════════════�
+  <!-- ══════════════════════════════════════════════ WHATSAPP FLOAT -->
+  <a class="wa-float"
+     href="https://wa.me/995591115300?text=Hi%2C%20I%20am%20interested%20in%20PMEC%27s%20PMP%20training%20programme."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.827L.057 23.882a.5.5 0 0 0 .617.617l6.088-1.461A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 0 1-5.003-1.372l-.358-.213-3.714.892.908-3.647-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+    </svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- ══════════════════════════════════════════════ JS -->
+  <script>
+    function switchTab(tab) {
+      // Update tab buttons
+      document.querySelectorAll('.form-tab').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && tab === 'training') || (i === 1 && tab === 'mentoring'));
+      });
+      // Show / hide panes
+      document.querySelectorAll('.form-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === 'pane-' + tab);
+      });
+    }
+
+    // Allow card CTA buttons to pre-select the right tab
+    document.querySelectorAll('a[href="#apply"]').forEach(link => {
+      link.addEventListener('click', function() {
+        const section = this.closest('[id]');
+        if (section && section.id === 'mentoring') switchTab('mentoring');
+        else switchTab('training');
+      });
+    });
+  </script>
+
+</body>
+</html>
