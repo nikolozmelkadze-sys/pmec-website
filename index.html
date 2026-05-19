@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PMP Training & Mentoring - PMEC | Where Project Leaders Are Made</title>
-  <meta name="description" content="Earn your PMP certification with PMEC's 35-hour accredited training or personalized mentoring program. Structured. Expert-led. Built for working professionals in Georgia." />
+  <meta name="description"
+    content="Earn your PMP certification with PMEC's 35-hour accredited training or personalized mentoring program. Structured. Expert-led. Built for working professionals in Georgia." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+Georgian:wght@400;600;700&display=swap"
+    rel="stylesheet" />
 
   <style>
     /* ─── RESET & BASE ─────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Open Sans', Arial, sans-serif;
       font-size: 16px;
@@ -23,17 +37,22 @@
 
     /* ─── TOKENS ────────────────────────────────────────── */
     :root {
-      --navy:      #1A2F5A;
-      --gold:      #D4A843;
-      --steel:     #2E6DA4;
-      --charcoal:  #2D3748;
-      --offwhite:  #F4F6FA;
+      --navy: #1A2F5A;
+      --gold: #D4A843;
+      --steel: #2E6DA4;
+      --charcoal: #2D3748;
+      --offwhite: #F4F6FA;
       --lightgray: #E8ECF2;
-      --white:     #ffffff;
+      --white: #ffffff;
     }
 
     /* ─── UTILS ─────────────────────────────────────────── */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
     .section-label {
       font-family: 'Open Sans', Arial, sans-serif;
       font-size: 11px;
@@ -44,6 +63,7 @@
       display: block;
       margin-bottom: 12px;
     }
+
     .gold-rule {
       width: 48px;
       height: 3px;
@@ -51,7 +71,10 @@
       border-radius: 2px;
       margin: 16px 0 24px;
     }
-    .gold-rule.centered { margin: 16px auto 24px; }
+
+    .gold-rule.centered {
+      margin: 16px auto 24px;
+    }
 
     /* ─── BUTTONS ────────────────────────────────────────── */
     .btn {
@@ -67,16 +90,23 @@
       transition: opacity 0.18s, transform 0.18s;
       border: none;
     }
-    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
     .btn-gold {
       background: var(--gold);
       color: var(--navy);
     }
+
     .btn-outline-white {
       background: transparent;
-      border: 2px solid rgba(255,255,255,0.65);
+      border: 2px solid rgba(255, 255, 255, 0.65);
       color: var(--white);
     }
+
     .btn-outline-navy {
       background: transparent;
       border: 2px solid var(--navy);
@@ -89,8 +119,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 2px solid rgba(212,168,67,0.3);
+      border-bottom: 2px solid rgba(212, 168, 67, 0.3);
     }
+
     nav {
       display: flex;
       align-items: center;
@@ -99,11 +130,13 @@
       max-width: 1100px;
       margin: 0 auto;
     }
+
     .nav-logo {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
+
     .nav-logo .org-name {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 700;
@@ -112,6 +145,7 @@
       color: var(--white);
       line-height: 1.2;
     }
+
     .nav-logo .org-tagline {
       font-family: 'Open Sans', Arial, sans-serif;
       font-size: 10px;
@@ -120,32 +154,44 @@
       font-style: italic;
       text-transform: uppercase;
     }
+
     .nav-divider {
       width: 1px;
       height: 32px;
-      background: rgba(212,168,67,0.4);
+      background: rgba(212, 168, 67, 0.4);
       margin: 0 18px;
     }
-    .nav-logo-wrap { display: flex; align-items: center; }
+
+    .nav-logo-wrap {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-badge {
       width: 36px;
       height: 36px;
     }
+
     .nav-links {
       display: flex;
       gap: 28px;
       list-style: none;
       align-items: center;
     }
+
     .nav-links a {
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.3px;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: var(--gold); }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
     .nav-links .nav-cta a {
       color: var(--navy);
       background: var(--gold);
@@ -162,23 +208,26 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 60% 40%, rgba(46,109,164,0.18) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 60% 40%, rgba(46, 109, 164, 0.18) 0%, transparent 65%);
       pointer-events: none;
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(212,168,67,0.12);
-      border: 1px solid rgba(212,168,67,0.4);
+      background: rgba(212, 168, 67, 0.12);
+      border: 1px solid rgba(212, 168, 67, 0.4);
       border-radius: 100px;
       padding: 6px 16px;
       margin-bottom: 28px;
     }
+
     .hero-badge span {
       font-size: 11.5px;
       font-weight: 600;
@@ -186,11 +235,14 @@
       color: var(--gold);
       text-transform: uppercase;
     }
+
     .hero-badge .dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--gold);
     }
+
     .hero h1 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: clamp(32px, 5vw, 52px);
@@ -201,27 +253,32 @@
       margin: 0 auto 20px;
       letter-spacing: -0.5px;
     }
+
     .hero h1 em {
       color: var(--gold);
       font-style: normal;
     }
+
     .hero-sub {
       font-size: 18px;
-      color: rgba(255,255,255,0.72);
+      color: rgba(255, 255, 255, 0.72);
       max-width: 560px;
       margin: 0 auto 36px;
       line-height: 1.65;
     }
+
     .hero-ctas {
       display: flex;
       gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .hero-ctas .btn {
       font-size: 14px;
       padding: 15px 34px;
     }
+
     .hero-stats {
       display: flex;
       justify-content: center;
@@ -229,9 +286,11 @@
       margin-top: 56px;
       flex-wrap: wrap;
     }
+
     .hero-stat {
       text-align: center;
     }
+
     .hero-stat .num {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 30px;
@@ -240,16 +299,18 @@
       display: block;
       line-height: 1;
     }
+
     .hero-stat .label {
       font-size: 12px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       letter-spacing: 0.8px;
       margin-top: 5px;
       display: block;
     }
+
     .hero-divider {
       width: 1px;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       align-self: stretch;
     }
 
@@ -258,10 +319,12 @@
       padding: 88px 24px;
       background: var(--offwhite);
     }
+
     .programmes-intro {
       text-align: center;
       margin-bottom: 52px;
     }
+
     .programmes-intro h2 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 34px;
@@ -269,6 +332,7 @@
       color: var(--navy);
       margin-bottom: 14px;
     }
+
     .programmes-intro p {
       font-size: 17px;
       color: var(--charcoal);
@@ -276,11 +340,13 @@
       margin: 0 auto;
       opacity: 0.8;
     }
+
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
     }
+
     .card {
       background: var(--white);
       border-radius: 8px;
@@ -290,16 +356,21 @@
       flex-direction: column;
       transition: box-shadow 0.2s;
     }
-    .card:hover { box-shadow: 0 8px 32px rgba(26,47,90,0.10); }
+
+    .card:hover {
+      box-shadow: 0 8px 32px rgba(26, 47, 90, 0.10);
+    }
+
     .card-header {
       background: var(--navy);
       padding: 32px 36px 28px;
       position: relative;
     }
+
     .card-tag {
       display: inline-block;
-      background: rgba(212,168,67,0.18);
-      border: 1px solid rgba(212,168,67,0.45);
+      background: rgba(212, 168, 67, 0.18);
+      border: 1px solid rgba(212, 168, 67, 0.45);
       color: var(--gold);
       font-size: 10.5px;
       font-weight: 700;
@@ -309,6 +380,7 @@
       border-radius: 100px;
       margin-bottom: 14px;
     }
+
     .card-header h3 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 22px;
@@ -317,17 +389,26 @@
       line-height: 1.3;
       margin-bottom: 8px;
     }
+
     .card-header p {
       font-size: 14px;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255, 255, 255, 0.65);
       line-height: 1.6;
     }
-    .card-body { padding: 32px 36px; flex: 1; display: flex; flex-direction: column; }
+
+    .card-body {
+      padding: 32px 36px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     .feature-list {
       list-style: none;
       margin-bottom: 28px;
       flex: 1;
     }
+
     .feature-list li {
       display: flex;
       gap: 12px;
@@ -338,27 +419,35 @@
       border-bottom: 1px solid var(--lightgray);
       line-height: 1.55;
     }
-    .feature-list li:last-child { border-bottom: none; }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
     .feature-list .icon {
       flex-shrink: 0;
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: rgba(26,47,90,0.08);
+      background: rgba(26, 47, 90, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 2px;
     }
+
     .feature-list .icon svg {
-      width: 10px; height: 10px;
+      width: 10px;
+      height: 10px;
     }
+
     .card-meta {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       margin-bottom: 24px;
     }
+
     .meta-chip {
       background: var(--offwhite);
       border: 1px solid var(--lightgray);
@@ -371,21 +460,30 @@
       align-items: center;
       gap: 6px;
     }
-    .meta-chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+    .meta-chip .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
 
     /* ─── WHY PMEC ───────────────────────────────────────── */
     .why {
       background: var(--navy);
       padding: 80px 24px;
     }
+
     .why-inner {
       max-width: 1100px;
       margin: 0 auto;
     }
+
     .why-header {
       text-align: center;
       margin-bottom: 52px;
     }
+
     .why-header h2 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 32px;
@@ -393,36 +491,45 @@
       color: var(--white);
       margin-bottom: 12px;
     }
+
     .why-header p {
       font-size: 16px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       max-width: 500px;
       margin: 0 auto;
     }
+
     .why-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 24px;
     }
+
     .why-item {
       text-align: center;
       padding: 28px 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 8px;
     }
+
     .why-icon {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: rgba(212,168,67,0.12);
-      border: 1px solid rgba(212,168,67,0.3);
+      background: rgba(212, 168, 67, 0.12);
+      border: 1px solid rgba(212, 168, 67, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 16px;
     }
-    .why-icon svg { width: 22px; height: 22px; }
+
+    .why-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
     .why-item h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 15px;
@@ -430,9 +537,10 @@
       color: var(--white);
       margin-bottom: 8px;
     }
+
     .why-item p {
       font-size: 13px;
-      color: rgba(255,255,255,0.52);
+      color: rgba(255, 255, 255, 0.52);
       line-height: 1.6;
     }
 
@@ -441,10 +549,12 @@
       padding: 88px 24px;
       background: var(--offwhite);
     }
+
     .form-section-header {
       text-align: center;
       margin-bottom: 52px;
     }
+
     .form-section-header h2 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 32px;
@@ -452,6 +562,7 @@
       color: var(--navy);
       margin-bottom: 12px;
     }
+
     .form-section-header p {
       font-size: 16px;
       color: var(--charcoal);
@@ -459,6 +570,7 @@
       max-width: 500px;
       margin: 0 auto;
     }
+
     .form-tabs {
       display: flex;
       gap: 0;
@@ -469,6 +581,7 @@
       overflow: hidden;
       background: var(--white);
     }
+
     .form-tab {
       flex: 1;
       padding: 14px 20px;
@@ -479,20 +592,29 @@
       text-align: center;
       border: none;
       background: var(--white);
-      color: rgba(26,47,90,0.45);
+      color: rgba(26, 47, 90, 0.45);
       letter-spacing: 0.3px;
       transition: all 0.2s;
     }
+
     .form-tab.active {
       background: var(--navy);
       color: var(--white);
     }
+
     .form-tab:not(.active):hover {
       background: var(--offwhite);
       color: var(--navy);
     }
-    .form-pane { display: none; }
-    .form-pane.active { display: block; }
+
+    .form-pane {
+      display: none;
+    }
+
+    .form-pane.active {
+      display: block;
+    }
+
     .form-wrapper {
       max-width: 800px;
       margin: 0 auto;
@@ -500,8 +622,9 @@
       border: 1px solid var(--lightgray);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(26,47,90,0.06);
+      box-shadow: 0 4px 20px rgba(26, 47, 90, 0.06);
     }
+
     .form-intro {
       background: var(--navy);
       padding: 28px 36px;
@@ -509,6 +632,7 @@
       align-items: center;
       gap: 20px;
     }
+
     .form-intro-text h3 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 18px;
@@ -516,35 +640,41 @@
       color: var(--white);
       margin-bottom: 5px;
     }
+
     .form-intro-text p {
       font-size: 13.5px;
-      color: rgba(255,255,255,0.62);
+      color: rgba(255, 255, 255, 0.62);
     }
+
     .form-intro-icon {
       flex-shrink: 0;
       width: 44px;
       height: 44px;
-      background: rgba(212,168,67,0.15);
-      border: 1px solid rgba(212,168,67,0.35);
+      background: rgba(212, 168, 67, 0.15);
+      border: 1px solid rgba(212, 168, 67, 0.35);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     .form-iframe-wrap {
       padding: 0;
     }
+
     .form-iframe-wrap iframe {
       width: 100%;
       border: none;
       display: block;
       min-height: 680px;
     }
+
     /* Placeholder shown when no iframe src is set */
     .form-placeholder {
       padding: 52px 36px;
       text-align: center;
     }
+
     .form-placeholder .placeholder-icon {
       width: 56px;
       height: 56px;
@@ -556,6 +686,7 @@
       justify-content: center;
       margin: 0 auto 18px;
     }
+
     .form-placeholder h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 16px;
@@ -563,6 +694,7 @@
       color: var(--navy);
       margin-bottom: 8px;
     }
+
     .form-placeholder p {
       font-size: 13.5px;
       color: var(--charcoal);
@@ -571,6 +703,7 @@
       margin: 0 auto;
       line-height: 1.65;
     }
+
     .form-placeholder code {
       display: inline-block;
       background: var(--offwhite);
@@ -589,6 +722,7 @@
       border-top: 1px solid var(--lightgray);
       border-bottom: 1px solid var(--lightgray);
     }
+
     .process h2 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 28px;
@@ -597,6 +731,7 @@
       text-align: center;
       margin-bottom: 44px;
     }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -605,6 +740,7 @@
       margin: 0 auto;
       position: relative;
     }
+
     .steps::before {
       content: '';
       position: absolute;
@@ -614,11 +750,13 @@
       height: 1px;
       background: var(--lightgray);
     }
+
     .step {
       text-align: center;
       padding: 0 12px;
       position: relative;
     }
+
     .step-num {
       width: 48px;
       height: 48px;
@@ -635,7 +773,12 @@
       position: relative;
       z-index: 1;
     }
-    .step-num.gold { background: var(--gold); color: var(--navy); }
+
+    .step-num.gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
     .step h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 13.5px;
@@ -643,6 +786,7 @@
       color: var(--navy);
       margin-bottom: 6px;
     }
+
     .step p {
       font-size: 12.5px;
       color: var(--charcoal);
@@ -654,8 +798,9 @@
     footer {
       background: var(--navy);
       padding: 48px 24px 32px;
-      border-top: 3px solid rgba(212,168,67,0.4);
+      border-top: 3px solid rgba(212, 168, 67, 0.4);
     }
+
     .footer-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -665,6 +810,7 @@
       gap: 36px;
       flex-wrap: wrap;
     }
+
     .footer-brand .org-name {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 700;
@@ -673,6 +819,7 @@
       letter-spacing: 0.8px;
       margin-bottom: 4px;
     }
+
     .footer-brand .org-tagline {
       font-size: 10.5px;
       letter-spacing: 2.5px;
@@ -680,12 +827,14 @@
       font-style: italic;
       text-transform: uppercase;
     }
+
     .footer-brand .atp-note {
       margin-top: 10px;
       font-size: 11px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       letter-spacing: 0.5px;
     }
+
     .footer-links h5 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 11px;
@@ -695,19 +844,25 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
+
     .footer-links ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
+
     .footer-links a {
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       text-decoration: none;
       font-size: 13.5px;
       transition: color 0.15s;
     }
-    .footer-links a:hover { color: var(--gold); }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
     /* ─── WHATSAPP FLOAT ────────────────────────────────── */
     .wa-float {
       position: fixed;
@@ -725,50 +880,100 @@
       font-weight: 700;
       padding: 13px 20px 13px 16px;
       border-radius: 50px;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
       transition: transform 0.18s, box-shadow 0.18s;
       white-space: nowrap;
     }
+
     .wa-float:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+      box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
     }
-    .wa-float svg { flex-shrink: 0; }
+
+    .wa-float svg {
+      flex-shrink: 0;
+    }
+
     @media (max-width: 480px) {
-      .wa-float { padding: 13px; border-radius: 50%; bottom: 20px; right: 20px; }
-      .wa-float span { display: none; }
+      .wa-float {
+        padding: 13px;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .wa-float span {
+        display: none;
+      }
     }
 
     .footer-bottom {
       max-width: 1100px;
       margin: 32px auto 0;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 12px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.3);
       flex-wrap: wrap;
       gap: 8px;
     }
 
     /* ─── MOBILE ─────────────────────────────────────────── */
     @media (max-width: 768px) {
-      .cards { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; row-gap: 32px; }
-      .steps::before { display: none; }
-      .nav-links { display: none; }
-      .hero { padding: 56px 20px 64px; }
-      .hero-stats { gap: 28px; }
-      .hero-divider { display: none; }
-      .form-intro { flex-direction: column; text-align: center; }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 32px;
+      }
+
+      .steps::before {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 56px 20px 64px;
+      }
+
+      .hero-stats {
+        gap: 28px;
+      }
+
+      .hero-divider {
+        display: none;
+      }
+
+      .form-intro {
+        flex-direction: column;
+        text-align: center;
+      }
     }
+
     @media (max-width: 480px) {
-      .why-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 28px; }
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
     }
 
     /* ─── TRAINER ────────────────────────────────────────── */
@@ -776,6 +981,7 @@
       background: var(--white);
       padding: 88px 24px;
     }
+
     .trainer-inner {
       display: grid;
       grid-template-columns: 260px 1fr;
@@ -784,6 +990,7 @@
       max-width: 1100px;
       margin: 0 auto;
     }
+
     .trainer-photo-col {
       display: flex;
       flex-direction: column;
@@ -792,6 +999,7 @@
       position: sticky;
       top: 88px;
     }
+
     .trainer-avatar {
       width: 160px;
       height: 160px;
@@ -799,10 +1007,14 @@
       object-fit: cover;
       object-position: center top;
       margin-bottom: 20px;
-      box-shadow: 0 8px 40px rgba(26,47,90,0.22);
+      box-shadow: 0 8px 40px rgba(26, 47, 90, 0.22);
       display: block;
     }
-    .trainer-name-block { width: 100%; }
+
+    .trainer-name-block {
+      width: 100%;
+    }
+
     .trainer-fullname {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 17px;
@@ -810,6 +1022,7 @@
       color: var(--navy);
       margin-bottom: 6px;
     }
+
     .trainer-pmp-badge {
       display: inline-block;
       background: var(--gold);
@@ -823,6 +1036,7 @@
       margin-bottom: 14px;
       text-transform: uppercase;
     }
+
     .trainer-linkedin {
       display: inline-flex;
       align-items: center;
@@ -833,8 +1047,15 @@
       font-weight: 600;
       transition: color 0.15s;
     }
-    .trainer-linkedin:hover { color: var(--navy); }
-    .trainer-bio-col > .section-label { margin-bottom: 10px; }
+
+    .trainer-linkedin:hover {
+      color: var(--navy);
+    }
+
+    .trainer-bio-col>.section-label {
+      margin-bottom: 10px;
+    }
+
     .trainer-bio-col h2 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 29px;
@@ -843,18 +1064,21 @@
       margin-bottom: 22px;
       line-height: 1.25;
     }
+
     .trainer-bio-col p {
       color: #4A5568;
       font-size: 15.5px;
       line-height: 1.85;
       margin-bottom: 16px;
     }
+
     .trainer-credentials {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 30px;
     }
+
     .cred-badge {
       display: flex;
       align-items: center;
@@ -867,17 +1091,38 @@
       color: var(--charcoal);
       font-weight: 600;
     }
+
     .cred-badge svg {
       width: 16px;
       height: 16px;
       color: var(--gold);
       flex-shrink: 0;
     }
+
     @media (max-width: 768px) {
-      .trainer-inner { grid-template-columns: 1fr; gap: 36px; }
-      .trainer-photo-col { flex-direction: row; text-align: left; gap: 20px; align-items: flex-start; position: static; }
-      .trainer-avatar { width: 96px; height: 96px; flex-shrink: 0; margin-bottom: 0; }
-      .trainer-name-block { text-align: left; }
+      .trainer-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .trainer-photo-col {
+        flex-direction: row;
+        text-align: left;
+        gap: 20px;
+        align-items: flex-start;
+        position: static;
+      }
+
+      .trainer-avatar {
+        width: 96px;
+        height: 96px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+
+      .trainer-name-block {
+        text-align: left;
+      }
     }
 
     /* ─── ADDED PMEC IMPROVEMENTS ────────────────────────── */
@@ -887,13 +1132,14 @@
       color: var(--navy) !important;
       font-weight: 700;
       border: 1px solid var(--gold);
-      box-shadow: 0 4px 12px rgba(212,168,67,0.2);
+      box-shadow: 0 4px 12px rgba(212, 168, 67, 0.2);
       transition: all 0.25s ease;
     }
+
     .nav-links .nav-cta a:hover {
       background: var(--navy);
       color: var(--gold) !important;
-      box-shadow: 0 4px 16px rgba(212,168,67,0.4);
+      box-shadow: 0 4px 16px rgba(212, 168, 67, 0.4);
     }
 
     /* Comparison Table Styles */
@@ -901,48 +1147,57 @@
       padding: 88px 24px;
       background: var(--white);
     }
+
     .comparison-table-wrap {
       max-width: 900px;
       margin: 40px auto 0;
       overflow-x: auto;
       border: 1px solid var(--lightgray);
       border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
     }
+
     .comparison-table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
       font-size: 14.5px;
     }
-    .comparison-table th, .comparison-table td {
+
+    .comparison-table th,
+    .comparison-table td {
       padding: 16px 20px;
       border-bottom: 1px solid var(--lightgray);
     }
+
     .comparison-table th {
       background: var(--navy);
       color: var(--white);
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 600;
     }
+
     .comparison-table tr:last-child td {
       border-bottom: none;
     }
+
     .comparison-table td:first-child {
       font-weight: 600;
       color: var(--navy);
       background: var(--offwhite);
       width: 25%;
     }
+
     .comparison-table td {
       width: 37.5%;
     }
-    
+
     /* Testimonials Section */
     .testimonials {
       padding: 88px 24px;
       background: var(--offwhite);
     }
+
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -950,21 +1205,24 @@
       max-width: 1100px;
       margin: 40px auto 0;
     }
+
     .testimonial-card {
       background: var(--white);
       padding: 32px;
       border-radius: 8px;
       border: 1px solid var(--lightgray);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .testimonial-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(26,47,90,0.08);
+      box-shadow: 0 8px 24px rgba(26, 47, 90, 0.08);
     }
+
     .testimonial-text {
       font-style: italic;
       color: var(--charcoal);
@@ -972,11 +1230,13 @@
       line-height: 1.6;
       margin-bottom: 24px;
     }
+
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 12px;
     }
+
     .author-avatar {
       width: 44px;
       height: 44px;
@@ -990,20 +1250,23 @@
       align-items: center;
       justify-content: center;
     }
+
     .author-info h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 14px;
       font-weight: 700;
       color: var(--navy);
     }
+
     .author-info p {
       font-size: 12px;
       color: var(--steel);
       margin-top: 2px;
     }
+
     .badge-pass {
       display: inline-block;
-      background: rgba(37,211,102,0.1);
+      background: rgba(37, 211, 102, 0.1);
       color: #1b8a43;
       font-size: 10px;
       font-weight: 700;
@@ -1025,9 +1288,10 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      box-shadow: 0 8px 24px rgba(26,47,90,0.15);
+      box-shadow: 0 8px 24px rgba(26, 47, 90, 0.15);
       border-left: 4px solid var(--gold);
     }
+
     .eligibility-content h3 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 18px;
@@ -1035,10 +1299,12 @@
       color: var(--gold);
       margin-bottom: 4px;
     }
+
     .eligibility-content p {
       font-size: 14px;
       opacity: 0.9;
     }
+
     .eligibility-btn {
       background: var(--gold);
       color: var(--navy);
@@ -1051,7 +1317,10 @@
       white-space: nowrap;
       transition: opacity 0.2s;
     }
-    .eligibility-btn:hover { opacity: 0.9; }
+
+    .eligibility-btn:hover {
+      opacity: 0.9;
+    }
 
     /* Smart Select Form Selector */
     .smart-selector-wrap {
@@ -1059,6 +1328,7 @@
       margin: 0 auto 36px;
       text-align: center;
     }
+
     .smart-selector-wrap label {
       display: block;
       font-family: 'Montserrat', Arial, sans-serif;
@@ -1069,6 +1339,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .smart-select {
       width: 100%;
       padding: 14px 20px;
@@ -1087,6 +1358,7 @@
       background-position: right 16px center;
       transition: border-color 0.2s;
     }
+
     .smart-select:focus {
       border-color: var(--gold);
     }
@@ -1097,6 +1369,7 @@
       border-top: 1px solid var(--lightgray);
       padding-top: 48px;
     }
+
     .timeline-title {
       text-align: center;
       font-family: 'Montserrat', Arial, sans-serif;
@@ -1111,11 +1384,13 @@
       margin-top: 24px;
       text-align: center;
     }
+
     .btn-brochure {
       background: var(--navy);
       color: var(--white);
       border: 2px solid var(--navy);
     }
+
     .btn-brochure:hover {
       background: transparent;
       color: var(--navy);
@@ -1126,7 +1401,7 @@
       position: fixed;
       inset: 0;
       z-index: 1000;
-      background: rgba(26,47,90,0.6);
+      background: rgba(26, 47, 90, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1135,10 +1410,12 @@
       transition: opacity 0.25s ease;
       padding: 20px;
     }
+
     .syllabus-modal.active {
       opacity: 1;
       pointer-events: auto;
     }
+
     .syllabus-modal-content {
       background: var(--white);
       width: 100%;
@@ -1146,14 +1423,21 @@
       max-height: 85vh;
       border-radius: 8px;
       overflow-y: auto;
-      box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
       position: relative;
       animation: modalSlide 0.3s ease;
     }
+
     @keyframes modalSlide {
-      from { transform: translateY(20px); }
-      to { transform: translateY(0); }
+      from {
+        transform: translateY(20px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
     }
+
     .syllabus-modal-header {
       background: var(--navy);
       color: var(--white);
@@ -1165,12 +1449,14 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .syllabus-modal-header h3 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 20px;
       font-weight: 700;
       color: var(--gold);
     }
+
     .close-modal {
       background: transparent;
       border: none;
@@ -1179,9 +1465,11 @@
       cursor: pointer;
       line-height: 1;
     }
+
     .syllabus-modal-body {
       padding: 32px;
     }
+
     .syllabus-modal-body h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 16px;
@@ -1189,21 +1477,28 @@
       color: var(--navy);
       margin: 20px 0 10px;
     }
-    .syllabus-modal-body h4:first-child { margin-top: 0; }
+
+    .syllabus-modal-body h4:first-child {
+      margin-top: 0;
+    }
+
     .syllabus-modal-body p {
       font-size: 14.5px;
       color: var(--charcoal);
       line-height: 1.6;
     }
+
     .syllabus-modal-body ul {
       margin-left: 20px;
       margin-bottom: 16px;
     }
+
     .syllabus-modal-body li {
       font-size: 14px;
       color: var(--charcoal);
       margin-bottom: 6px;
     }
+
     .syllabus-modal-footer {
       padding: 20px 32px;
       border-top: 1px solid var(--lightgray);
@@ -1216,6 +1511,7 @@
     .form-iframe-wrap {
       position: relative;
     }
+
     .form-loading-overlay {
       position: absolute;
       inset: 0;
@@ -1229,6 +1525,7 @@
       color: var(--navy);
       transition: opacity 0.3s;
     }
+
     .spinner {
       border: 4px solid var(--lightgray);
       border-top: 4px solid var(--gold);
@@ -1238,9 +1535,15 @@
       animation: spin 1s linear infinite;
       margin-bottom: 12px;
     }
+
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* ─── STUDY SUITE ────────────────────────────────── */
@@ -1250,6 +1553,7 @@
       border-top: 1px solid var(--lightgray);
       border-bottom: 1px solid var(--lightgray);
     }
+
     .suite-tabs {
       display: flex;
       justify-content: center;
@@ -1257,6 +1561,7 @@
       margin-bottom: 40px;
       flex-wrap: wrap;
     }
+
     .suite-tab-btn {
       background: var(--offwhite);
       border: 1.5px solid var(--lightgray);
@@ -1272,32 +1577,45 @@
       gap: 8px;
       transition: all 0.25s ease;
     }
+
     .suite-tab-btn:hover {
       background: var(--lightgray);
       border-color: var(--navy);
       color: var(--navy);
       transform: translateY(-1px);
     }
+
     .suite-tab-btn.active {
       background: var(--navy);
       border-color: var(--navy);
       color: var(--white);
-      box-shadow: 0 4px 12px rgba(26,47,90,0.15);
+      box-shadow: 0 4px 12px rgba(26, 47, 90, 0.15);
     }
+
     .suite-panes {
       max-width: 800px;
       margin: 0 auto;
     }
+
     .suite-pane {
       display: none;
       animation: fadeIn 0.4s ease;
     }
+
     .suite-pane.active {
       display: block;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Video player styles */
@@ -1306,20 +1624,22 @@
       color: var(--white);
       border-radius: 12px;
       padding: 32px;
-      box-shadow: 0 10px 25px rgba(26,47,90,0.15);
+      box-shadow: 0 10px 25px rgba(26, 47, 90, 0.15);
       display: flex;
       flex-direction: column;
       gap: 20px;
       position: relative;
       overflow: hidden;
     }
+
     .video-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 90% 10%, rgba(212,168,67,0.15) 0%, transparent 60%);
+      background: radial-gradient(circle at 90% 10%, rgba(212, 168, 67, 0.15) 0%, transparent 60%);
       pointer-events: none;
     }
+
     .video-header h3 {
       font-size: 20px;
       font-weight: 700;
@@ -1327,20 +1647,23 @@
       margin-bottom: 6px;
       font-family: 'Montserrat', Arial, sans-serif;
     }
+
     .video-header p {
       font-size: 14px;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       margin: 0;
     }
+
     .video-player-wrapper {
       position: relative;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       background: #000;
       line-height: 0;
     }
+
     .video-player-wrapper video {
       display: block;
       width: 100%;
@@ -1353,25 +1676,28 @@
       color: var(--white);
       border-radius: 12px;
       padding: 32px;
-      box-shadow: 0 10px 25px rgba(26,47,90,0.15);
+      box-shadow: 0 10px 25px rgba(26, 47, 90, 0.15);
       display: flex;
       flex-direction: column;
       gap: 24px;
       position: relative;
       overflow: hidden;
     }
+
     .podcast-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 90% 10%, rgba(212,168,67,0.15) 0%, transparent 60%);
+      background: radial-gradient(circle at 90% 10%, rgba(212, 168, 67, 0.15) 0%, transparent 60%);
       pointer-events: none;
     }
+
     .podcast-header {
       display: flex;
       align-items: center;
       gap: 20px;
     }
+
     .podcast-art {
       width: 80px;
       height: 80px;
@@ -1380,36 +1706,42 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(212,168,67,0.3);
+      box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
       flex-shrink: 0;
     }
+
     .podcast-art svg {
       width: 40px;
       height: 40px;
       fill: var(--navy);
     }
+
     .podcast-info h3 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 20px;
       color: var(--white);
       margin-bottom: 4px;
     }
+
     .podcast-info p {
       font-size: 13px;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       margin: 0;
     }
+
     .podcast-player {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
+
     .podcast-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
     }
+
     .play-btn {
       width: 56px;
       height: 56px;
@@ -1421,20 +1753,23 @@
       justify-content: center;
       cursor: pointer;
       transition: transform 0.2s, background 0.2s;
-      box-shadow: 0 4px 10px rgba(212,168,67,0.4);
+      box-shadow: 0 4px 10px rgba(212, 168, 67, 0.4);
     }
+
     .play-btn:hover {
       transform: scale(1.06);
       background: #e2b956;
     }
+
     .play-btn svg {
       width: 24px;
       height: 24px;
       fill: var(--navy);
     }
+
     .playback-speed {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       color: var(--white);
       padding: 6px 12px;
       border-radius: 4px;
@@ -1443,14 +1778,17 @@
       cursor: pointer;
       transition: background 0.2s;
     }
+
     .playback-speed:hover {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
     }
+
     .volume-control {
       display: flex;
       align-items: center;
       gap: 8px;
     }
+
     .volume-btn {
       background: transparent;
       border: none;
@@ -1461,34 +1799,40 @@
       opacity: 0.8;
       transition: opacity 0.2s;
     }
+
     .volume-btn:hover {
       opacity: 1;
     }
+
     .volume-slider {
       width: 80px;
       accent-color: var(--gold);
       height: 4px;
       cursor: pointer;
     }
+
     .timeline-wrap {
       display: flex;
       align-items: center;
       gap: 12px;
     }
+
     .time-stamp {
       font-family: monospace;
       font-size: 12px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       width: 38px;
     }
+
     .podcast-progress-bar {
       flex: 1;
       height: 6px;
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 3px;
       cursor: pointer;
       position: relative;
     }
+
     .podcast-progress-filled {
       height: 100%;
       background: var(--gold);
@@ -1496,6 +1840,7 @@
       width: 0%;
       position: relative;
     }
+
     .podcast-progress-handle {
       width: 12px;
       height: 12px;
@@ -1505,9 +1850,10 @@
       top: 50%;
       right: -6px;
       transform: translateY(-50%);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       display: none;
     }
+
     .podcast-progress-bar:hover .podcast-progress-handle {
       display: block;
     }
@@ -1518,8 +1864,9 @@
       border: 1.5px solid var(--lightgray);
       border-radius: 12px;
       padding: 36px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
     }
+
     .quiz-header {
       display: flex;
       justify-content: space-between;
@@ -1528,11 +1875,13 @@
       border-bottom: 1px solid var(--lightgray);
       padding-bottom: 16px;
     }
+
     .quiz-progress-label {
       font-weight: 600;
       font-size: 13.5px;
       color: var(--navy);
     }
+
     .quiz-hint-btn {
       font-family: 'Open Sans', Arial, sans-serif;
       font-size: 12.5px;
@@ -1545,9 +1894,11 @@
       align-items: center;
       gap: 4px;
     }
+
     .quiz-hint-btn:hover {
       text-decoration: underline;
     }
+
     .quiz-progress-track {
       width: 100%;
       height: 6px;
@@ -1556,12 +1907,14 @@
       margin-bottom: 28px;
       overflow: hidden;
     }
+
     .quiz-progress-bar {
       height: 100%;
       background: var(--gold);
       width: 8.3%;
       transition: width 0.3s ease;
     }
+
     .quiz-question {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 17px;
@@ -1570,11 +1923,13 @@
       line-height: 1.5;
       margin-bottom: 24px;
     }
+
     .quiz-options {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .quiz-option {
       background: var(--offwhite);
       border: 1.5px solid var(--lightgray);
@@ -1592,38 +1947,45 @@
       justify-content: space-between;
       gap: 12px;
     }
+
     .quiz-option:hover:not(.disabled) {
       background: var(--lightgray);
       border-color: var(--navy);
       transform: translateX(4px);
     }
+
     .quiz-option.selected {
-      background: rgba(46,109,164,0.06);
+      background: rgba(46, 109, 164, 0.06);
       border-color: var(--steel);
     }
+
     .quiz-option.correct {
-      background: rgba(40,167,69,0.08) !important;
+      background: rgba(40, 167, 69, 0.08) !important;
       border-color: #28a745 !important;
       color: #155724 !important;
       font-weight: 600;
     }
+
     .quiz-option.incorrect {
-      background: rgba(220,53,69,0.08) !important;
+      background: rgba(220, 53, 69, 0.08) !important;
       border-color: #dc3545 !important;
       color: #721c24 !important;
     }
+
     .quiz-feedback-icon {
       font-weight: bold;
       font-size: 16px;
     }
+
     .quiz-rationale-box {
       margin-top: 24px;
-      background: rgba(212,168,67,0.08);
+      background: rgba(212, 168, 67, 0.08);
       border-left: 4px solid var(--gold);
       padding: 16px 20px;
       border-radius: 0 8px 8px 0;
       animation: slideDown 0.3s ease;
     }
+
     .quiz-rationale-title {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 700;
@@ -1633,14 +1995,16 @@
       letter-spacing: 1px;
       margin-bottom: 6px;
     }
+
     .quiz-rationale-text {
       font-size: 13.5px;
       line-height: 1.5;
       color: var(--charcoal);
     }
+
     .quiz-hint-box {
       margin-bottom: 20px;
-      background: rgba(46,109,164,0.05);
+      background: rgba(46, 109, 164, 0.05);
       border-left: 4px solid var(--steel);
       padding: 12px 16px;
       border-radius: 0 6px 6px 0;
@@ -1648,14 +2012,23 @@
       font-size: 13px;
       color: var(--charcoal);
     }
+
     .quiz-controls {
       margin-top: 28px;
       display: flex;
       justify-content: flex-end;
     }
+
     @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Quiz results styles */
@@ -1664,11 +2037,12 @@
       padding: 40px 20px;
       animation: fadeIn 0.4s ease;
     }
+
     .results-score-circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background: rgba(212,168,67,0.12);
+      background: rgba(212, 168, 67, 0.12);
       border: 3px solid var(--gold);
       margin: 0 auto 24px;
       display: flex;
@@ -1676,6 +2050,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .results-score-val {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 36px;
@@ -1683,11 +2058,13 @@
       color: var(--navy);
       line-height: 1.1;
     }
+
     .results-score-max {
       font-size: 14px;
       color: var(--charcoal);
       opacity: 0.8;
     }
+
     .results-recommendation {
       font-size: 16px;
       line-height: 1.6;
@@ -1695,9 +2072,11 @@
       margin: 0 auto 28px;
       color: var(--charcoal);
     }
+
     .results-recommendation strong {
       color: var(--navy);
     }
+
     .results-buttons {
       display: flex;
       justify-content: center;
@@ -1712,6 +2091,7 @@
       align-items: center;
       gap: 28px;
     }
+
     .flashcard-wrapper {
       perspective: 1000px;
       width: 100%;
@@ -1719,6 +2099,7 @@
       height: 280px;
       cursor: pointer;
     }
+
     .flashcard-card {
       width: 100%;
       height: 100%;
@@ -1726,14 +2107,17 @@
       transform-style: preserve-3d;
       transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     }
+
     .flashcard-wrapper:hover .flashcard-card {
-      box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
     }
+
     .flashcard-card.flipped {
       transform: rotateY(180deg);
     }
+
     .card-face {
       position: absolute;
       inset: 0;
@@ -1747,16 +2131,19 @@
       text-align: center;
       border: 1.5px solid var(--lightgray);
     }
+
     .card-front {
       background: var(--white);
       color: var(--navy);
     }
+
     .card-back {
       background: var(--navy);
       color: var(--white);
       transform: rotateY(180deg);
       border-color: var(--navy);
     }
+
     .card-front::after {
       content: '⚡ Click to Flip';
       position: absolute;
@@ -1768,6 +2155,7 @@
       font-weight: 600;
       opacity: 0.8;
     }
+
     .card-back::after {
       content: '↩ Click to Flip';
       position: absolute;
@@ -1779,19 +2167,23 @@
       font-weight: 600;
       opacity: 0.8;
     }
+
     .card-face p {
       font-size: 16px;
       font-weight: 600;
       line-height: 1.6;
       margin: 0;
     }
+
     .card-front p {
       font-family: 'Montserrat', Arial, sans-serif;
     }
+
     .card-back p {
       font-family: 'Open Sans', Arial, sans-serif;
       font-weight: 400;
     }
+
     .flashcard-controls {
       display: flex;
       align-items: center;
@@ -1800,6 +2192,7 @@
       max-width: 520px;
       justify-content: space-between;
     }
+
     .flashcard-btn {
       background: var(--white);
       border: 1.5px solid var(--lightgray);
@@ -1813,17 +2206,20 @@
       justify-content: center;
       transition: all 0.2s ease;
     }
+
     .flashcard-btn:hover {
       background: var(--navy);
       border-color: var(--navy);
       color: var(--white);
       transform: scale(1.05);
     }
+
     .flashcard-indicator {
       font-size: 14px;
       font-weight: 600;
       color: var(--navy);
     }
+
     .flashcard-action-btn {
       background: transparent;
       border: none;
@@ -1835,6 +2231,7 @@
       align-items: center;
       gap: 4px;
     }
+
     .flashcard-action-btn:hover {
       text-decoration: underline;
     }
@@ -1846,8 +2243,9 @@
       border-radius: 12px;
       padding: 32px;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
     }
+
     .roadmap-preview-box {
       width: 100%;
       height: 400px;
@@ -1861,6 +2259,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .roadmap-preview-box img {
       max-width: 100%;
       max-height: 100%;
@@ -1868,6 +2267,7 @@
       transition: transform 0.3s ease;
       cursor: zoom-in;
     }
+
     .roadmap-actions {
       display: flex;
       justify-content: center;
@@ -1879,7 +2279,7 @@
     .roadmap-lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(26,47,90,0.95);
+      background: rgba(26, 47, 90, 0.95);
       z-index: 1000;
       display: none;
       align-items: center;
@@ -1887,9 +2287,11 @@
       padding: 40px;
       animation: fadeIn 0.3s ease;
     }
+
     .roadmap-lightbox.active {
       display: flex;
     }
+
     .lightbox-close {
       position: absolute;
       top: 24px;
@@ -1902,9 +2304,11 @@
       opacity: 0.8;
       transition: opacity 0.2s;
     }
+
     .lightbox-close:hover {
       opacity: 1;
     }
+
     .lightbox-content-box {
       max-width: 90%;
       max-height: 90vh;
@@ -1913,6 +2317,7 @@
       background: var(--white);
       padding: 10px;
     }
+
     .lightbox-content-box img {
       display: block;
       max-width: 100%;
@@ -1922,33 +2327,79 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      .suite-tabs { gap: 8px; }
-      .suite-tab-btn { padding: 10px 16px; font-size: 12.5px; }
-      .podcast-card { padding: 24px; }
-      .podcast-header { gap: 14px; }
-      .podcast-art { width: 64px; height: 64px; }
-      .podcast-art svg { width: 32px; height: 32px; }
-      .podcast-info h3 { font-size: 17px; }
-      .quiz-container { padding: 24px; }
-      .quiz-question { font-size: 15px; }
-      .quiz-option { padding: 14px 16px; font-size: 13.5px; }
-      .flashcard-wrapper { height: 240px; }
-      .card-face { padding: 24px; }
-      .card-face p { font-size: 14.5px; }
+      .suite-tabs {
+        gap: 8px;
+      }
+
+      .suite-tab-btn {
+        padding: 10px 16px;
+        font-size: 12.5px;
+      }
+
+      .podcast-card {
+        padding: 24px;
+      }
+
+      .podcast-header {
+        gap: 14px;
+      }
+
+      .podcast-art {
+        width: 64px;
+        height: 64px;
+      }
+
+      .podcast-art svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .podcast-info h3 {
+        font-size: 17px;
+      }
+
+      .quiz-container {
+        padding: 24px;
+      }
+
+      .quiz-question {
+        font-size: 15px;
+      }
+
+      .quiz-option {
+        padding: 14px 16px;
+        font-size: 13.5px;
+      }
+
+      .flashcard-wrapper {
+        height: 240px;
+      }
+
+      .card-face {
+        padding: 24px;
+      }
+
+      .card-face p {
+        font-size: 14.5px;
+      }
     }
 
     /* Mobile media overrides for table/grid */
     @media (max-width: 900px) {
-      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Bilingual switching styles */
     .lang-ka {
       display: none !important;
     }
+
     body.ka-active .lang-ka {
       display: inline-block !important;
     }
+
     body.ka-active .lang-en {
       display: none !important;
     }
@@ -1964,7 +2415,7 @@
     body.ka-active h4.lang-ka {
       display: block !important;
     }
-    
+
     body:not(.ka-active) p.lang-ka,
     body:not(.ka-active) div.lang-ka,
     body:not(.ka-active) section.lang-ka,
@@ -1979,14 +2430,15 @@
     body.ka-active {
       font-family: 'Noto Sans Georgian', 'Open Sans', Arial, sans-serif;
     }
-    body.ka-active h1, 
-    body.ka-active h2, 
-    body.ka-active h3, 
-    body.ka-active h4, 
-    body.ka-active .btn, 
+
+    body.ka-active h1,
+    body.ka-active h2,
+    body.ka-active h3,
+    body.ka-active h4,
+    body.ka-active .btn,
     body.ka-active .section-label,
-    body.ka-active .num, 
-    body.ka-active .label, 
+    body.ka-active .num,
+    body.ka-active .label,
     body.ka-active .trainer-fullname,
     body.ka-active .trainer-pmp-badge {
       font-family: 'Noto Sans Georgian', 'Montserrat', Arial, sans-serif !important;
@@ -2002,6 +2454,7 @@
       gap: 2px;
       margin-left: 12px;
     }
+
     .lang-btn {
       background: transparent;
       border: none;
@@ -2014,9 +2467,11 @@
       cursor: pointer;
       transition: all 0.2s;
     }
+
     .lang-btn:hover {
       color: var(--white);
     }
+
     .lang-btn.active {
       background: var(--gold);
       color: var(--navy);
@@ -2031,16 +2486,20 @@
     <nav>
       <div class="nav-logo-wrap">
         <a href="#" style="display:flex;align-items:center;">
-          <img src="logo.png" alt="Project Management Excellence Centre" style="height:48px;width:auto;display:block;filter:brightness(0) invert(1);" />
+          <img src="logo.png" alt="Project Management Excellence Centre"
+            style="height:48px;width:auto;display:block;filter:brightness(0) invert(1);" />
         </a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <ul class="nav-links">
-          <li><a href="#programmes"><span class="lang-en">Programmes</span><span class="lang-ka">პროგრამები</span></a></li>
+          <li><a href="#programmes"><span class="lang-en">Programmes</span><span class="lang-ka">პროგრამები</span></a>
+          </li>
           <li><a href="#why-pmec"><span class="lang-en">Why PMEC</span><span class="lang-ka">რატომ PMEC</span></a></li>
-          <li><a href="#process"><span class="lang-en">How It Works</span><span class="lang-ka">როგორ მუშაობს</span></a></li>
+          <li><a href="#process"><span class="lang-en">How It Works</span><span class="lang-ka">როგორ მუშაობს</span></a>
+          </li>
           <li><a href="#trainer"><span class="lang-en">Your Trainer</span><span class="lang-ka">ტრენერი</span></a></li>
-          <li class="nav-cta"><a href="#apply"><span class="lang-en">Apply Now</span><span class="lang-ka">რეგისტრაცია</span></a></li>
+          <li class="nav-cta"><a href="#apply"><span class="lang-en">Apply Now</span><span
+                class="lang-ka">რეგისტრაცია</span></a></li>
         </ul>
         <div class="lang-switcher">
           <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
@@ -2065,8 +2524,10 @@
         <span class="lang-ka">შეწყვიტე მკითხაობა.<br>დაიწყე მომზადება.<br>გახდი <em>PMP.</em></span>
       </h1>
       <p class="hero-sub">
-        <span class="lang-en">Structured training and personal mentoring for working professionals ready to certify. Built for the 2025+ PMI Exam Content Outline.</span>
-        <span class="lang-ka">სტრუქტურირებული ტრენინგი და ინდივიდუალური მენტორინგი დასაქმებული პროფესიონალებისთვის. მორგებული 2025+ წლის PMI გამოცდის პროგრამაზე.</span>
+        <span class="lang-en">Structured training and personal mentoring for working professionals ready to certify.
+          Built for the 2025+ PMI Exam Content Outline.</span>
+        <span class="lang-ka">სტრუქტურირებული ტრენინგი და ინდივიდუალური მენტორინგი დასაქმებული პროფესიონალებისთვის.
+          მორგებული 2025+ წლის PMI გამოცდის პროგრამაზე.</span>
       </p>
       <div class="hero-ctas">
         <a href="#apply" class="btn btn-gold">
@@ -2120,8 +2581,10 @@
         </h2>
         <div class="gold-rule centered"></div>
         <p>
-          <span class="lang-en">Choose the programme that fits your situation - or combine both for the full certification track.</span>
-          <span class="lang-ka">აირჩიე პროგრამა, რომელიც საუკეთესოდ ერგება შენს მიზნებს - ან გააერთიანე ორივე სრული სერტიფიცირებისთვის.</span>
+          <span class="lang-en">Choose the programme that fits your situation - or combine both for the full
+            certification track.</span>
+          <span class="lang-ka">აირჩიე პროგრამა, რომელიც საუკეთესოდ ერგება შენს მიზნებს - ან გააერთიანე ორივე სრული
+            სერტიფიცირებისთვის.</span>
         </p>
       </div>
       <div class="cards">
@@ -2138,14 +2601,16 @@
               <span class="lang-ka">PMP საგამოცდო მოსამზადებელი ტრენინგი</span>
             </h3>
             <p>
-              <span class="lang-en">The structured, PMI-aligned classroom programme that satisfies the mandatory 35 contact hours and builds the knowledge to pass on your first attempt.</span>
-              <span class="lang-ka">სტრუქტურირებული, PMI-ის სტანდარტებზე მორგებული საკლასო პროგრამა, რომელიც ფარავს სავალდებულო 35 საკონტაქტო საათს და გაძლევს პირველივე ცდაზე ჩაბარების ცოდნას.</span>
+              <span class="lang-en">The structured, PMI-aligned classroom programme that satisfies the mandatory 35
+                contact hours and builds the knowledge to pass on your first attempt.</span>
+              <span class="lang-ka">სტრუქტურირებული, PMI-ის სტანდარტებზე მორგებული საკლასო პროგრამა, რომელიც ფარავს
+                სავალდებულო 35 საკონტაქტო საათს და გაძლევს პირველივე ცდაზე ჩაბარების ცოდნას.</span>
             </p>
           </div>
           <div class="card-body">
             <div class="card-meta">
               <div class="meta-chip">
-                <div class="dot"></div> 
+                <div class="dot"></div>
                 <span class="lang-en">35 Contact Hours / PDUs</span>
                 <span class="lang-ka">35 საკონტაქტო საათი / PDU</span>
               </div>
@@ -2163,42 +2628,62 @@
             <ul class="feature-list">
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
-                <span class="lang-en">PMI 2025 ECO-aligned curriculum covering predictive, agile, and hybrid delivery</span>
-                <span class="lang-ka">PMI 2025 ECO-სთან შესაბამისი პროგრამა: პრედიქტიული, ეჯაილ და ჰიბრიდული მიდგომები</span>
+                <span class="lang-en">PMI 2025 ECO-aligned curriculum covering predictive, agile, and hybrid
+                  delivery</span>
+                <span class="lang-ka">PMI 2025 ECO-სთან შესაბამისი პროგრამა: პრედიქტიული, ეჯაილ და ჰიბრიდული
+                  მიდგომები</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Certified, experienced instructors with active PMP credentials</span>
                 <span class="lang-ka">სერტიფიცირებული, გამოცდილი ინსტრუქტორები აქტიური PMP სტატუსით</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Full exam-simulation practice sets with performance feedback</span>
                 <span class="lang-ka">გამოცდის სრული სიმულაციები და დეტალური უკუკავშირი</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">PMI application guidance included - no guesswork on eligibility or forms</span>
                 <span class="lang-ka">სააპლიკაციო გზამკვლევი და დახმარება - რეგისტრაციის მარტივად გასავლელად</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Cohort accountability - learn alongside peers who share your goal</span>
                 <span class="lang-ka">ჯგუფური პასუხისმგებლობა - ისწავლე მათთან ერთად, ვისაც შენნაირი მიზნები აქვს</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Official certificate of completion issued by PMEC (35 PDU-eligible hours)</span>
                 <span class="lang-ka">PMEC-ის ოფიციალური სერტიფიკატი კურსის დასრულებაზე (35 საკონტაქტო საათი)</span>
@@ -2223,8 +2708,10 @@
               <span class="lang-ka">1:1 PMP სერტიფიცირების მენტორინგი</span>
             </h3>
             <p>
-              <span class="lang-en">One-on-one expert mentoring throughout your entire certification journey - from eligibility check to exam day and beyond.</span>
-              <span class="lang-ka">ინდივიდუალური მენტორინგი სერტიფიცირების სრულ გზაზე - აპლიკაციის შემოწმებიდან გამოცდის ჩაბარებამდე და მის შემდეგ.</span>
+              <span class="lang-en">One-on-one expert mentoring throughout your entire certification journey - from
+                eligibility check to exam day and beyond.</span>
+              <span class="lang-ka">ინდივიდუალური მენტორინგი სერტიფიცირების სრულ გზაზე - აპლიკაციის შემოწმებიდან
+                გამოცდის ჩაბარებამდე და მის შემდეგ.</span>
             </p>
           </div>
           <div class="card-body">
@@ -2248,45 +2735,69 @@
             <ul class="feature-list">
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
-                <span class="lang-en">Free eligibility assessment - confirm your hours and education meet PMI requirements</span>
-                <span class="lang-ka">უფლებამოსილების (Eligibility) უფასო შეფასება - შეამოწმე აკმაყოფილებს თუ არა შენი გამოცდილება PMI მოთხოვნებს</span>
+                <span class="lang-en">Free eligibility assessment - confirm your hours and education meet PMI
+                  requirements</span>
+                <span class="lang-ka">უფლებამოსილების (Eligibility) უფასო შეფასება - შეამოწმე აკმაყოფილებს თუ არა შენი
+                  გამოცდილება PMI მოთხოვნებს</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Personalized study plan built around your schedule and weak areas</span>
                 <span class="lang-ka">ინდივიდუალური სასწავლო გეგმა, მორგებული შენს გრაფიკსა და სუსტ მხარეებზე</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">PMI application review - your mentor checks every field before you submit</span>
                 <span class="lang-ka">სააპლიკაციო ფორმის დეტალური განხილვა მენტორთან ერთად გაგზავნამდე</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <span class="lang-en">Bi-weekly 1:1 coaching sessions with a PMP-certified mentor</span>
                 <span class="lang-ka">1:1 ქოუჩინგ სესიები PMP სერტიფიცირებულ მენტორთან კვირაში ორჯერ</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
-                <span class="lang-en">Resource guidance - which books, mock exams, and practice tools actually work</span>
-                <span class="lang-ka">რეკომენდაციები სასწავლო რესურსებზე - რომელი წიგნები და სიმულატორები მუშაობს რეალურად</span>
+                <span class="lang-en">Resource guidance - which books, mock exams, and practice tools actually
+                  work</span>
+                <span class="lang-ka">რეკომენდაციები სასწავლო რესურსებზე - რომელი წიგნები და სიმულატორები მუშაობს
+                  რეალურად</span>
               </li>
               <li>
                 <div class="icon">
-                  <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
-                <span class="lang-en">Ongoing support up to and after exam day - including re-attempt strategy if needed</span>
-                <span class="lang-ka">მხარდაჭერა გამოცდის დღემდე და მის შემდეგ - საჭიროების შემთხვევაში განმეორებითი გამოცდის სტრატეგიით</span>
+                <span class="lang-en">Ongoing support up to and after exam day - including re-attempt strategy if
+                  needed</span>
+                <span class="lang-ka">მხარდაჭერა გამოცდის დღემდე და მის შემდეგ - საჭიროების შემთხვევაში განმეორებითი
+                  გამოცდის სტრატეგიით</span>
               </li>
             </ul>
             <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;">
@@ -2441,35 +2952,52 @@
         </h2>
         <div class="gold-rule centered"></div>
         <p>
-          <span class="lang-en">Reinforce your knowledge with AI-driven interactive study tools, podcast reviews, and readiness diagnostics.</span>
-          <span class="lang-ka">განამტკიცეთ თქვენი ცოდნა ხელოვნური ინტელექტის ინტერაქტიული სასწავლო ხელსაწყოებით, პოდკასტებითა და მზაობის დიაგნოსტიკით.</span>
+          <span class="lang-en">Reinforce your knowledge with AI-driven interactive study tools, podcast reviews, and
+            readiness diagnostics.</span>
+          <span class="lang-ka">განამტკიცეთ თქვენი ცოდნა ხელოვნური ინტელექტის ინტერაქტიული სასწავლო ხელსაწყოებით,
+            პოდკასტებითა და მზაობის დიაგნოსტიკით.</span>
         </p>
       </div>
 
       <!-- Tab Buttons -->
       <div class="suite-tabs">
         <button class="suite-tab-btn active" id="tab-btn-podcast" onclick="switchSuiteTab('podcast')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.09 18.66 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-6H9V9h4v2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.09 18.66 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-6H9V9h4v2z" />
+          </svg>
           <span class="lang-en">🎧 Audio Overview</span>
           <span class="lang-ka">🎧 აუდიო მიმოხილვა</span>
         </button>
         <button class="suite-tab-btn" id="tab-btn-video" onclick="switchSuiteTab('video')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12zM9 10v8l7-4z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12zM9 10v8l7-4z" />
+          </svg>
           <span class="lang-en">🎬 Video Overview</span>
           <span class="lang-ka">🎬 ვიდეო მიმოხილვა</span>
         </button>
         <button class="suite-tab-btn" id="tab-btn-quiz" onclick="switchSuiteTab('quiz')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+          </svg>
           <span class="lang-en">📝 Readiness Quiz</span>
           <span class="lang-ka">📝 მზაობის ქვიზი</span>
         </button>
         <button class="suite-tab-btn" id="tab-btn-flashcards" onclick="switchSuiteTab('flashcards')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z" />
+          </svg>
           <span class="lang-en">⚡ Concept Flashcards</span>
           <span class="lang-ka">⚡ სასწავლო ბარათები</span>
         </button>
         <button class="suite-tab-btn" id="tab-btn-roadmap" onclick="switchSuiteTab('roadmap')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+          </svg>
           <span class="lang-en">🗺️ PMP Roadmap</span>
           <span class="lang-ka">🗺️ PMP გზამკვლევი</span>
         </button>
@@ -2483,7 +3011,8 @@
             <div class="podcast-header">
               <div class="podcast-art">
                 <svg viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                 </svg>
               </div>
               <div class="podcast-info">
@@ -2498,7 +3027,8 @@
               </div>
             </div>
 
-            <audio id="podcast-audio" src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFRGFXuyWG80OCPQIQzmDZSTu3RVN0X0j1V_Vto3RXh4uapFWhKQm2fPulvk20kgOhHkpgJ9jNjwzvtwVr9NSNLdkBstPMQAHsnnH85WowpUPkxR9ElZ2MRCOcpOWQTa99MHkBu35i7CRY08eb8YcWOWcmqG-o=m140-dv"></audio>
+            <audio id="podcast-audio"
+              src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFRGFXuyWG80OCPQIQzmDZSTu3RVN0X0j1V_Vto3RXh4uapFWhKQm2fPulvk20kgOhHkpgJ9jNjwzvtwVr9NSNLdkBstPMQAHsnnH85WowpUPkxR9ElZ2MRCOcpOWQTa99MHkBu35i7CRY08eb8YcWOWcmqG-o=m140-dv"></audio>
 
             <div class="podcast-player">
               <div class="timeline-wrap">
@@ -2513,23 +3043,26 @@
 
               <div class="podcast-controls">
                 <button class="playback-speed" id="podcast-speed-btn" onclick="togglePlaybackSpeed()">1.0x</button>
-                
+
                 <button class="play-btn" id="podcast-play-btn" onclick="togglePodcastPlay()">
                   <svg viewBox="0 0 24 24" id="podcast-play-icon" style="width: 24px; height: 24px; fill: var(--navy);">
-                    <path d="M8 5v14l11-7z"/>
+                    <path d="M8 5v14l11-7z" />
                   </svg>
-                  <svg viewBox="0 0 24 24" id="podcast-pause-icon" style="display:none; width: 24px; height: 24px; fill: var(--navy);">
-                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                  <svg viewBox="0 0 24 24" id="podcast-pause-icon"
+                    style="display:none; width: 24px; height: 24px; fill: var(--navy);">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                   </svg>
                 </button>
 
                 <div class="volume-control">
                   <button class="volume-btn" onclick="toggleMute()" aria-label="Mute audio">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" id="volume-icon">
-                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                      <path
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
                     </svg>
                   </button>
-                  <input type="range" class="volume-slider" id="podcast-volume" min="0" max="1" step="0.1" value="0.8" oninput="setPodcastVolume(this.value)">
+                  <input type="range" class="volume-slider" id="podcast-volume" min="0" max="1" step="0.1" value="0.8"
+                    oninput="setPodcastVolume(this.value)">
                 </div>
               </div>
             </div>
@@ -2551,7 +3084,9 @@
             </div>
             <div class="video-player-wrapper">
               <video id="suite-video" controls width="100%">
-                <source src="https://lh3.googleusercontent.com/notebooklm/AKXwDQEaN7gArKwjRAzqHcyxTyLMAzbEp5fNy31ZIswf4OOCrGHVnWntJjRw3FLxXM8Ga7nbwjBq28j3ZU1RILT_0XD3pooM0BhA4ExxBYjHy2Ie_m0gp8gjc5Jo8dEVcYkCcNzqfiYgxDtS221PnYjJC0xXgqnjK-A=m22-dv" type="video/mp4">
+                <source
+                  src="https://lh3.googleusercontent.com/notebooklm/AKXwDQEaN7gArKwjRAzqHcyxTyLMAzbEp5fNy31ZIswf4OOCrGHVnWntJjRw3FLxXM8Ga7nbwjBq28j3ZU1RILT_0XD3pooM0BhA4ExxBYjHy2Ie_m0gp8gjc5Jo8dEVcYkCcNzqfiYgxDtS221PnYjJC0xXgqnjK-A=m22-dv"
+                  type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -2581,21 +3116,28 @@
 
             <div class="flashcard-controls">
               <button class="flashcard-btn" onclick="prevFlashcard()" aria-label="Previous card">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
               </button>
-              
+
               <div class="flashcard-indicator">
-                <span class="lang-en">Card</span><span class="lang-ka">ბარათი</span> 
+                <span class="lang-en">Card</span><span class="lang-ka">ბარათი</span>
                 <span id="flashcard-index">1</span> / 10
               </div>
 
               <button class="flashcard-action-btn" onclick="shuffleFlashcards()">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                  style="vertical-align: middle; margin-right: 4px;">
+                  <path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z" />
+                </svg>
                 <span class="lang-en">Shuffle</span><span class="lang-ka">არევა</span>
               </button>
 
               <button class="flashcard-btn" onclick="nextFlashcard()" aria-label="Next card">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
               </button>
             </div>
           </div>
@@ -2605,14 +3147,17 @@
         <div class="suite-pane" id="suite-pane-roadmap">
           <div class="roadmap-wrapper">
             <div class="roadmap-preview-box" onclick="openRoadmapLightbox()">
-              <img src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" alt="PMP Certification Roadmap Preview">
+              <img
+                src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2"
+                alt="PMP Certification Roadmap Preview">
             </div>
             <div class="roadmap-actions">
               <button class="btn btn-secondary" onclick="openRoadmapLightbox()">
                 <span class="lang-en">🔍 View Fullscreen Roadmap</span>
                 <span class="lang-ka">🔍 სრული გზამკვლევის ნახვა</span>
               </button>
-              <a href="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <a href="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2"
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                 <span class="lang-en">📥 Download Roadmap (High Res)</span>
                 <span class="lang-ka">📥 გზამკვლევის ჩამოტვირთვა (მაღალი რეზოლუციით)</span>
               </a>
@@ -2627,7 +3172,9 @@
   <div class="roadmap-lightbox" id="roadmap-lightbox" onclick="closeRoadmapLightbox()">
     <button class="lightbox-close" onclick="closeRoadmapLightbox()">&times;</button>
     <div class="lightbox-content-box" onclick="event.stopPropagation()">
-      <img src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2" alt="PMP Certification Roadmap Fullscreen">
+      <img
+        src="https://lh3.googleusercontent.com/notebooklm/AKXwDQFQLMhOpdFv84rsEDNEgYQoJf4ZhPoJQG3XI5GysJOnGzsqZhIOP4m4NMXmgMAfsQosJcnB_cTMdWjUhXOVHjm6C1kCJga-PwMUE_yuxJNkcRHPF5wmrTnKBVH_8OqGIC6ZrC2tckmrAcfTSudVzK3535FkUA=w1536-d-h2752-mp2"
+        alt="PMP Certification Roadmap Fullscreen">
     </div>
   </div>
 
@@ -2646,15 +3193,18 @@
         <div class="gold-rule centered"></div>
         <p>
           <span class="lang-en">Real feedback from project managers who certified under Nikoloz's guidance.</span>
-          <span class="lang-ka">რეალური უკუკავშირი პროექტის მენეჯერებისგან, რომლებმაც ნიკოლოზის ხელმძღვანელობით მიიღეს სერტიფიკატი.</span>
+          <span class="lang-ka">რეალური უკუკავშირი პროექტის მენეჯერებისგან, რომლებმაც ნიკოლოზის ხელმძღვანელობით მიიღეს
+            სერტიფიკატი.</span>
         </p>
       </div>
       <div class="testimonials-grid">
         <!-- Card 1 -->
         <div class="testimonial-card">
           <p class="testimonial-text">
-            <span class="lang-en">"The structure was exactly what I needed. Nikoloz has an incredible way of explaining complex agile concepts simply. I passed the exam on my first attempt!"</span>
-            <span class="lang-ka">„სტრუქტურა ზუსტად ისეთი იყო, რაც მჭირდებოდა. ნიკოლოზს აქვს საოცარი უნარი, მარტივად ახსნას რთული ეჯაილ კონცეფციები. გამოცდა პირველივე ცდაზე ჩავაბარე!“</span>
+            <span class="lang-en">"The structure was exactly what I needed. Nikoloz has an incredible way of explaining
+              complex agile concepts simply. I passed the exam on my first attempt!"</span>
+            <span class="lang-ka">„სტრუქტურა ზუსტად ისეთი იყო, რაც მჭირდებოდა. ნიკოლოზს აქვს საოცარი უნარი, მარტივად
+              ახსნას რთული ეჯაილ კონცეფციები. გამოცდა პირველივე ცდაზე ჩავაბარე!“</span>
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">LK</div>
@@ -2674,8 +3224,10 @@
         <!-- Card 2 -->
         <div class="testimonial-card">
           <p class="testimonial-text">
-            <span class="lang-en">"I was overwhelmed by the application requirements and the sheer volume of material. The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"</span>
-            <span class="lang-ka">„ძალიან დათრგუნული ვიყავი აპლიკაციის მოთხოვნებით და მასალის მოცულობით. 1:1 მენტორინგმა ეს ყველაფერი მარტივ ნაბიჯებად დაყო. ძალიან გირჩევთ!“</span>
+            <span class="lang-en">"I was overwhelmed by the application requirements and the sheer volume of material.
+              The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"</span>
+            <span class="lang-ka">„ძალიან დათრგუნული ვიყავი აპლიკაციის მოთხოვნებით და მასალის მოცულობით. 1:1 მენტორინგმა
+              ეს ყველაფერი მარტივ ნაბიჯებად დაყო. ძალიან გირჩევთ!“</span>
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">NT</div>
@@ -2695,8 +3247,12 @@
         <!-- Card 3 -->
         <div class="testimonial-card">
           <p class="testimonial-text">
-            <span class="lang-en">"No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a PMI-aligned project leader, which not only helped me pass but also improved my day-to-day delivery."</span>
-            <span class="lang-ka">„მართლაც ყოველგვარი ზედმეტი დეტალებისა და მოკლე გზების გარეშე. ნიკოლოზი ორიენტირებულია გასწავლოს აზროვნება, როგორც PMI-ის პროექტის ლიდერმა, რამაც არა მხოლოდ გამოცდის ჩაბარებაში დამეხმარა, არამედ ჩემი ყოველდღიური მუშაობა გააუმჯობესა.“</span>
+            <span class="lang-en">"No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a
+              PMI-aligned project leader, which not only helped me pass but also improved my day-to-day
+              delivery."</span>
+            <span class="lang-ka">„მართლაც ყოველგვარი ზედმეტი დეტალებისა და მოკლე გზების გარეშე. ნიკოლოზი ორიენტირებულია
+              გასწავლოს აზროვნება, როგორც PMI-ის პროექტის ლიდერმა, რამაც არა მხოლოდ გამოცდის ჩაბარებაში დამეხმარა,
+              არამედ ჩემი ყოველდღიური მუშაობა გააუმჯობესა.“</span>
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">GI</div>
@@ -2731,15 +3287,18 @@
         </h2>
         <div class="gold-rule centered"></div>
         <p>
-          <span class="lang-en">We do not run generic courses. Every element of our programme is designed to get working professionals certified.</span>
-          <span class="lang-ka">ჩვენ არ ვატარებთ ზოგად კურსებს. ჩვენი პროგრამის თითოეული დეტალი მორგებულია დასაქმებული ადამიანების სერტიფიცირებაზე.</span>
+          <span class="lang-en">We do not run generic courses. Every element of our programme is designed to get working
+            professionals certified.</span>
+          <span class="lang-ka">ჩვენ არ ვატარებთ ზოგად კურსებს. ჩვენი პროგრამის თითოეული დეტალი მორგებულია დასაქმებული
+            ადამიანების სერტიფიცირებაზე.</span>
         </p>
       </div>
       <div class="why-grid">
         <div class="why-item">
           <div class="why-icon">
-            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 2L13.5 8H20L14.5 12L17 18L11 14L5 18L7.5 12L2 8H8.5L11 2Z"/>
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M11 2L13.5 8H20L14.5 12L17 18L11 14L5 18L7.5 12L2 8H8.5L11 2Z" />
             </svg>
           </div>
           <h4>
@@ -2747,14 +3306,17 @@
             <span class="lang-ka">PMI-ის შესაბამისი კონტენტი</span>
           </h4>
           <p>
-            <span class="lang-en">Curriculum matches the 2025 Exam Content Outline exactly. We update when PMI updates.</span>
-            <span class="lang-ka">პროგრამა ზუსტად შეესაბამება 2025 წლის Exam Content Outline-ს. ჩვენ განვაახლებთ მას ყოველთვის, როცა PMI აკეთებს ამას.</span>
+            <span class="lang-en">Curriculum matches the 2025 Exam Content Outline exactly. We update when PMI
+              updates.</span>
+            <span class="lang-ka">პროგრამა ზუსტად შეესაბამება 2025 წლის Exam Content Outline-ს. ჩვენ განვაახლებთ მას
+              ყოველთვის, როცა PMI აკეთებს ამას.</span>
           </p>
         </div>
         <div class="why-item">
           <div class="why-icon">
             <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round">
-              <circle cx="11" cy="8" r="4"/><path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6"/>
+              <circle cx="11" cy="8" r="4" />
+              <path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6" />
             </svg>
           </div>
           <h4>
@@ -2762,14 +3324,19 @@
             <span class="lang-ka">სერტიფიცირებული ინსტრუქტორები</span>
           </h4>
           <p>
-            <span class="lang-en">Every trainer holds an active PMP credential and brings real project delivery experience.</span>
-            <span class="lang-ka">თითოეულ ტრენერს აქვს აქტიური PMP სტატუსი და პროექტების მართვის რეალური გამოცდილება.</span>
+            <span class="lang-en">Every trainer holds an active PMP credential and brings real project delivery
+              experience.</span>
+            <span class="lang-ka">თითოეულ ტრენერს აქვს აქტიური PMP სტატუსი და პროექტების მართვის რეალური
+              გამოცდილება.</span>
           </p>
         </div>
         <div class="why-item">
           <div class="why-icon">
-            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h16"/><path d="M9 21V9"/>
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="16" height="16" rx="2" />
+              <path d="M3 9h16" />
+              <path d="M9 21V9" />
             </svg>
           </div>
           <h4>
@@ -2777,14 +3344,18 @@
             <span class="lang-ka">მორგებული დაკავებულ გრაფიკზე</span>
           </h4>
           <p>
-            <span class="lang-en">Weeknight and weekend sessions. Your job does not stop - your preparation should not either.</span>
-            <span class="lang-ka">საღამოს და უქმე დღეების სესიები. შენი სამუშაო არ ჩერდება - შესაბამისად, არც შენი მომზადება უნდა გაჩერდეს.</span>
+            <span class="lang-en">Weeknight and weekend sessions. Your job does not stop - your preparation should not
+              either.</span>
+            <span class="lang-ka">საღამოს და უქმე დღეების სესიები. შენი სამუშაო არ ჩერდება - შესაბამისად, არც შენი
+              მომზადება უნდა გაჩერდეს.</span>
           </p>
         </div>
         <div class="why-item">
           <div class="why-icon">
-            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v4M12 16v4M4.93 4.93l2.83 2.83M14.24 14.24l2.83 2.83M2 12h4M16 12h4M4.93 19.07l2.83-2.83M14.24 7.76l2.83-2.83"/>
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M12 2v4M12 16v4M4.93 4.93l2.83 2.83M14.24 14.24l2.83 2.83M2 12h4M16 12h4M4.93 19.07l2.83-2.83M14.24 7.76l2.83-2.83" />
             </svg>
           </div>
           <h4>
@@ -2792,14 +3363,17 @@
             <span class="lang-ka">პასუხისმგებლობის სისტემა</span>
           </h4>
           <p>
-            <span class="lang-en">Cohort-based learning and personal check-ins mean you will not abandon your preparation halfway.</span>
-            <span class="lang-ka">ჯგუფური სწავლება და ინდივიდუალური კონტროლი გარანტიაა იმისა, რომ მომზადებას შუა გზაზე არ მიატოვებ.</span>
+            <span class="lang-en">Cohort-based learning and personal check-ins mean you will not abandon your
+              preparation halfway.</span>
+            <span class="lang-ka">ჯგუფური სწავლება და ინდივიდუალური კონტროლი გარანტიაა იმისა, რომ მომზადებას შუა გზაზე
+              არ მიატოვებ.</span>
           </p>
         </div>
         <div class="why-item">
           <div class="why-icon">
-            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
           <h4>
@@ -2807,8 +3381,10 @@
             <span class="lang-ka">ზედმეტი დეტალებისა და მოკლე გზების გარეშე</span>
           </h4>
           <p>
-            <span class="lang-en">We do not teach exam dumps or shortcuts. We build real understanding to pass on first attempt.</span>
-            <span class="lang-ka">ჩვენ არ გასწავლით მხოლოდ საგამოცდო ტესტებს ან მოკლე გზებს. ჩვენ გაძლევთ რეალურ ცოდნას გამოცდის პირველივე ცდაზე ჩასაბარებლად.</span>
+            <span class="lang-en">We do not teach exam dumps or shortcuts. We build real understanding to pass on first
+              attempt.</span>
+            <span class="lang-ka">ჩვენ არ გასწავლით მხოლოდ საგამოცდო ტესტებს ან მოკლე გზებს. ჩვენ გაძლევთ რეალურ ცოდნას
+              გამოცდის პირველივე ცდაზე ჩასაბარებლად.</span>
           </p>
         </div>
       </div>
@@ -2830,8 +3406,10 @@
             <span class="lang-ka">გაგზავნე აპლიკაცია</span>
           </h4>
           <p>
-            <span class="lang-en">Complete the form below. Free eligibility check included - no commitment required.</span>
-            <span class="lang-ka">შეავსე ქვემოთ მოცემული ფორმა. მოიცავს უფლებამოსილების უფასო შემოწმებას ყოველგვარი ვალდებულების გარეშე.</span>
+            <span class="lang-en">Complete the form below. Free eligibility check included - no commitment
+              required.</span>
+            <span class="lang-ka">შეავსე ქვემოთ მოცემული ფორმა. მოიცავს უფლებამოსილების უფასო შემოწმებას ყოველგვარი
+              ვალდებულების გარეშე.</span>
           </p>
         </div>
         <div class="step">
@@ -2841,8 +3419,10 @@
             <span class="lang-ka">უფლებამოსილების შეფასება</span>
           </h4>
           <p>
-            <span class="lang-en">Our team reviews your experience and confirms your PMI application requirements within 48 hours.</span>
-            <span class="lang-ka">ჩვენი გუნდი განიხილავს შენს გამოცდილებას და 48 საათში დაგიდასტურებს PMI მოთხოვნებთან შესაბამისობას.</span>
+            <span class="lang-en">Our team reviews your experience and confirms your PMI application requirements within
+              48 hours.</span>
+            <span class="lang-ka">ჩვენი გუნდი განიხილავს შენს გამოცდილებას და 48 საათში დაგიდასტურებს PMI მოთხოვნებთან
+              შესაბამისობას.</span>
           </p>
         </div>
         <div class="step">
@@ -2863,8 +3443,10 @@
             <span class="lang-ka">მიიღე PMP სერტიფიკატი</span>
           </h4>
           <p>
-            <span class="lang-en">Pass the exam and join a growing community of certified project leaders in Georgia.</span>
-            <span class="lang-ka">ჩააბარე გამოცდა და შემოუერთდი სერტიფიცირებული პროექტის მენეჯერების მზარდ საზოგადოებას საქართველოში.</span>
+            <span class="lang-en">Pass the exam and join a growing community of certified project leaders in
+              Georgia.</span>
+            <span class="lang-ka">ჩააბარე გამოცდა და შემოუერთდი სერტიფიცირებული პროექტის მენეჯერების მზარდ საზოგადოებას
+              საქართველოში.</span>
           </p>
         </div>
       </div>
@@ -2881,9 +3463,13 @@
         <img class="trainer-avatar" src="trainer.jpg" alt="Nikoloz Melkadze - PMP Trainer" />
         <div class="trainer-name-block">
           <div class="trainer-fullname">Nikoloz Melkadze</div>
-          <span class="trainer-pmp-badge">PMP&#174; &middot; PMI-CI &middot; Assoc. CIPD</span><br/>
-          <a class="trainer-linkedin" href="https://www.linkedin.com/in/nikamelkadze/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span class="trainer-pmp-badge">PMP&#174; &middot; PMI-CI &middot; Assoc. CIPD</span><br />
+          <a class="trainer-linkedin" href="https://www.linkedin.com/in/nikamelkadze/" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
             <span class="lang-en">LinkedIn Profile</span>
             <span class="lang-ka">LinkedIn პროფილი</span>
           </a>
@@ -2901,48 +3487,92 @@
           <span class="lang-ka">ჯილდოების მფლობელი. სერტიფიცირებული. შექმნილია ქართველი პროფესიონალებისთვის.</span>
         </h2>
 
-        <p class="lang-en">Nikoloz Melkadze is a PMP&#174;-certified project manager, PMI-Certified Instructor, and L&amp;D leader with 10+ years of experience across defense education, international institutions, and CRM consulting. He has managed portfolios of up to 15 concurrent projects, led teams of up to 50 staff, and coordinated international partnerships across 5 countries. He holds an LL.M <em>cum laude</em> from the University of Groningen and active credentials from PMI and the Chartered Institute of Personnel and Development (CIPD).</p>
-        <p class="lang-ka">ნიკოლოზ მელქაძე არის PMP&#174; სერტიფიცირებული პროექტის მენეჯერი, PMI-ს სერტიფიცირებული ინსტრუქტორი და L&amp;D ლიდერი, რომელსაც აქვს 10+ წლიანი გამოცდილება თავდაცვის განათლების, საერთაშორისო ინსტიტუტებისა და CRM კონსალტინგის სფეროში. მას უმართავს 15-მდე პარალელური პროექტის პორტფელი, ხელმძღვანელობდა 50-მდე ადამიანისგან შემდგარ გუნდებს და კოორდინაციას უწევდა საერთაშორისო პარტნიორობას 5 ქვეყანაში. ის ფლობს სამართლის მაგისტრის ხარისხს (LL.M cum laude) გრონინგენის უნივერსიტეტიდან, ასევე PMI-ისა და პერსონალის განვითარების ჩარტერული ინსტიტუტის (CIPD) აქტიურ სერტიფიკატებს.</p>
+        <p class="lang-en">Nikoloz Melkadze is a PMP&#174;-certified project manager, PMI-Certified Instructor, and
+          L&amp;D leader with 10+ years of experience across defense education, international institutions, and CRM
+          consulting. He has managed portfolios of up to 15 concurrent projects, led teams of up to 50 staff, and
+          coordinated international partnerships across 5 countries. He holds an LL.M <em>cum laude</em> from the
+          University of Groningen and active credentials from PMI and the Chartered Institute of Personnel and
+          Development (CIPD).</p>
+        <p class="lang-ka">ნიკოლოზ მელქაძე არის PMP&#174; სერტიფიცირებული პროექტის მენეჯერი, PMI-ს სერტიფიცირებული
+          ინსტრუქტორი და L&amp;D ლიდერი, რომელსაც აქვს 10+ წლიანი გამოცდილება თავდაცვის განათლების, საერთაშორისო
+          ინსტიტუტებისა და CRM კონსალტინგის სფეროში. მას უმართავს 15-მდე პარალელური პროექტის პორტფელი, ხელმძღვანელობდა
+          50-მდე ადამიანისგან შემდგარ გუნდებს და კოორდინაციას უწევდა საერთაშორისო პარტნიორობას 5 ქვეყანაში. ის ფლობს
+          სამართლის მაგისტრის ხარისხს (LL.M cum laude) გრონინგენის უნივერსიტეტიდან, ასევე PMI-ისა და პერსონალის
+          განვითარების ჩარტერული ინსტიტუტის (CIPD) აქტიურ სერტიფიკატებს.</p>
 
-        <p class="lang-en">As Deputy Director at the Defence Institutional Building School, he oversaw 35 programs per year across NATO/EU interoperability initiatives, coordinating 26 international partners and a 5M GEL institutional budget. He led a 5-year NATO accreditation project across 4 institutions - and in 2025 was awarded the <strong>Medal for Exemplary Service</strong> by the Ministry of Defence of Georgia.</p>
-        <p class="lang-ka">როგორც თავდაცვის ინსტიტუციური აღმშენებლობის სკოლის დირექტორის მოადგილე, ის ხელმძღვანელობდა წელიწადში 35-მდე პროგრამას ნატო/ევროკავშირის თავსებადობის ინიციატივების ფარგლებში, კოორდინაციას უწევდა 26 საერთაშორისო პარტნიორს და სკოლის 5 მილიონიან ბიუჯეტს. ის ხელმძღვანელობდა ნატოს აკრედიტაციის 5-წლიან პროექტს 4 ინსტიტუციაში - ხოლო 2025 წელს საქართველოს თავდაცვის სამინისტროს მიერ დაჯილდოვდა <strong>მედლით სამსახურებრივი წარჩინებისთვის</strong>.</p>
+        <p class="lang-en">As Deputy Director at the Defence Institutional Building School, he oversaw 35 programs per
+          year across NATO/EU interoperability initiatives, coordinating 26 international partners and a 5M GEL
+          institutional budget. He led a 5-year NATO accreditation project across 4 institutions - and in 2025 was
+          awarded the <strong>Medal for Exemplary Service</strong> by the Ministry of Defence of Georgia.</p>
+        <p class="lang-ka">როგორც თავდაცვის ინსტიტუციური აღმშენებლობის სკოლის დირექტორის მოადგილე, ის ხელმძღვანელობდა
+          წელიწადში 35-მდე პროგრამას ნატო/ევროკავშირის თავსებადობის ინიციატივების ფარგლებში, კოორდინაციას უწევდა 26
+          საერთაშორისო პარტნიორს და სკოლის 5 მილიონიან ბიუჯეტს. ის ხელმძღვანელობდა ნატოს აკრედიტაციის 5-წლიან პროექტს 4
+          ინსტიტუციაში - ხოლო 2025 წელს საქართველოს თავდაცვის სამინისტროს მიერ დაჯილდოვდა <strong>მედლით სამსახურებრივი
+            წარჩინებისთვის</strong>.</p>
 
-        <p class="lang-en">A lecturer at four Georgian universities since 2016 and a participant in the U.S. State Department&#8217;s IVLP program, Nikoloz brings international-standard rigor to every session. He is also an active member of the PMI Tbilisi, Georgia Chapter, contributing to the development of the regional project management network. He has taught PMP and Agile/Scrum methodology to students who subsequently passed the certification exam - and now builds that same track for Georgian professionals through PMEC.</p>
-        <p class="lang-ka">2016 წლიდან არის ლექტორი ოთხ ქართულ უნივერსიტეტში და აშშ-ის სახელმწიფო დეპარტამენტის IVLP პროგრამის მონაწილე, რითაც ყოველ სესიაზე შემოაქვს სწავლების საერთაშორისო სტანდარტი. ის ასევე არის PMI თბილისის წარმომადგენლობის აქტიური წევრი და წვლილი შეაქვს რეგიონული პროექტების მართვის ქსელის განვითარებაში. მას მიყავს PMP და Agile/Scrum მოსამზადებელი კურსები სტუდენტებისთვის, რომლებმაც წარმატებით ჩააბარეს გამოცდა - და ახლა იგივე გზას აშენებს ქართველი პროფესიონალებისთვის PMEC-ის მეშვეობით.</p>
+        <p class="lang-en">A lecturer at four Georgian universities since 2016 and a participant in the U.S. State
+          Department&#8217;s IVLP program, Nikoloz brings international-standard rigor to every session. He is also an
+          active member of the PMI Tbilisi, Georgia Chapter, contributing to the development of the regional project
+          management network. He has taught PMP and Agile/Scrum methodology to students who subsequently passed the
+          certification exam - and now builds that same track for Georgian professionals through PMEC.</p>
+        <p class="lang-ka">2016 წლიდან არის ლექტორი ოთხ ქართულ უნივერსიტეტში და აშშ-ის სახელმწიფო დეპარტამენტის IVLP
+          პროგრამის მონაწილე, რითაც ყოველ სესიაზე შემოაქვს სწავლების საერთაშორისო სტანდარტი. ის ასევე არის PMI თბილისის
+          წარმომადგენლობის აქტიური წევრი და წვლილი შეაქვს რეგიონული პროექტების მართვის ქსელის განვითარებაში. მას მიყავს
+          PMP და Agile/Scrum მოსამზადებელი კურსები სტუდენტებისთვის, რომლებმაც წარმატებით ჩააბარეს გამოცდა - და ახლა
+          იგივე გზას აშენებს ქართველი პროფესიონალებისთვის PMEC-ის მეშვეობით.</p>
 
         <div class="trainer-credentials">
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M8 14s-4 1.5-4 6h16c0-4.5-4-6-4-6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M8 14s-4 1.5-4 6h16c0-4.5-4-6-4-6" />
+            </svg>
             <span class="lang-en">PMP&#174; Certified</span>
             <span class="lang-ka">PMP&#174; სერტიფიცირებული</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
             <span class="lang-en">PMI-Certified Instructor</span>
             <span class="lang-ka">PMI-ს სერტიფიცირებული ინსტრუქტორი</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
             <span class="lang-en">PMI Tbilisi Chapter Member</span>
             <span class="lang-ka">PMI თბილისის წარმომადგენლობის წევრი</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
             <span class="lang-en">Assoc. CIPD (L&amp;D)</span>
             <span class="lang-ka">Assoc. CIPD (L&amp;D)</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
             <span class="lang-en">MoD Medal for Exemplary Service</span>
             <span class="lang-ka">თავდაცვის სამინისტროს მედალი სამსახურებრივი წარჩინებისთვის</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-7 10 7M12 22V12"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-7 10 7M12 22V12" />
+            </svg>
             <span class="lang-en">LL.M Cum Laude, Groningen</span>
             <span class="lang-ka">LL.M წარჩინებით (Cum Laude), გრონინგენი</span>
           </div>
           <div class="cred-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
             <span class="lang-en">10+ Years in PM &amp; L&amp;D</span>
             <span class="lang-ka">10+ წელი PM და L&amp;D-ში</span>
           </div>
@@ -2964,8 +3594,11 @@
             <span class="lang-ka">მოიცავს PMP® უფლებამოსილების უფასო შემოწმებას</span>
           </h3>
           <p>
-            <span class="lang-en">Unsure if your experience meets PMI's requirements? Apply today and our team will assess your eligibility at no cost and with zero commitment.</span>
-            <span class="lang-ka">არ ხართ დარწმუნებული, შეესაბამება თუ არა თქვენი გამოცდილება PMI მოთხოვნებს? შეავსეთ აპლიკაცია დღესვე და ჩვენი გუნდი უფასოდ, ყოველგვარი ვალდებულების გარეშე შეაფასებს თქვენს უფლებამოსილებას.</span>
+            <span class="lang-en">Unsure if your experience meets PMI's requirements? Apply today and our team will
+              assess your eligibility at no cost and with zero commitment.</span>
+            <span class="lang-ka">არ ხართ დარწმუნებული, შეესაბამება თუ არა თქვენი გამოცდილება PMI მოთხოვნებს? შეავსეთ
+              აპლიკაცია დღესვე და ჩვენი გუნდი უფასოდ, ყოველგვარი ვალდებულების გარეშე შეაფასებს თქვენს
+              უფლებამოსილებას.</span>
           </p>
         </div>
         <a href="#apply" class="eligibility-btn" onclick="scrollToSelector()">
@@ -2985,8 +3618,10 @@
         </h2>
         <div class="gold-rule centered"></div>
         <p>
-          <span class="lang-en">Complete the short form below to get started. We will review your application and respond within 48 hours.</span>
-          <span class="lang-ka">დაიწყეთ ქვემოთ მოცემული მოკლე ფორმის შევსებით. ჩვენ განვიხილავთ თქვენს განაცხადს და გიპასუხებთ 48 საათის განმავლობაში.</span>
+          <span class="lang-en">Complete the short form below to get started. We will review your application and
+            respond within 48 hours.</span>
+          <span class="lang-ka">დაიწყეთ ქვემოთ მოცემული მოკლე ფორმის შევსებით. ჩვენ განვიხილავთ თქვენს განაცხადს და
+            გიპასუხებთ 48 საათის განმავლობაში.</span>
         </p>
       </div>
 
@@ -3013,8 +3648,11 @@
         <div class="form-wrapper">
           <div class="form-intro">
             <div class="form-intro-icon">
-              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h16"/><path d="M9 21V9"/>
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
+                <rect x="3" y="3" width="16" height="16" rx="2" />
+                <path d="M3 9h16" />
+                <path d="M9 21V9" />
               </svg>
             </div>
             <div class="form-intro-text">
@@ -3023,18 +3661,17 @@
                 <span class="lang-ka">განაცხადი: 35-საათიანი PMP საგამოცდო მოსამზადებელი ტრენინგი</span>
               </h3>
               <p>
-                <span class="lang-en">Takes about 3 minutes &nbsp;·&nbsp; Free eligibility check included &nbsp;·&nbsp; No payment at this stage</span>
-                <span class="lang-ka">სჭირდება დაახლოებით 3 წუთი &nbsp;·&nbsp; მოიცავს უფლებამოსილების უფასო შემოწმებას &nbsp;·&nbsp; გადახდა არ არის საჭირო</span>
+                <span class="lang-en">Takes about 3 minutes &nbsp;·&nbsp; Free eligibility check included &nbsp;·&nbsp;
+                  No payment at this stage</span>
+                <span class="lang-ka">სჭირდება დაახლოებით 3 წუთი &nbsp;·&nbsp; მოიცავს უფლებამოსილების უფასო შემოწმებას
+                  &nbsp;·&nbsp; გადახდა არ არის საჭირო</span>
               </p>
             </div>
           </div>
           <div class="form-iframe-wrap">
             <iframe
               data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
-              title="Apply for 35-Hour PMP Training"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0">
+              title="Apply for 35-Hour PMP Training" frameborder="0" marginheight="0" marginwidth="0">
               Loading…
             </iframe>
           </div>
@@ -3046,8 +3683,10 @@
         <div class="form-wrapper">
           <div class="form-intro">
             <div class="form-intro-icon">
-              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" width="20" height="20">
-                <circle cx="11" cy="8" r="4"/><path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6"/>
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" width="20"
+                height="20">
+                <circle cx="11" cy="8" r="4" />
+                <path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6" />
               </svg>
             </div>
             <div class="form-intro-text">
@@ -3056,18 +3695,17 @@
                 <span class="lang-ka">განაცხადი: PMP სერტიფიცირების მენტორინგი</span>
               </h3>
               <p>
-                <span class="lang-en">Takes about 3 minutes &nbsp;·&nbsp; Free eligibility check included &nbsp;·&nbsp; No payment at this stage</span>
-                <span class="lang-ka">სჭირდება დაახლოებით 3 წუთი &nbsp;·&nbsp; მოიცავს უფლებამოსილების უფასო შემოწმებას &nbsp;·&nbsp; გადახდა არ არის საჭირო</span>
+                <span class="lang-en">Takes about 3 minutes &nbsp;·&nbsp; Free eligibility check included &nbsp;·&nbsp;
+                  No payment at this stage</span>
+                <span class="lang-ka">სჭირდება დაახლოებით 3 წუთი &nbsp;·&nbsp; მოიცავს უფლებამოსილების უფასო შემოწმებას
+                  &nbsp;·&nbsp; გადახდა არ არის საჭირო</span>
               </p>
             </div>
           </div>
           <div class="form-iframe-wrap">
             <iframe
               data-src="https://docs.google.com/forms/d/e/1FAIpQLSehdNK1q_yQATpo-CiBIH-jyF5pI_tGz-alm-lLbFQTdldWmQ/viewform?embedded=true"
-              title="Apply for PMP Certification Mentoring"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0">
+              title="Apply for PMP Certification Mentoring" frameborder="0" marginheight="0" marginwidth="0">
               Loading…
             </iframe>
           </div>
@@ -3079,8 +3717,10 @@
         <div class="form-wrapper">
           <div class="form-intro">
             <div class="form-intro-icon">
-              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <rect x="2" y="4" width="18" height="14" rx="2"/><path d="M2 7l9 6 9-6"/>
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
+                <rect x="2" y="4" width="18" height="14" rx="2" />
+                <path d="M2 7l9 6 9-6" />
               </svg>
             </div>
             <div class="form-intro-text">
@@ -3089,18 +3729,17 @@
                 <span class="lang-ka">კონტაქტი &amp; ზოგადი კითხვები</span>
               </h3>
               <p>
-                <span class="lang-en">Questions about programmes, eligibility, scheduling, or pricing? Send us a message and we will respond within 24 hours.</span>
-                <span class="lang-ka">გაქვთ კითხვები პროგრამებთან, უფლებამოსილებასთან, განრიგთან ან ფასებთან დაკავშირებით? გამოგვიგზავნეთ შეტყობინება და ჩვენ გიპასუხებთ 24 საათში.</span>
+                <span class="lang-en">Questions about programmes, eligibility, scheduling, or pricing? Send us a message
+                  and we will respond within 24 hours.</span>
+                <span class="lang-ka">გაქვთ კითხვები პროგრამებთან, უფლებამოსილებასთან, განრიგთან ან ფასებთან
+                  დაკავშირებით? გამოგვიგზავნეთ შეტყობინება და ჩვენ გიპასუხებთ 24 საათში.</span>
               </p>
             </div>
           </div>
           <div class="form-iframe-wrap">
             <iframe
               data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
-              title="Contact PMEC"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0">
+              title="Contact PMEC" frameborder="0" marginheight="0" marginwidth="0">
               Loading…
             </iframe>
           </div>
@@ -3112,8 +3751,12 @@
         <div class="form-wrapper">
           <div class="form-intro">
             <div class="form-intro-icon">
-              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <rect x="2" y="7" width="18" height="13" rx="1"/><path d="M7 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="11" y1="11" x2="11" y2="15"/><line x1="9" y1="13" x2="13" y2="13"/>
+              <svg viewBox="0 0 22 22" fill="none" stroke="#D4A843" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
+                <rect x="2" y="7" width="18" height="13" rx="1" />
+                <path d="M7 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                <line x1="11" y1="11" x2="11" y2="15" />
+                <line x1="9" y1="13" x2="13" y2="13" />
               </svg>
             </div>
             <div class="form-intro-text">
@@ -3122,30 +3765,31 @@
                 <span class="lang-ka">მოთხოვნა კორპორატიულ ტრენინგზე</span>
               </h3>
               <p>
-                <span class="lang-en">Looking to certify your team? Request a tailored proposal for group cohorts, in-house delivery, or corporate PMP preparation programmes.</span>
-                <span class="lang-ka">გსურთ თქვენი გუნდის სერტიფიცირება? მოითხოვეთ ინდივიდუალური წინადადება ჯგუფური კურსებისთვის, შიდა ტრენინგებისთვის ან კორპორატიული მოსამზადებელი პროგრამებისთვის.</span>
+                <span class="lang-en">Looking to certify your team? Request a tailored proposal for group cohorts,
+                  in-house delivery, or corporate PMP preparation programmes.</span>
+                <span class="lang-ka">გსურთ თქვენი გუნდის სერტიფიცირება? მოითხოვეთ ინდივიდუალური წინადადება ჯგუფური
+                  კურსებისთვის, შიდა ტრენინგებისთვის ან კორპორატიული მოსამზადებელი პროგრამებისთვის.</span>
               </p>
             </div>
           </div>
           <div class="form-iframe-wrap">
             <iframe
               data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
-              title="Corporate Training Request"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0">
+              title="Corporate Training Request" frameborder="0" marginheight="0" marginwidth="0">
               Loading…
             </iframe>
           </div>
         </div>
-        
+
         <!-- Corporate Lead Magnet Button -->
         <div class="lead-magnet-btn-wrap" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <button class="btn btn-brochure" onclick="openSyllabusModal()">
             <span class="lang-en">View &amp; Download Course Brochure</span>
             <span class="lang-ka">კურსის ბროშურის ნახვა და ჩამოტვირთვა</span>
           </button>
-          <a href="https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkYSD2FydGlmYWN0c19tZWRpYRozCiQ3ZGM3MGM2OS1jNjRhLTQxMjctOTg2MC0xMmZhOTFjNDdlNTESCxIHELHLjNyZDRgB&filename=The_Standardized_Project_Leader.pdf&opi=96797242" target="_blank" rel="noopener noreferrer" class="btn btn-outline-navy" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+          <a href="https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkYSD2FydGlmYWN0c19tZWRpYRozCiQ3ZGM3MGM2OS1jNjRhLTQxMjctOTg2MC0xMmZhOTFjNDdlNTESCxIHELHLjNyZDRgB&filename=The_Standardized_Project_Leader.pdf&opi=96797242"
+            target="_blank" rel="noopener noreferrer" class="btn btn-outline-navy"
+            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
             <span class="lang-en">📥 Download Corporate Slide Deck</span>
             <span class="lang-ka">📥 კორპორატიული პრეზენტაციის ჩამოტვირთვა</span>
           </a>
@@ -3166,8 +3810,10 @@
               <span class="lang-ka">განხილვა &amp; შეფასება</span>
             </h4>
             <p>
-              <span class="lang-en">Our team reviews your professional experience against official PMI eligibility criteria.</span>
-              <span class="lang-ka">ჩვენი გუნდი განიხილავს თქვენს პროფესიულ გამოცდილებას და შეადარებს PMI-ის ოფიციალურ მოთხოვნებს.</span>
+              <span class="lang-en">Our team reviews your professional experience against official PMI eligibility
+                criteria.</span>
+              <span class="lang-ka">ჩვენი გუნდი განიხილავს თქვენს პროფესიულ გამოცდილებას და შეადარებს PMI-ის ოფიციალურ
+                მოთხოვნებს.</span>
             </p>
           </div>
           <div class="step">
@@ -3177,8 +3823,10 @@
               <span class="lang-ka">სტრატეგიული ზარი</span>
             </h4>
             <p>
-              <span class="lang-en">We hold a quick 15-minute call to confirm your PDU needs and map your study path.</span>
-              <span class="lang-ka">ჩვენ დავგეგმავთ 15-წუთიან ზარს თქვენი საჭიროებების დასადასტურებლად და სასწავლო გზის დასაგეგმად.</span>
+              <span class="lang-en">We hold a quick 15-minute call to confirm your PDU needs and map your study
+                path.</span>
+              <span class="lang-ka">ჩვენ დავგეგმავთ 15-წუთიან ზარს თქვენი საჭიროებების დასადასტურებლად და სასწავლო გზის
+                დასაგეგმად.</span>
             </p>
           </div>
           <div class="step">
@@ -3188,8 +3836,10 @@
               <span class="lang-ka">რეგისტრაცია &amp; დაწყება</span>
             </h4>
             <p>
-              <span class="lang-en">Gain access to study materials, prep databases, and join your cohort or mentor.</span>
-              <span class="lang-ka">მიიღეთ წვდომა სასწავლო მასალებზე, საგამოცდო კითხვების ბაზაზე და შეუერთდით ჯგუფს ან მენტორს.</span>
+              <span class="lang-en">Gain access to study materials, prep databases, and join your cohort or
+                mentor.</span>
+              <span class="lang-ka">მიიღეთ წვდომა სასწავლო მასალებზე, საგამოცდო კითხვების ბაზაზე და შეუერთდით ჯგუფს ან
+                მენტორს.</span>
             </p>
           </div>
           <div class="step">
@@ -3225,37 +3875,51 @@
           <span class="lang-ka">PMEC კორპორატიული კურსის შესახებ</span>
         </h4>
         <p>
-          <span class="lang-en">Our corporate program is custom-tailored for organizations seeking to upskill their project teams, establish a standardized PM language, and increase their project success rate.</span>
-          <span class="lang-ka">ჩვენი კორპორატიული პროგრამა სპეციალურად მორგებულია ორგანიზაციებზე, რომლებსაც სურთ თავიანთი პროექტის გუნდების კვალიფიკაციის ამაღლება, პროექტების მართვის ერთიანი ენის დანერგვა და პროექტების წარმატების მაჩვენებლის გაზრდა.</span>
+          <span class="lang-en">Our corporate program is custom-tailored for organizations seeking to upskill their
+            project teams, establish a standardized PM language, and increase their project success rate.</span>
+          <span class="lang-ka">ჩვენი კორპორატიული პროგრამა სპეციალურად მორგებულია ორგანიზაციებზე, რომლებსაც სურთ
+            თავიანთი პროექტის გუნდების კვალიფიკაციის ამაღლება, პროექტების მართვის ერთიანი ენის დანერგვა და პროექტების
+            წარმატების მაჩვენებლის გაზრდა.</span>
         </p>
-        
+
         <h4>
           <span class="lang-en">Course Outline &amp; Syllabus (35 Hours)</span>
           <span class="lang-ka">კურსის გეგმა &amp; სილაბუსი (35 საათი)</span>
         </h4>
         <ul>
           <li>
-            <span class="lang-en"><strong>Module 1: Creating a High-Performing Team</strong> - Defining team ground rules, negotiating agreements, empowering members, and managing conflict.</span>
-            <span class="lang-ka"><strong>მოდული 1: მაღალეფექტური გუნდის შექმნა</strong> - გუნდის წესების განსაზღვრა, შეთანხმებების წარმოება, გუნდის წევრების გაძლიერება და კონფლიქტების მართვა.</span>
+            <span class="lang-en"><strong>Module 1: Creating a High-Performing Team</strong> - Defining team ground
+              rules, negotiating agreements, empowering members, and managing conflict.</span>
+            <span class="lang-ka"><strong>მოდული 1: მაღალეფექტური გუნდის შექმნა</strong> - გუნდის წესების განსაზღვრა,
+              შეთანხმებების წარმოება, გუნდის წევრების გაძლიერება და კონფლიქტების მართვა.</span>
           </li>
           <li>
-            <span class="lang-en"><strong>Module 2: Starting the Project</strong> - Plan and manage scope, budget, schedule, quality, and project closure.</span>
-            <span class="lang-ka"><strong>მოდული 2: პროექტის დაწყება</strong> - პროექტის მასშტაბის, ბიუჯეტის, განრიგის, ხარისხის დაგეგმვა/მართვა და პროექტის დახურვა.</span>
+            <span class="lang-en"><strong>Module 2: Starting the Project</strong> - Plan and manage scope, budget,
+              schedule, quality, and project closure.</span>
+            <span class="lang-ka"><strong>მოდული 2: პროექტის დაწყება</strong> - პროექტის მასშტაბის, ბიუჯეტის, განრიგის,
+              ხარისხის დაგეგმვა/მართვა და პროექტის დახურვა.</span>
           </li>
           <li>
-            <span class="lang-en"><strong>Module 3: Doing the Work</strong> - Managing risk, engaging stakeholders, executing tasks, and managing project changes using predictive, agile, or hybrid methods.</span>
-            <span class="lang-ka"><strong>მოდული 3: პროექტზე მუშაობა</strong> - რისკების მართვა, დაინტერესებულ მხარეებთან მუშაობა, ამოცანების შესრულება და ცვლილებების მართვა პროგნოზირებადი, agile ან ჰიბრიდული მეთოდებით.</span>
+            <span class="lang-en"><strong>Module 3: Doing the Work</strong> - Managing risk, engaging stakeholders,
+              executing tasks, and managing project changes using predictive, agile, or hybrid methods.</span>
+            <span class="lang-ka"><strong>მოდული 3: პროექტზე მუშაობა</strong> - რისკების მართვა, დაინტერესებულ
+              მხარეებთან მუშაობა, ამოცანების შესრულება და ცვლილებების მართვა პროგნოზირებადი, agile ან ჰიბრიდული
+              მეთოდებით.</span>
           </li>
           <li>
-            <span class="lang-en"><strong>Module 4: Keeping the Team on Track</strong> - Leadership, collaboration, emotional intelligence, and performance monitoring.</span>
-            <span class="lang-ka"><strong>მოდული 4: გუნდის მუშაობის მხარდაჭერა</strong> - ლიდერობა, კოლაბორაცია, ემოციური ინტელექტი და გუნდის პროგრესის მონიტორინგი.</span>
+            <span class="lang-en"><strong>Module 4: Keeping the Team on Track</strong> - Leadership, collaboration,
+              emotional intelligence, and performance monitoring.</span>
+            <span class="lang-ka"><strong>მოდული 4: გუნდის მუშაობის მხარდაჭერა</strong> - ლიდერობა, კოლაბორაცია,
+              ემოციური ინტელექტი და გუნდის პროგრესის მონიტორინგი.</span>
           </li>
           <li>
-            <span class="lang-en"><strong>Module 5: Keeping the Business in Mind</strong> - Compliance, business value delivery, organizational culture, and continuous improvement.</span>
-            <span class="lang-ka"><strong>მოდული 5: ბიზნეს გარემოს გათვალისწინება</strong> - შესაბამისობის (compliance) უზრუნველყოფა, ბიზნეს ღირებულების შექმნა, ორგანიზაციული კულტურა და უწყვეტი გაუმჯობესება.</span>
+            <span class="lang-en"><strong>Module 5: Keeping the Business in Mind</strong> - Compliance, business value
+              delivery, organizational culture, and continuous improvement.</span>
+            <span class="lang-ka"><strong>მოდული 5: ბიზნეს გარემოს გათვალისწინება</strong> - შესაბამისობის (compliance)
+              უზრუნველყოფა, ბიზნეს ღირებულების შექმნა, ორგანიზაციული კულტურა და უწყვეტი გაუმჯობესება.</span>
           </li>
         </ul>
-        
+
         <h4>
           <span class="lang-en">What Is Included:</span>
           <span class="lang-ka">რას მოიცავს პროგრამა:</span>
@@ -3263,7 +3927,8 @@
         <ul>
           <li>
             <span class="lang-en">Official 35 contact hours (required for PMP Exam eligibility).</span>
-            <span class="lang-ka">ოფიციალური 35 საკონტაქტო საათი (PMP გამოცდაზე გასასვლელად სავალდებულო მოთხოვნა).</span>
+            <span class="lang-ka">ოფიციალური 35 საკონტაქტო საათი (PMP გამოცდაზე გასასვლელად სავალდებულო
+              მოთხოვნა).</span>
           </li>
           <li>
             <span class="lang-en">Curriculum matches the 2025+ PMI Exam Content Outline exactly.</span>
@@ -3300,7 +3965,8 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="logo.png" alt="Project Management Excellence Centre" style="height:52px;width:auto;display:block;margin:0 auto 12px;filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg);" />
+        <img src="logo.png" alt="Project Management Excellence Centre"
+          style="height:52px;width:auto;display:block;margin:0 auto 12px;filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg);" />
         <div class="atp-note">
           <span class="lang-en">PMI ATP Candidate Organization &nbsp;·&nbsp; Tbilisi, Georgia</span>
           <span class="lang-ka">PMI ATP კანდიდატი ორგანიზაცია &nbsp;·&nbsp; თბილისი, საქართველო</span>
@@ -3361,20 +4027,21 @@
       </span>
       <span style="font-style:italic; color:rgba(212,168,67,0.5)">
         <span class="lang-en">PMI and PMP are registered trademarks of Project Management Institute, Inc.</span>
-        <span class="lang-ka">PMI და PMP წარმოადგენს პროექტების მართვის ინსტიტუტის (Project Management Institute, Inc.) რეგისტრირებულ სავაჭრო ნიშნებს.</span>
+        <span class="lang-ka">PMI და PMP წარმოადგენს პროექტების მართვის ინსტიტუტის (Project Management Institute, Inc.)
+          რეგისტრირებულ სავაჭრო ნიშნებს.</span>
       </span>
     </div>
   </footer>
 
   <!-- ══════════════════════════════════════════════ WHATSAPP FLOAT -->
   <a class="wa-float"
-     href="https://wa.me/995591115300?text=Hi%2C%20I%20am%20interested%20in%20PMEC%27s%20PMP%20training%20programme."
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Chat on WhatsApp">
+    href="https://wa.me/995591115300?text=Hi%2C%20I%20am%20interested%20in%20PMEC%27s%20PMP%20training%20programme."
+    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.827L.057 23.882a.5.5 0 0 0 .617.617l6.088-1.461A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 0 1-5.003-1.372l-.358-.213-3.714.892.908-3.647-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.827L.057 23.882a.5.5 0 0 0 .617.617l6.088-1.461A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 0 1-5.003-1.372l-.358-.213-3.714.892.908-3.647-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z" />
     </svg>
     <span>Chat on WhatsApp</span>
   </a>
@@ -3383,7 +4050,7 @@
   <script>
     // Lazy load and handle iframe loading spinners
     const loadedIframes = new Set();
-    
+
     // ─── STUDY SUITE DATA ──────────────────────────────
     const PMP_QUIZ_DATA = [
       {
@@ -3914,7 +4581,7 @@
       if (isOptionChosen) {
         const rationale = lang === 'ka' ? q.rationale_ka : q.rationale_en;
         const explanationTitle = lang === 'ka' ? 'განმარტება:' : 'Explanation:';
-        const nextButtonText = currentQuizIndex === PMP_QUIZ_DATA.length - 1 
+        const nextButtonText = currentQuizIndex === PMP_QUIZ_DATA.length - 1
           ? (lang === 'ka' ? 'შედეგების ნახვა 📊' : 'View Results 📊')
           : (lang === 'ka' ? 'შემდეგი კითხვა ➡️' : 'Next Question ➡️');
 
@@ -3943,7 +4610,7 @@
       if (isOptionChosen) return;
       isOptionChosen = true;
       selectedOptionIndex = idx;
-      
+
       const q = PMP_QUIZ_DATA[currentQuizIndex];
       if (idx === q.correctIndex) {
         quizScore++;
@@ -3969,8 +4636,8 @@
       let titleText = "", descText = "", ctaLabel = "", targetTab = "";
 
       if (passed) {
-        titleText = lang === 'ka' 
-          ? "გილოცავთ! თქვენ მზად ხართ ლიდერობისთვის! 🎉" 
+        titleText = lang === 'ka'
+          ? "გილოცავთ! თქვენ მზად ხართ ლიდერობისთვის! 🎉"
           : "Congratulations! You're Ready to Lead! 🎉";
         descText = lang === 'ka'
           ? `თქვენ დააგროვეთ ${quizScore}-დან ${PMP_QUIZ_DATA.length} ქულა (${percentage}%). თქვენ გაქვთ ძლიერი ბაზისი. ჩვენი ინდივიდუალური მენტორინგის პროგრამა იდეალურია თქვენთვის, რათა დახვეწოთ აპლიკაცია და ჩააბაროთ გამოცდა პირველივე ცდაზე.`
@@ -4125,7 +4792,7 @@
       document.querySelectorAll('.form-pane').forEach(pane => {
         const isTarget = pane.id === 'pane-' + tab;
         pane.classList.toggle('active', isTarget);
-        
+
         // Lazy load Google Forms iframe when selected
         if (isTarget) {
           const iframe = pane.querySelector('iframe');
@@ -4137,13 +4804,13 @@
               spinner.className = 'form-loading-overlay';
               spinner.innerHTML = '<div><div class="spinner"></div><div>Loading secure application form...</div></div>';
               spinnerWrap.appendChild(spinner);
-              
+
               iframe.addEventListener('load', () => {
                 spinner.style.opacity = '0';
                 setTimeout(() => spinner.remove(), 300);
               }, { once: true });
             }
-            
+
             // Set source if not set yet to trigger load
             const dataSrc = iframe.getAttribute('data-src');
             if (dataSrc) {
@@ -4182,14 +4849,14 @@
 
     // Allow card CTA buttons to pre-select the right tab
     document.querySelectorAll('a[href="#apply"]').forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function (e) {
         const section = this.closest('[id]');
         let selectedTab = 'training';
-        
+
         if (section && section.id === 'mentoring') {
           selectedTab = 'mentoring';
         }
-        
+
         switchTab(selectedTab);
       });
     });
@@ -4222,7 +4889,7 @@
       const savedLang = localStorage.getItem('pmec_lang') || 'en';
       setLanguage(savedLang);
       switchTab('training');
-      
+
       // Initialize study suite engines
       renderCurrentQuizQuestion();
       renderCurrentFlashcard();
@@ -4230,4 +4897,5 @@
   </script>
 
 </body>
+
 </html>
