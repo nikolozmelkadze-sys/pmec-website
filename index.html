@@ -1300,6 +1300,53 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Video player styles */
+    .video-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 25px rgba(26,47,90,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .video-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 90% 10%, rgba(212,168,67,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .video-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .video-header p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      margin: 0;
+    }
+    .video-player-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: #000;
+      line-height: 0;
+    }
+    .video-player-wrapper video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     /* Podcast player styles */
     .podcast-card {
       background: var(--navy);
@@ -2406,6 +2453,11 @@
           <span class="lang-en">🎧 Audio Overview</span>
           <span class="lang-ka">🎧 აუდიო მიმოხილვა</span>
         </button>
+        <button class="suite-tab-btn" id="tab-btn-video" onclick="switchSuiteTab('video')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12zM9 10v8l7-4z"/></svg>
+          <span class="lang-en">🎬 Video Overview</span>
+          <span class="lang-ka">🎬 ვიდეო მიმოხილვა</span>
+        </button>
         <button class="suite-tab-btn" id="tab-btn-quiz" onclick="switchSuiteTab('quiz')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
           <span class="lang-en">📝 Readiness Quiz</span>
@@ -2480,6 +2532,28 @@
                   <input type="range" class="volume-slider" id="podcast-volume" min="0" max="1" step="0.1" value="0.8" oninput="setPodcastVolume(this.value)">
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Player Pane -->
+        <div class="suite-pane" id="suite-pane-video">
+          <div class="video-card">
+            <div class="video-header">
+              <h3>
+                <span class="lang-en">PMP Certification Guide &amp; Syllabus Overview</span>
+                <span class="lang-ka">PMP სერტიფიცირებისა და სილაბუსის ვიდეო მიმოხილვა</span>
+              </h3>
+              <p>
+                <span class="lang-en">AI-Generated Video Walkthrough of the Five Core Modules</span>
+                <span class="lang-ka">ხელოვნური ინტელექტის მიერ გენერირებული 5 ძირითადი მოდულის ვიდეო მიმოხილვა</span>
+              </p>
+            </div>
+            <div class="video-player-wrapper">
+              <video id="suite-video" controls width="100%">
+                <source src="https://lh3.googleusercontent.com/notebooklm/AKXwDQEaN7gArKwjRAzqHcyxTyLMAzbEp5fNy31ZIswf4OOCrGHVnWntJjRw3FLxXM8Ga7nbwjBq28j3ZU1RILT_0XD3pooM0BhA4ExxBYjHy2Ie_m0gp8gjc5Jo8dEVcYkCcNzqfiYgxDtS221PnYjJC0xXgqnjK-A=m22-dv" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -3066,11 +3140,15 @@
         </div>
         
         <!-- Corporate Lead Magnet Button -->
-        <div class="lead-magnet-btn-wrap">
+        <div class="lead-magnet-btn-wrap" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <button class="btn btn-brochure" onclick="openSyllabusModal()">
-            <span class="lang-en">View &amp; Download Corporate Training Brochure</span>
-            <span class="lang-ka">იხილეთ და ჩამოტვირთეთ კორპორატიული ტრენინგის ბროშურა</span>
+            <span class="lang-en">View &amp; Download Course Brochure</span>
+            <span class="lang-ka">კურსის ბროშურის ნახვა და ჩამოტვირთვა</span>
           </button>
+          <a href="https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkYSD2FydGlmYWN0c19tZWRpYRozCiQ3ZGM3MGM2OS1jNjRhLTQxMjctOTg2MC0xMmZhOTFjNDdlNTESCxIHELHLjNyZDRgB&filename=The_Standardized_Project_Leader.pdf&opi=96797242" target="_blank" rel="noopener noreferrer" class="btn btn-outline-navy" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+            <span class="lang-en">📥 Download Corporate Slide Deck</span>
+            <span class="lang-ka">📥 კორპორატიული პრეზენტაციის ჩამოტვირთვა</span>
+          </a>
         </div>
       </div>
 
@@ -3652,6 +3730,14 @@
         if (audio && !audio.paused) {
           audio.pause();
           updatePodcastPlayState(false);
+        }
+      }
+
+      // Pause video if switching away from video tab
+      if (tabId !== 'video') {
+        const video = document.getElementById('suite-video');
+        if (video && !video.paused) {
+          video.pause();
         }
       }
     }
