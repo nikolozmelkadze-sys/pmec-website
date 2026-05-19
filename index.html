@@ -879,6 +879,374 @@
       .trainer-avatar { width: 96px; height: 96px; flex-shrink: 0; margin-bottom: 0; }
       .trainer-name-block { text-align: left; }
     }
+
+    /* ─── ADDED PMEC IMPROVEMENTS ────────────────────────── */
+    /* Prominent Sticky Nav CTA */
+    .nav-links .nav-cta a {
+      background: var(--gold);
+      color: var(--navy) !important;
+      font-weight: 700;
+      border: 1px solid var(--gold);
+      box-shadow: 0 4px 12px rgba(212,168,67,0.2);
+      transition: all 0.25s ease;
+    }
+    .nav-links .nav-cta a:hover {
+      background: var(--navy);
+      color: var(--gold) !important;
+      box-shadow: 0 4px 16px rgba(212,168,67,0.4);
+    }
+
+    /* Comparison Table Styles */
+    .comparison-section {
+      padding: 88px 24px;
+      background: var(--white);
+    }
+    .comparison-table-wrap {
+      max-width: 900px;
+      margin: 40px auto 0;
+      overflow-x: auto;
+      border: 1px solid var(--lightgray);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--lightgray);
+    }
+    .comparison-table th {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--offwhite);
+      width: 25%;
+    }
+    .comparison-table td {
+      width: 37.5%;
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      padding: 88px 24px;
+      background: var(--offwhite);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+    }
+    .testimonial-card {
+      background: var(--white);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--lightgray);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(26,47,90,0.08);
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--charcoal);
+      font-size: 14.5px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .author-info h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .author-info p {
+      font-size: 12px;
+      color: var(--steel);
+      margin-top: 2px;
+    }
+    .badge-pass {
+      display: inline-block;
+      background: rgba(37,211,102,0.1);
+      color: #1b8a43;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Eligibility Callout Banner */
+    .eligibility-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #254077 100%);
+      color: var(--white);
+      padding: 24px 32px;
+      border-radius: 8px;
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 8px 24px rgba(26,47,90,0.15);
+      border-left: 4px solid var(--gold);
+    }
+    .eligibility-content h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .eligibility-content p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .eligibility-btn {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .eligibility-btn:hover { opacity: 0.9; }
+
+    /* Smart Select Form Selector */
+    .smart-selector-wrap {
+      max-width: 560px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+    .smart-selector-wrap label {
+      display: block;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .smart-select {
+      width: 100%;
+      padding: 14px 20px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--white);
+      border: 2px solid var(--lightgray);
+      border-radius: 6px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='%231A2F5A' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      transition: border-color 0.2s;
+    }
+    .smart-select:focus {
+      border-color: var(--gold);
+    }
+
+    /* What Happens Next Timeline */
+    .timeline-wrap {
+      margin-top: 56px;
+      border-top: 1px solid var(--lightgray);
+      padding-top: 48px;
+    }
+    .timeline-title {
+      text-align: center;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 32px;
+    }
+
+    /* Syllabus Download Lead Magnet */
+    .lead-magnet-btn-wrap {
+      margin-top: 24px;
+      text-align: center;
+    }
+    .btn-brochure {
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+    }
+    .btn-brochure:hover {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    /* Syllabus Modal */
+    .syllabus-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(26,47,90,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+    .syllabus-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .syllabus-modal-content {
+      background: var(--white);
+      width: 100%;
+      max-width: 680px;
+      max-height: 85vh;
+      border-radius: 8px;
+      overflow-y: auto;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+      position: relative;
+      animation: modalSlide 0.3s ease;
+    }
+    @keyframes modalSlide {
+      from { transform: translateY(20px); }
+      to { transform: translateY(0); }
+    }
+    .syllabus-modal-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .syllabus-modal-header h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .close-modal {
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .syllabus-modal-body {
+      padding: 32px;
+    }
+    .syllabus-modal-body h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 20px 0 10px;
+    }
+    .syllabus-modal-body h4:first-child { margin-top: 0; }
+    .syllabus-modal-body p {
+      font-size: 14.5px;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+    .syllabus-modal-body ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    .syllabus-modal-body li {
+      font-size: 14px;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .syllabus-modal-footer {
+      padding: 20px 32px;
+      border-top: 1px solid var(--lightgray);
+      display: flex;
+      justify-content: flex-end;
+      background: var(--offwhite);
+    }
+
+    /* Dynamic Form Wrapper Loader */
+    .form-iframe-wrap {
+      position: relative;
+    }
+    .form-loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      transition: opacity 0.3s;
+    }
+    .spinner {
+      border: 4px solid var(--lightgray);
+      border-top: 4px solid var(--gold);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Mobile media overrides for table/grid */
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -1061,6 +1429,117 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════ PROGRAMME COMPARISON -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="programmes-intro">
+        <span class="section-label">Compare Paths</span>
+        <h2>Which path is right for you?</h2>
+        <div class="gold-rule centered"></div>
+        <p>A side-by-side breakdown of our PMP preparation tracks.</p>
+      </div>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>35-Hour Programme</th>
+              <th>Personal Mentoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time Commitment</td>
+              <td>35 contact hours (structured class time)</td>
+              <td>Flexible schedule built around your workload</td>
+            </tr>
+            <tr>
+              <td>Delivery Format</td>
+              <td>Live instructor-led (Weeknights / Weekends)</td>
+              <td>Bi-weekly 1:1 sessions (Private coaching)</td>
+            </tr>
+            <tr>
+              <td>Level of Support</td>
+              <td>Cohort-based learning &amp; peer accountability</td>
+              <td>1:1 direct access, customized study plan</td>
+            </tr>
+            <tr>
+              <td>Mock Simulations</td>
+              <td>Full exam-simulation practice sets &amp; feedback</td>
+              <td>Personalized weak-area analysis &amp; guidance</td>
+            </tr>
+            <tr>
+              <td>Application Review</td>
+              <td>Application guide &amp; process outline included</td>
+              <td>Line-by-line expert review before submission</td>
+            </tr>
+            <tr>
+              <td>Pricing (Investment)</td>
+              <td>Contact for details (Competitive local rates)</td>
+              <td>Customized package based on experience gap</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="programmes-intro">
+        <span class="section-label">Success Stories</span>
+        <h2>What Georgia's professionals say</h2>
+        <div class="gold-rule centered"></div>
+        <p>Real feedback from project managers who certified under Nikoloz's guidance.</p>
+      </div>
+      <div class="testimonials-grid">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The structure was exactly what I needed. Nikoloz has an incredible way of explaining complex agile concepts simply. I passed the exam on my first attempt!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LK</div>
+            <div class="author-info">
+              <h4>Lasha K.</h4>
+              <p>Senior Project Manager, Bank of Georgia</p>
+              <span class="badge-pass">Passed on First Attempt</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "I was overwhelmed by the application requirements and the sheer volume of material. The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NT</div>
+            <div class="author-info">
+              <h4>Nino T.</h4>
+              <p>Delivery Lead, TBC Bank</p>
+              <span class="badge-pass">Passed on First Attempt</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a PMI-aligned project leader, which not only helped me pass but also improved my day-to-day delivery."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">GI</div>
+            <div class="author-info">
+              <h4>Giorgi I.</h4>
+              <p>Infrastructure Project Lead, Energo-Pro</p>
+              <span class="badge-pass">Passed on First Attempt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════════════════════════════ WHY PMEC -->
   <section class="why" id="why-pmec">
     <div class="why-inner">
@@ -1203,27 +1682,32 @@
   <!-- ══════════════════════════════════════════════ APPLICATION FORM -->
   <section class="form-section" id="apply">
     <div class="container">
+
+      <!-- Eligibility Callout Banner -->
+      <div class="eligibility-banner">
+        <div class="eligibility-content">
+          <h3>Free PMP® Eligibility Check Included</h3>
+          <p>Unsure if your experience meets PMI's requirements? Apply today and our team will assess your eligibility at no cost and with zero commitment.</p>
+        </div>
+        <a href="#apply" class="eligibility-btn" onclick="scrollToSelector()">Check My Eligibility</a>
+      </div>
+
       <div class="form-section-header">
         <span class="section-label">Apply Now</span>
         <h2>Start your certification journey.</h2>
         <div class="gold-rule centered"></div>
-        <p>Select your programme and complete the short application. We will follow up within 48 hours.</p>
+        <p>Complete the short form below to get started. We will review your application and respond within 48 hours.</p>
       </div>
 
-      <!-- Programme Tabs -->
-      <div class="form-tabs">
-        <button class="form-tab active" onclick="switchTab('training')">
-          35-Hour PMP Training
-        </button>
-        <button class="form-tab" onclick="switchTab('mentoring')">
-          Certification Mentoring
-        </button>
-        <button class="form-tab" onclick="switchTab('contact')">
-          Contact &amp; Inquiry
-        </button>
-        <button class="form-tab" onclick="switchTab('corporate')">
-          Corporate Training
-        </button>
+      <!-- Unified Smart Selector Dropdown -->
+      <div class="smart-selector-wrap">
+        <label for="programme-select">Select your path to get started</label>
+        <select id="programme-select" class="smart-select" onchange="switchTab(this.value)">
+          <option value="training">35-Hour PMP Exam Preparation Training</option>
+          <option value="mentoring">1:1 PMP Certification Journey Mentoring</option>
+          <option value="contact">Contact &amp; General Inquiry</option>
+          <option value="corporate">Corporate Training Request (Teams)</option>
+        </select>
       </div>
 
       <!-- Training Form Pane -->
@@ -1332,10 +1816,80 @@
             </iframe>
           </div>
         </div>
+        
+        <!-- Corporate Lead Magnet Button -->
+        <div class="lead-magnet-btn-wrap">
+          <button class="btn btn-brochure" onclick="openSyllabusModal()">
+            View &amp; Download Corporate Training Brochure
+          </button>
+        </div>
+      </div>
+
+      <!-- "What Happens Next?" Timeline -->
+      <div class="timeline-wrap" id="what-happens-next">
+        <h3 class="timeline-title">What happens after you submit?</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Review &amp; Assess</h4>
+            <p>Our team reviews your professional experience against official PMI eligibility criteria.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Strategy Call</h4>
+            <p>We hold a quick 15-minute call to confirm your PDU needs and map your study path.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>Enrollment &amp; Kickoff</h4>
+            <p>Gain access to study materials, prep databases, and join your cohort or mentor.</p>
+          </div>
+          <div class="step">
+            <div class="step-num gold">✓</div>
+            <h4>Pass the PMP</h4>
+            <p>Get certified on your first attempt with ongoing exam day strategy support.</p>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
+
+  <!-- ══════════════════════════════════════════════ SYLLABUS MODAL -->
+  <div class="syllabus-modal" id="syllabus-modal">
+    <div class="syllabus-modal-content">
+      <div class="syllabus-modal-header">
+        <h3>PMEC Corporate Training Programme</h3>
+        <button class="close-modal" onclick="closeSyllabusModal()">&times;</button>
+      </div>
+      <div class="syllabus-modal-body">
+        <h4>About the PMEC Corporate Track</h4>
+        <p>Our corporate program is custom-tailored for organizations seeking to upskill their project teams, establish a standardized PM language, and increase their project success rate.</p>
+        
+        <h4>Course Outline &amp; Syllabus (35 Hours)</h4>
+        <ul>
+          <li><strong>Module 1: Creating a High-Performing Team</strong> — Defining team ground rules, negotiating agreements, empowering members, and managing conflict.</li>
+          <li><strong>Module 2: Starting the Project</strong> — Plan and manage scope, budget, schedule, quality, and project closure.</li>
+          <li><strong>Module 3: Doing the Work</strong> — Managing risk, engaging stakeholders, executing tasks, and managing project changes using predictive, agile, or hybrid methods.</li>
+          <li><strong>Module 4: Keeping the Team on Track</strong> — Leadership, collaboration, emotional intelligence, and performance monitoring.</li>
+          <li><strong>Module 5: Keeping the Business in Mind</strong> — Compliance, business value delivery, organizational culture, and continuous improvement.</li>
+        </ul>
+        
+        <h4>What Is Included:</h4>
+        <ul>
+          <li>Official 35 contact hours (required for PMP Exam eligibility).</li>
+          <li>Curriculum matches the 2025+ PMI Exam Content Outline exactly.</li>
+          <li>Full exam simulations with detailed performance reports.</li>
+          <li>Comprehensive PMI application support for the entire team.</li>
+          <li>Post-training mentoring sessions to ensure high pass rates.</li>
+        </ul>
+      </div>
+      <div class="syllabus-modal-footer">
+        <button class="btn btn-gold" onclick="window.print()">Print / Save as PDF</button>
+        <button class="btn btn-outline-navy" onclick="closeSyllabusModal()" style="margin-left: 10px;">Close</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ══════════════════════════════════════════════ FOOTER -->
   <footer>
@@ -1382,24 +1936,92 @@
 
   <!-- ══════════════════════════════════════════════ JS -->
   <script>
+    // Lazy load and handle iframe loading spinners
+    const loadedIframes = new Set();
+    
     function switchTab(tab) {
-      // Update tab buttons
-      document.querySelectorAll('.form-tab').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0 && tab === 'training') || (i === 1 && tab === 'mentoring'));
-      });
+      // Update the select dropdown if it's not already matching
+      const selector = document.getElementById('programme-select');
+      if (selector && selector.value !== tab) {
+        selector.value = tab;
+      }
+
       // Show / hide panes
       document.querySelectorAll('.form-pane').forEach(pane => {
-        pane.classList.toggle('active', pane.id === 'pane-' + tab);
+        const isTarget = pane.id === 'pane-' + tab;
+        pane.classList.toggle('active', isTarget);
+        
+        // Lazy load Google Forms iframe when selected
+        if (isTarget) {
+          const iframe = pane.querySelector('iframe');
+          if (iframe && !loadedIframes.has(tab)) {
+            // Show loading spinner
+            let spinnerWrap = pane.querySelector('.form-iframe-wrap');
+            if (spinnerWrap) {
+              const spinner = document.createElement('div');
+              spinner.className = 'form-loading-overlay';
+              spinner.innerHTML = '<div><div class="spinner"></div><div>Loading secure application form...</div></div>';
+              spinnerWrap.appendChild(spinner);
+              
+              iframe.addEventListener('load', () => {
+                spinner.style.opacity = '0';
+                setTimeout(() => spinner.remove(), 300);
+              }, { once: true });
+            }
+            
+            // Set source if not set yet to trigger load
+            const src = iframe.getAttribute('src');
+            if (src) {
+              iframe.setAttribute('src', src); // Reload/trigger
+            }
+            loadedIframes.add(tab);
+          }
+        }
       });
     }
 
+    // Scroll helper for eligibility banner
+    function scrollToSelector() {
+      const selector = document.getElementById('programme-select');
+      if (selector) {
+        selector.focus();
+        selector.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Modal Control
+    function openSyllabusModal() {
+      document.getElementById('syllabus-modal').classList.add('active');
+    }
+    function closeSyllabusModal() {
+      document.getElementById('syllabus-modal').classList.remove('active');
+    }
+
+    // Close modal if clicked outside content
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('syllabus-modal');
+      if (e.target === modal) {
+        closeSyllabusModal();
+      }
+    });
+
     // Allow card CTA buttons to pre-select the right tab
     document.querySelectorAll('a[href="#apply"]').forEach(link => {
-      link.addEventListener('click', function() {
+      link.addEventListener('click', function(e) {
         const section = this.closest('[id]');
-        if (section && section.id === 'mentoring') switchTab('mentoring');
-        else switchTab('training');
+        let selectedTab = 'training';
+        
+        if (section && section.id === 'mentoring') {
+          selectedTab = 'mentoring';
+        }
+        
+        switchTab(selectedTab);
       });
+    });
+
+    // Run tab setup on DOM ready to lazy load first tab (training)
+    document.addEventListener('DOMContentLoaded', () => {
+      switchTab('training');
     });
   </script>
 
