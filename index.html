@@ -3030,7 +3030,7 @@
           </div>
           <div class="form-iframe-wrap">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
+              data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
               title="Apply for 35-Hour PMP Training"
               frameborder="0"
               marginheight="0"
@@ -3063,7 +3063,7 @@
           </div>
           <div class="form-iframe-wrap">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSehdNK1q_yQATpo-CiBIH-jyF5pI_tGz-alm-lLbFQTdldWmQ/viewform?embedded=true"
+              data-src="https://docs.google.com/forms/d/e/1FAIpQLSehdNK1q_yQATpo-CiBIH-jyF5pI_tGz-alm-lLbFQTdldWmQ/viewform?embedded=true"
               title="Apply for PMP Certification Mentoring"
               frameborder="0"
               marginheight="0"
@@ -3096,7 +3096,7 @@
           </div>
           <div class="form-iframe-wrap">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
+              data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
               title="Contact PMEC"
               frameborder="0"
               marginheight="0"
@@ -3129,7 +3129,7 @@
           </div>
           <div class="form-iframe-wrap">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
+              data-src="https://docs.google.com/forms/d/e/1FAIpQLSe-I1mZ5SHrG9VMGTR_EiyL_7QTc4m-KTensiML4EArLoouKw/viewform?embedded=true"
               title="Corporate Training Request"
               frameborder="0"
               marginheight="0"
@@ -4145,9 +4145,9 @@
             }
             
             // Set source if not set yet to trigger load
-            const src = iframe.getAttribute('src');
-            if (src) {
-              iframe.setAttribute('src', src); // Reload/trigger
+            const dataSrc = iframe.getAttribute('data-src');
+            if (dataSrc) {
+              iframe.setAttribute('src', dataSrc);
             }
             loadedIframes.add(tab);
           }
