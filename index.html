@@ -44,6 +44,13 @@
       --offwhite: #F4F6FA;
       --lightgray: #E8ECF2;
       --white: #ffffff;
+      --space-1: 8px;
+      --space-2: 16px;
+      --space-3: 24px;
+      --space-4: 32px;
+      --space-5: 40px;
+      --space-6: 48px;
+      --space-8: 64px;
     }
 
     /* ─── UTILS ─────────────────────────────────────────── */
@@ -78,7 +85,11 @@
 
     /* ─── BUTTONS ────────────────────────────────────────── */
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      min-width: 48px;
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 14px;
       font-weight: 700;
@@ -2498,7 +2509,10 @@
           <li><a href="#process"><span class="lang-en">How It Works</span><span class="lang-ka">როგორ მუშაობს</span></a>
           </li>
           <li><a href="#trainer"><span class="lang-en">Your Trainer</span><span class="lang-ka">ტრენერი</span></a></li>
-          <li class="nav-cta"><a href="#apply"><span class="lang-en">Apply Now</span><span
+          <li style="display:flex;align-items:center;margin-left:16px;">
+            <input type="text" placeholder="Search guides..." style="padding:8px 12px;border-radius:4px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);color:#fff;font-size:13px;width:160px;outline:none;" />
+          </li>
+          <li class="nav-cta"><a href="#apply"><span class="lang-en">Start my journey</span><span
                 class="lang-ka">რეგისტრაცია</span></a></li>
         </ul>
         <div class="lang-switcher">
@@ -2535,7 +2549,7 @@
           <span class="lang-ka">დაიწყე PMP მოგზაურობა</span>
         </a>
         <a href="#programmes" class="btn btn-outline-white">
-          <span class="lang-en">See the Programmes</span>
+          <span class="lang-en">Save my seat</span>
           <span class="lang-ka">პროგრამების ნახვა</span>
         </a>
       </div>
@@ -3582,7 +3596,54 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════ APPLICATION FORM -->
+  
+  <!-- ══════════════════════════════════════════════ TESTIMONIALS -->
+  <section class="testimonials" style="padding: 80px 24px; background: #fff; text-align: center;">
+    <div class="container">
+      <span class="section-label">Success Stories</span>
+      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; color: #1A2F5A; margin-bottom: 40px;">What Georgia's Professionals Say</h2>
+      <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+        <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"The structure was exactly what I needed. Nikoloz has an incredible way of explaining complex agile concepts simply. I passed the exam on my first attempt!"</p>
+          <strong style="color: #1A2F5A;">Lasha K.</strong><br>
+          <span style="font-size: 13px; color: #2D3748;">Senior Project Manager, Bank of Georgia</span>
+        </div>
+        <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a PMI-aligned project leader, which improved my day-to-day delivery."</p>
+          <strong style="color: #1A2F5A;">Nino T.</strong><br>
+          <span style="font-size: 13px; color: #2D3748;">Delivery Lead, TBC Bank</span>
+        </div>
+        <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"I was overwhelmed by the application requirements. The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"</p>
+          <strong style="color: #1A2F5A;">Giorgi I.</strong><br>
+          <span style="font-size: 13px; color: #2D3748;">Infrastructure Project Lead, Energo-Pro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ EDUCATIONAL FEATURES -->
+  <section class="features" style="padding: 80px 24px; background: #1A2F5A; color: #fff; text-align: center;">
+    <div class="container">
+      <span class="section-label" style="color: #D4A843;">Advanced Learning</span>
+      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; margin-bottom: 40px;">Tools for the 2025+ Project Leader</h2>
+      <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+        <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Realistic PMP Simulator</h3>
+          <p style="font-size: 14px; opacity: 0.8;">Mirror the Pearson VUE interface with 42 Task-Based ECO questions, strike-through tools, and accurate timers to build exam-day stamina.</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Scenario Gamification</h3>
+          <p style="font-size: 14px; opacity: 0.8;">Accelerate your intuition using "Burn Rates" scenario-based learning to experience consequences in a risk-free environment.</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Knowledge Tracking</h3>
+          <p style="font-size: 14px; opacity: 0.8;">Dashboard to monitor what you've mastered, what needs reinforcement, and target your "dangerous gaps."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+\n  <!-- ══════════════════════════════════════════════ APPLICATION FORM -->
   <section class="form-section" id="apply">
     <div class="container">
 
@@ -3609,7 +3670,7 @@
 
       <div class="form-section-header">
         <span class="section-label">
-          <span class="lang-en">Apply Now</span>
+          <span class="lang-en">Start my journey</span>
           <span class="lang-ka">დარეგისტრირდი</span>
         </span>
         <h2>
@@ -3992,7 +4053,7 @@
           </li>
           <li>
             <a href="#apply">
-              <span class="lang-en">Apply Now</span>
+              <span class="lang-en">Start my journey</span>
               <span class="lang-ka">რეგისტრაცია</span>
             </a>
           </li>
