@@ -21,6 +21,14 @@
       line-height: 1.7;
     }
 
+    
+    /* ─── BILINGUAL LOGIC ────────────────────────────────────────── */
+    html[lang="en"] .lang-ka { display: none !important; }
+    html[lang="ka"] .lang-en { display: none !important; }
+    .lang-switcher span { transition: all 0.2s; }
+    .lang-switcher span:hover { color: var(--gold); }
+    .lang-switcher span.active { opacity: 1 !important; color: var(--gold) !important; }
+    
     /* ─── TOKENS ────────────────────────────────────────── */
     :root {
       --navy:      #1A2F5A;
@@ -916,6 +924,11 @@
           </li>
           <li class="nav-cta"><a href="#apply"><span class="lang-en">Start my journey</span><span
                 class="lang-ka">რეგისტრაცია</span></a></li>
+          <li class="lang-switcher" style="margin-left: 20px; font-weight: bold; cursor: pointer; color: #fff;">
+            <span id="btn-lang-en" onclick="setLang('en')" style="opacity: 0.5;">EN</span> | 
+            <span id="btn-lang-ka" onclick="setLang('ka')" style="opacity: 0.5;">GE</span>
+          </li>
+          
         </ul>
         <div class="lang-switcher">
           <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
@@ -969,10 +982,10 @@
   <!-- ══════════════════════════════════════════════ BRIEFING OVERVIEW -->
   <section class="briefing" style="padding: 60px 24px; background: #fff; text-align: center; border-bottom: 1px solid #E8ECF2;">
     <div class="container" style="max-width: 800px;">
-      <span class="section-label">Free Resources</span>
-      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 28px; color: #1A2F5A; margin-bottom: 24px;">Listen to our PMEC Briefing</h2>
+      <span class="section-label"><span class="lang-en">Free Resources</span><span class="lang-ka">უფასო რესურსები</span></span>
+      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 28px; color: #1A2F5A; margin-bottom: 24px;"><span class="lang-en">Listen to our PMEC Briefing</span><span class="lang-ka">მოუსმინეთ PMEC-ის ბრიფინგს</span></h2>
       <p style="font-size: 16px; color: #2D3748; margin-bottom: 32px; opacity: 0.8;">
-        Get a quick, 10-minute audio overview of how our PMP training is designed to build real project leaders.
+        <span class="lang-en">Get a quick, 10-minute audio overview of how our PMP training is designed to build real project leaders.</span><span class="lang-ka">მიიღეთ მოკლე, 10-წუთიანი აუდიო მიმოხილვა, თუ როგორ არის შექმნილი ჩვენი PMP ტრენინგი ნამდვილი პროექტის ლიდერების ჩამოსაყალიბებლად.</span>
       </p>
       
       <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; border: 1px solid #E8ECF2; margin-bottom: 32px;">
@@ -983,7 +996,7 @@
       </div>
 
       <a href="guide.html" target="_blank" class="btn btn-outline-navy" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 48px; font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 700; padding: 14px 32px; border-radius: 4px; text-decoration: none; cursor: pointer; border: 2px solid #1A2F5A; color: #1A2F5A;">
-        Read the PMP Success Guide
+        <span class="lang-en">Read the PMP Success Guide</span><span class="lang-ka">წაიკითხეთ PMP წარმატების გზამკვლევი</span>
       </a>
     </div>
   </section>
@@ -1256,23 +1269,23 @@
   <!-- ══════════════════════════════════════════════ TESTIMONIALS -->
   <section class="testimonials" style="padding: 80px 24px; background: #fff; text-align: center;">
     <div class="container">
-      <span class="section-label">Success Stories</span>
-      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; color: #1A2F5A; margin-bottom: 40px;">What Georgia's Professionals Say</h2>
+      <span class="section-label"><span class="lang-en">Success Stories</span><span class="lang-ka">წარმატების ისტორიები</span></span>
+      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; color: #1A2F5A; margin-bottom: 40px;"><span class="lang-en">What Georgia's Professionals Say</span><span class="lang-ka">რას ამბობენ საქართველოს პროფესიონალები</span></h2>
       <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
         <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
-          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"The structure was exactly what I needed. Nikoloz has an incredible way of explaining complex agile concepts simply. I passed the exam on my first attempt!"</p>
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;"><span class="lang-en">"The structure was exactly what I needed. Nikoloz has an incredible way of explaining complex agile concepts simply. I passed the exam on my first attempt!"</span><span class="lang-ka">"სტრუქტურა ზუსტად ის იყო, რაც მჭირდებოდა. ნიკოლოზს რთული ეჯაილ კონცეფციების მარტივად ახსნის საოცარი უნარი აქვს. გამოცდა პირველივე ცდაზე ჩავაბარე!"</span></p>
           <strong style="color: #1A2F5A;">Lasha K.</strong><br>
-          <span style="font-size: 13px; color: #2D3748;">Senior Project Manager, Bank of Georgia</span>
+          <span style="font-size: 13px; color: #2D3748;"><span class="lang-en">Senior Project Manager, Bank of Georgia</span><span class="lang-ka">უფროსი პროექტის მენეჯერი, საქართველოს ბანკი</span></span>
         </div>
         <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
-          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a PMI-aligned project leader, which improved my day-to-day delivery."</p>
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;"><span class="lang-en">"No shortcuts, no filler indeed. Nikoloz focuses on teaching you how to think like a PMI-aligned project leader, which improved my day-to-day delivery."</span><span class="lang-ka">"ნამდვილად არავითარი მოკლე გზები. ნიკოლოზი ფოკუსირებულია გასწავლოთ თუ როგორ იფიქროთ როგორც PMI-თან შესაბამისობაში მყოფმა პროექტის ლიდერმა, რამაც გააუმჯობესა ჩემი ყოველდღიური მუშაობა."</span></p>
           <strong style="color: #1A2F5A;">Nino T.</strong><br>
-          <span style="font-size: 13px; color: #2D3748;">Delivery Lead, TBC Bank</span>
+          <span style="font-size: 13px; color: #2D3748;"><span class="lang-en">Delivery Lead, TBC Bank</span><span class="lang-ka">მიწოდების ლიდერი, თიბისი ბანკი</span></span>
         </div>
         <div style="background: #F4F6FA; padding: 24px; border-radius: 8px; max-width: 300px; text-align: left;">
-          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;">"I was overwhelmed by the application requirements. The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"</p>
+          <p style="font-style: italic; color: #2D3748; margin-bottom: 16px;"><span class="lang-en">"I was overwhelmed by the application requirements. The 1:1 mentoring broke it down into achievable milestones. Highly recommend!"</span><span class="lang-ka">"განაცხადის მოთხოვნებმა თავდაპირველად დამაბნია. 1:1 მენტორინგმა ის მიღწევად ეტაპებად დაყო. ყველას ვურჩევ!"</span></p>
           <strong style="color: #1A2F5A;">Giorgi I.</strong><br>
-          <span style="font-size: 13px; color: #2D3748;">Infrastructure Project Lead, Energo-Pro</span>
+          <span style="font-size: 13px; color: #2D3748;"><span class="lang-en">Infrastructure Project Lead, Energo-Pro</span><span class="lang-ka">ინფრასტრუქტურის პროექტის ლიდერი, ენერგო-პრო</span></span>
         </div>
       </div>
     </div>
@@ -1281,20 +1294,20 @@
   <!-- ══════════════════════════════════════════════ EDUCATIONAL FEATURES -->
   <section class="features" style="padding: 80px 24px; background: #1A2F5A; color: #fff; text-align: center;">
     <div class="container">
-      <span class="section-label" style="color: #D4A843;">Advanced Learning</span>
-      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; margin-bottom: 40px;">Tools for the 2025+ Project Leader</h2>
+      <span class="section-label" style="color: #D4A843;"><span class="lang-en">Advanced Learning</span><span class="lang-ka">მოწინავე სწავლება</span></span>
+      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 32px; margin-bottom: 40px;"><span class="lang-en">Tools for the 2025+ Project Leader</span><span class="lang-ka">ინსტრუმენტები 2025+ პროექტის ლიდერისთვის</span></h2>
       <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
         <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
-          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Realistic PMP Simulator</h3>
-          <p style="font-size: 14px; opacity: 0.8;">Mirror the Pearson VUE interface with 42 Task-Based ECO questions, strike-through tools, and accurate timers to build exam-day stamina.</p>
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;"><span class="lang-en">Realistic PMP Simulator</span><span class="lang-ka">რეალისტური PMP სიმულატორი</span></h3>
+          <p style="font-size: 14px; opacity: 0.8;"><span class="lang-en">Mirror the Pearson VUE interface with 42 Task-Based ECO questions, strike-through tools, and accurate timers to build exam-day stamina.</span><span class="lang-ka">დააკოპირეთ Pearson VUE ინტერფეისი 42 ამოცანაზე დაფუძნებული ECO კითხვით, გადახაზვის ინსტრუმენტებით და ზუსტი ტაიმერებით, გამოცდის დღის გამძლეობის გასავითარებლად.</span></p>
         </div>
         <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
-          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Scenario Gamification</h3>
-          <p style="font-size: 14px; opacity: 0.8;">Accelerate your intuition using "Burn Rates" scenario-based learning to experience consequences in a risk-free environment.</p>
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;"><span class="lang-en">Scenario Gamification</span><span class="lang-ka">სცენარული გეიმიფიკაცია</span></h3>
+          <p style="font-size: 14px; opacity: 0.8;"><span class="lang-en">Accelerate your intuition using "Burn Rates" scenario-based learning to experience consequences in a risk-free environment.</span><span class="lang-ka">დააჩქარეთ თქვენი ინტუიცია „Burn Rates“ სცენარზე დაფუძნებული სწავლების გამოყენებით, რათა განიცადოთ შედეგები რისკის გარეშე გარემოში.</span></p>
         </div>
         <div style="background: rgba(255,255,255,0.05); padding: 32px; border-radius: 8px; max-width: 340px;">
-          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;">Knowledge Tracking</h3>
-          <p style="font-size: 14px; opacity: 0.8;">Dashboard to monitor what you've mastered, what needs reinforcement, and target your "dangerous gaps."</p>
+          <h3 style="color: #D4A843; font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 12px;"><span class="lang-en">Knowledge Tracking</span><span class="lang-ka">ცოდნის მონიტორინგი</span></h3>
+          <p style="font-size: 14px; opacity: 0.8;"><span class="lang-en">Dashboard to monitor what you've mastered, what needs reinforcement, and target your "dangerous gaps."</span><span class="lang-ka">დაფა იმის მონიტორინგისთვის, თუ რა გაქვთ ათვისებული, რას სჭირდება განმტკიცება და მიზანში ამოიღეთ თქვენი „საშიში ხარვეზები“.</span></p>
         </div>
       </div>
     </div>
@@ -1523,5 +1536,20 @@
     });
   </script>
 
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('pmec-lang', lang);
+      document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-lang-ka').classList.toggle('active', lang === 'ka');
+    }
+    
+    // Init language
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem('pmec-lang') || 'en';
+      setLang(savedLang);
+    });
+  </script>
 </body>
 </html>
