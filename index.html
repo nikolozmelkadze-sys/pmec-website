@@ -22,6 +22,36 @@
     }
 
     
+    
+    /* ─── BILINGUAL SWITCHER UI ───────────────────────────── */
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 168, 67, 0.4);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-left: 20px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .lang-btn.active {
+      background: var(--gold);
+      color: var(--navy) !important;
+    }
+    
     /* ─── BILINGUAL LOGIC ────────────────────────────────────────── */
     html[lang="en"] .lang-ka { display: none !important; }
     html[lang="ka"] .lang-en { display: none !important; }
@@ -908,7 +938,7 @@
     <nav>
       <div class="nav-logo-wrap">
         <a href="#" style="display:flex;align-items:center;text-decoration:none;">
-          <img src="logo.png" alt="Project Management Excellence Centre" style="height:44px;width:auto;display:block;border-radius:4px;" />
+          <img src="logo.png" alt="Project Management Excellence Centre" style="height:80px;width:auto;display:block;border-radius:4px;" />
         </a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
@@ -924,15 +954,12 @@
           </li>
           <li class="nav-cta"><a href="#apply"><span class="lang-en">Start my journey</span><span
                 class="lang-ka">რეგისტრაცია</span></a></li>
-          <li class="lang-switcher" style="margin-left: 20px; font-weight: bold; cursor: pointer; color: #fff;">
-            <span id="btn-lang-en" onclick="setLang('en')" style="opacity: 0.5;">EN</span> | 
-            <span id="btn-lang-ka" onclick="setLang('ka')" style="opacity: 0.5;">GE</span>
-          </li>
+          
           
         </ul>
         <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-          <button class="lang-btn" data-lang="ka" onclick="setLanguage('ka')">ქარ</button>
+          <button id="btn-lang-en" class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+          <button id="btn-lang-ka" class="lang-btn" data-lang="ka" onclick="setLang('ka')">GE</button>
         </div>
       </div>
     </nav>
