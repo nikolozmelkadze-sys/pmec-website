@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <!-- Version 1: Pure wordmark — for dark backgrounds -->
+  <!-- PMEC monogram mark -->
+  <text x="0" y="52"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="bold"
+        fill="#D4A843"
+        letter-spacing="-2">PMEC</text>
+  <!-- Thin gold rule -->
+  <line x1="0" y1="60" x2="188" y2="60" stroke="#D4A843" stroke-width="1" opacity="0.5"/>
+  <!-- Tagline -->
+  <text x="1" y="75"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="8.5" fill="white" opacity="0.5"
+        letter-spacing="3.2">PROJECT MANAGEMENT EXCELLENCE CENTRE</text>
+</svg>
