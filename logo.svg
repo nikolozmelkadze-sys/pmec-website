@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" width="520" height="100">
+  <defs>
+    <clipPath id="lc">
+      <circle cx="50" cy="50" r="44"/>
+    </clipPath>
+  </defs>
+
+  <!-- Icon badge -->
+  <circle cx="50" cy="51" r="45" fill="#0D1B35" opacity="0.25"/>
+  <circle cx="50" cy="50" r="45" fill="#1A2F5A"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#D4A843" stroke-width="1.8"/>
+
+  <!-- Open book left page -->
+  <path d="M50 71 L12 27 C19 15 37 13 48 16 L50 71Z" fill="white" opacity="0.16" clip-path="url(#lc)"/>
+  <path d="M50 71 L12 27 C19 15 37 13 48 16 L50 71" fill="none" stroke="white" stroke-width="1.4" opacity="0.5" clip-path="url(#lc)"/>
+
+  <!-- Open book right page -->
+  <path d="M50 71 L88 27 C81 15 63 13 52 16 L50 71Z" fill="white" opacity="0.28" clip-path="url(#lc)"/>
+  <path d="M50 71 L88 27 C81 15 63 13 52 16 L50 71" fill="none" stroke="white" stroke-width="1.4" opacity="0.5" clip-path="url(#lc)"/>
+
+  <!-- Gold base line -->
+  <line x1="13" y1="71" x2="87" y2="71" stroke="#D4A843" stroke-width="2.2" stroke-linecap="round" clip-path="url(#lc)"/>
+  <!-- Gold spine -->
+  <line x1="50" y1="16" x2="50" y2="71" stroke="#D4A843" stroke-width="2.2" clip-path="url(#lc)"/>
+  <!-- Leadership arrow -->
+  <polygon points="50,6 42,20 58,20" fill="#D4A843"/>
+
+  <!-- Vertical divider -->
+  <line x1="108" y1="12" x2="108" y2="88" stroke="#D4A843" stroke-width="1.2" opacity="0.45"/>
+
+  <!-- Wordmark — white (for dark nav background) -->
+  <text x="122" y="38"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="18" font-weight="bold" fill="white" letter-spacing="1.5">PROJECT MANAGEMENT</text>
+  <text x="122" y="61"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="18" font-weight="bold" fill="white" letter-spacing="1.5">EXCELLENCE CENTRE</text>
+
+  <!-- Gold rule -->
+  <line x1="122" y1="68" x2="510" y2="68" stroke="#D4A843" stroke-width="1.5"/>
+
+  <!-- Tagline -->
+  <text x="123" y="83"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10" fill="#D4A843" letter-spacing="2.5" font-style="italic">WHERE PROJECT LEADERS ARE MADE</text>
+
+  <!-- PMI auth note -->
+  <text x="123" y="96"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="8.5" fill="white" opacity="0.4" letter-spacing="2.8">PMI AUTHORIZED TRAINING PROVIDER  ·  TBILISI, GEORGIA</text>
+</svg>
