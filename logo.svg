@@ -1,51 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" width="520" height="100">
-  <defs>
-    <clipPath id="lc">
-      <circle cx="50" cy="50" r="44"/>
-    </clipPath>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="400" height="60">
+  <!-- Nav logo: geometric P mark + wordmark, for dark navy backgrounds -->
 
-  <!-- Icon badge -->
-  <circle cx="50" cy="51" r="45" fill="#0D1B35" opacity="0.25"/>
-  <circle cx="50" cy="50" r="45" fill="#1A2F5A"/>
-  <circle cx="50" cy="50" r="42" fill="none" stroke="#D4A843" stroke-width="1.8"/>
+  <!-- P mark block -->
+  <rect x="0" y="0" width="48" height="48" rx="3" fill="#0f1e3d"/>
+  <polygon points="36,0 48,0 48,12" fill="#D4A843" opacity="0.85"/>
+  <rect x="11" y="10" width="6" height="28" fill="white"/>
+  <path d="M17 10 Q35 10 35 21 Q35 32 17 32" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="48" width="48" height="2.5" fill="#D4A843"/>
 
-  <!-- Open book left page -->
-  <path d="M50 71 L12 27 C19 15 37 13 48 16 L50 71Z" fill="white" opacity="0.16" clip-path="url(#lc)"/>
-  <path d="M50 71 L12 27 C19 15 37 13 48 16 L50 71" fill="none" stroke="white" stroke-width="1.4" opacity="0.5" clip-path="url(#lc)"/>
+  <!-- Thin divider -->
+  <line x1="62" y1="6" x2="62" y2="45" stroke="#D4A843" stroke-width="1" opacity="0.35"/>
 
-  <!-- Open book right page -->
-  <path d="M50 71 L88 27 C81 15 63 13 52 16 L50 71Z" fill="white" opacity="0.28" clip-path="url(#lc)"/>
-  <path d="M50 71 L88 27 C81 15 63 13 52 16 L50 71" fill="none" stroke="white" stroke-width="1.4" opacity="0.5" clip-path="url(#lc)"/>
+  <!-- Wordmark -->
+  <text x="76" y="27"
+        font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-size="19" font-weight="900"
+        fill="white"
+        letter-spacing="0.8">PROJECT MANAGEMENT</text>
+  <text x="76" y="47"
+        font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-size="19" font-weight="900"
+        fill="white"
+        letter-spacing="0.8">EXCELLENCE CENTRE</text>
 
-  <!-- Gold base line -->
-  <line x1="13" y1="71" x2="87" y2="71" stroke="#D4A843" stroke-width="2.2" stroke-linecap="round" clip-path="url(#lc)"/>
-  <!-- Gold spine -->
-  <line x1="50" y1="16" x2="50" y2="71" stroke="#D4A843" stroke-width="2.2" clip-path="url(#lc)"/>
-  <!-- Leadership arrow -->
-  <polygon points="50,6 42,20 58,20" fill="#D4A843"/>
-
-  <!-- Vertical divider -->
-  <line x1="108" y1="12" x2="108" y2="88" stroke="#D4A843" stroke-width="1.2" opacity="0.45"/>
-
-  <!-- Wordmark — white (for dark nav background) -->
-  <text x="122" y="38"
-        font-family="Arial, Helvetica, sans-serif"
-        font-size="18" font-weight="bold" fill="white" letter-spacing="1.5">PROJECT MANAGEMENT</text>
-  <text x="122" y="61"
-        font-family="Arial, Helvetica, sans-serif"
-        font-size="18" font-weight="bold" fill="white" letter-spacing="1.5">EXCELLENCE CENTRE</text>
-
-  <!-- Gold rule -->
-  <line x1="122" y1="68" x2="510" y2="68" stroke="#D4A843" stroke-width="1.5"/>
+  <!-- Gold sub-rule -->
+  <line x1="76" y1="52" x2="398" y2="52" stroke="#D4A843" stroke-width="1" opacity="0.45"/>
 
   <!-- Tagline -->
-  <text x="123" y="83"
+  <text x="77" y="60"
         font-family="Arial, Helvetica, sans-serif"
-        font-size="10" fill="#D4A843" letter-spacing="2.5" font-style="italic">WHERE PROJECT LEADERS ARE MADE</text>
-
-  <!-- PMI auth note -->
-  <text x="123" y="96"
-        font-family="Arial, Helvetica, sans-serif"
-        font-size="8.5" fill="white" opacity="0.4" letter-spacing="2.8">PMI AUTHORIZED TRAINING PROVIDER  ·  TBILISI, GEORGIA</text>
+        font-size="7" fill="#D4A843"
+        letter-spacing="2.5" font-style="italic">WHERE PROJECT LEADERS ARE MADE</text>
 </svg>
