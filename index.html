@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="ka" class="lang-ka">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1069,68 +1069,47 @@
       .faq-list { padding: 0; }
     }
 
-    /* ─── BILINGUAL HELPERS ──────────────────────────────── */
-    .en {
-      display: block;
-      font-size: 0.72em;
-      font-weight: 400;
-      font-style: italic;
-      color: inherit;
-      opacity: 0.52;
-      letter-spacing: 0.2px;
-      margin-top: 2px;
-      line-height: 1.3;
-    }
-    /* For headings, en sits below in smaller size */
-    h1 .en, h2 .en, h3 .en, h4 .en {
-      font-family: 'Open Sans', Arial, sans-serif;
-      font-weight: 300;
-      font-style: italic;
-      opacity: 0.45;
-    }
-    /* Nav & button labels: keep en inline/smaller */
-    .nav-links a .en {
-      display: none; /* nav is tight — show only Georgian */
-    }
-    .btn .en {
-      font-size: 0.75em;
-      font-weight: 400;
-      opacity: 0.75;
-      display: block;
-      margin-top: 1px;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-
-    /* ─── WEB3FORMS FIELD STYLES ─────────────────────────── */
-    .wf-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-    @media (max-width: 560px) {
-      .wf-row { grid-template-columns: 1fr; }
-    }
-    .wf-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 16px;
-    }
-    .wf-row .wf-group { margin-bottom: 0; }
-    .wf-label {
-      font-family: 'Open Sans', Arial, sans-serif;
+    /* ─── LANGUAGE SWITCHER ─────────────────────────────── */
+    /* Default: Georgian (lang-ka). Toggle to English (lang-en). */
+    .lang-ka .ka-text { display: inline; }
+    .lang-ka .en      { display: none !important; }
+    .lang-en .ka-text { display: none !important; }
+    .lang-en .en      { display: inline; }
+    /* Block elements need block display in EN */
+    .lang-en p > .en,
+    .lang-en li > .en,
+    .lang-en .faq-a > .en,
+    .lang-en .hero-sub > .en,
+    .lang-en .contact-direct-body p > .en,
+    .lang-en .trainer-bio-col p > .en { display: block !important; }
+    /* Lang toggle button */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 12px;
-      font-weight: 600;
-      color: var(--navy);
-      letter-spacing: 0.3px;
-      margin-bottom: 6px;
-      text-transform: uppercase;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+      margin-left: 16px;
+      flex-shrink: 0;
     }
-    .wf-req {
+    .lang-toggle:hover {
+      background: rgba(212,168,67,0.18);
       color: var(--gold);
-      margin-left: 2px;
+      border-color: rgba(212,168,67,0.5);
+      border-color: rgba(212,168,67,0.5);
     }
+    .lang-toggle .flag { font-size: 15px; line-height: 1; }
+    /* wf-en helper for form labels */
     .wf-en {
       font-weight: 400;
       font-style: italic;
@@ -1139,25 +1118,7 @@
       letter-spacing: 0;
       margin-left: 4px;
     }
-    .wf-input {
-      font-family: 'Open Sans', Arial, sans-serif;
-      font-size: 14px;
-      color: var(--charcoal);
-      background: var(--white);
-      border: 1.5px solid var(--lightgray);
-      border-radius: 4px;
-      padding: 10px 14px;
-      transition: border-color 0.18s;
-      outline: none;
-      width: 100%;
-    }
-    .wf-input:focus {
-      border-color: var(--steel);
-      box-shadow: 0 0 0 3px rgba(46,109,164,0.1);
-    }
-    select.wf-input { cursor: pointer; }
-    textarea.wf-input { resize: vertical; min-height: 80px; }
-  </style>
+    </style>
 </head>
 
 <body>
@@ -1171,12 +1132,15 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="#programmes">პროგრამები</a></li>
-        <li><a href="#why-pmec">რატომ PMEC</a></li>
-        <li><a href="#process">როგორ მუშაობს</a></li>
-        <li><a href="#trainer">ტრენერი</a></li>
-        <li class="nav-cta"><a href="#apply">განაცხადი</a></li>
+        <li><a href="#programmes" data-ka="პროგრამები" data-en="Programmes">პროგრამები</a></li>
+        <li><a href="#why-pmec" data-ka="რატომ PMEC" data-en="Why PMEC">რატომ PMEC</a></li>
+        <li><a href="#process" data-ka="როგორ მუშაობს" data-en="How It Works">როგორ მუშაობს</a></li>
+        <li><a href="#trainer" data-ka="ტრენერი" data-en="Trainer">ტრენერი</a></li>
+        <li class="nav-cta"><a href="#apply" data-ka="განაცხადი" data-en="Apply">განაცხადი</a></li>
       </ul>
+      <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">
+        <span class="flag">&#127468;&#127463;</span> <span id="lang-label">English</span>
+      </button>
     </nav>
   </header>
 
@@ -1185,7 +1149,7 @@
     <div class="container">
       <div class="hero-badge">
         <div class="dot"></div>
-        <span>PMI-ს მიერ ავტორიზებული &nbsp;·&nbsp; თბილისი, საქართველო</span>
+        <span data-ka="PMI-ს მიერ ავტორიზებული · თბილისი, საქართველო" data-en="PMI Authorized Training Provider · Tbilisi, Georgia">PMI-ს მიერ ავტორიზებული &nbsp;·&nbsp; თბილისი, საქართველო</span>
       </div>
       <h1>შეწყვიტე გამოცნობა.<br>დაიწყე მომზადება.<br>მიიღე შენი <em>PMP.</em></h1>
       <p class="hero-sub">
@@ -1199,8 +1163,8 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.827L.057 23.882a.5.5 0 0 0 .617.617l6.088-1.461A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 0 1-5.003-1.372l-.358-.213-3.714.892.908-3.647-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
           WhatsApp-ზე დაწერე
         </a>
-        <a href="#apply" class="btn btn-gold">განაცხადის შევსება</a>
-        <a href="#programmes" class="btn btn-outline-white">პროგრამების ნახვა</a>
+        <a href="#apply" class="btn btn-gold" data-ka="განაცხადის შევსება" data-en="Apply Now">განაცხადის შევსება</a>
+        <a href="#programmes" class="btn btn-outline-white" data-ka="პროგრამების ნახვა" data-en="View Programmes">პროგრამების ნახვა</a>
       </div>
       <div class="cohort-bar">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -1231,10 +1195,10 @@
   <section class="programmes" id="programmes">
     <div class="container">
       <div class="programmes-intro">
-        <span class="section-label">ჩვენი პროგრამები <span style="font-style:italic;opacity:0.55;letter-spacing:1px;">Our Programmes</span></span>
-        <h2>PMP-ის მოსაპოვებლად ორი გზა.<span class="en">Two ways to earn your PMP.</span></h2>
+        <span class="section-label"><span class="ka-text">ჩვენი პროგრამები </span><span class="en">Our Programmes</span></span>
+        <h2><span class="ka-text">PMP-ის მოსაპოვებლად ორი გზა.</span><span class="en">Two ways to earn your PMP.</span></h2>
         <div class="gold-rule centered"></div>
-        <p>აირჩიე შენს სიტუაციაზე მორგებული პროგრამა, ან გააერთიანე ორივე სრული სერტიფიკაციის ბილიკისთვის.<span class="en">Choose the programme that fits your situation, or combine both for the full certification track.</span></p>
+        <p><span class="ka-text">აირჩიე შენს სიტუაციაზე მორგებული პროგრამა, ან გააერთიანე ორივე სრული სერტიფიკაციის ბილიკისთვის.</span><span class="en">Choose the programme that fits your situation, or combine both for the full certification track.</span></p>
       </div>
       <div class="cards">
 
@@ -1242,8 +1206,8 @@
         <div class="card" id="training">
           <div class="card-header">
             <div class="card-tag">35-საათიანი პროგრამა &nbsp;|&nbsp; 35-Hour Programme</div>
-            <h3>PMP გამოცდისთვის მომზადების ტრენინგი<span class="en">PMP Exam Preparation Training</span></h3>
-            <p>სტრუქტურირებული, PMI-ის სტანდარტების შესაბამისი საკლასო პროგრამა, რომელიც ასრულებს სავალდებულო 35 საკონტაქტო საათს და იძლევა ცოდნას პირველი მცდელობით წარმატებისთვის.<span class="en">The structured, PMI-aligned classroom programme that satisfies the mandatory 35 contact hours and builds the knowledge to pass on your first attempt.</span></p>
+            <h3><span class="ka-text">PMP გამოცდისთვის მომზადების ტრენინგი</span><span class="en">PMP Exam Preparation Training</span></h3>
+            <p><span class="ka-text">სტრუქტურირებული, PMI-ის სტანდარტების შესაბამისი საკლასო პროგრამა, რომელიც ასრულებს სავალდებულო 35 საკონტაქტო საათს და იძლევა ცოდნას პირველი მცდელობით წარმატებისთვის.</span><span class="en">The structured, PMI-aligned classroom programme that satisfies the mandatory 35 contact hours and builds the knowledge to pass on your first attempt.</span></p>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -1256,40 +1220,40 @@
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                PMI 2025 ECO-ის კურიკულუმი: პრედიქტული, აჯაილური და ჰიბრიდური მიდგომები<span class="en">PMI 2025 ECO-aligned curriculum covering predictive, agile, and hybrid delivery</span>
+                <span class="ka-text">PMI 2025 ECO-ის კურიკულუმი: პრედიქტული, აჯაილური და ჰიბრიდური მიდგომები</span><span class="en">PMI 2025 ECO-aligned curriculum covering predictive, agile, and hybrid delivery</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                სერტიფიცირებული, გამოცდილი ინსტრუქტორები აქტიური PMP კრედენციალებით<span class="en">Certified, experienced instructors with active PMP credentials</span>
+                <span class="ka-text">სერტიფიცირებული, გამოცდილი ინსტრუქტორები აქტიური PMP კრედენციალებით</span><span class="en">Certified, experienced instructors with active PMP credentials</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                გამოცდის სრული სიმულაციური ნაკრები შედეგების გამოხმაურებით<span class="en">Full exam-simulation practice sets with performance feedback</span>
+                <span class="ka-text">გამოცდის სრული სიმულაციური ნაკრები შედეგების გამოხმაურებით</span><span class="en">Full exam-simulation practice sets with performance feedback</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                PMI-ს განაცხადის წარდგენის სრული მხარდაჭერა: ელიგიბილობისა და ფორმების დადასტურება<span class="en">PMI application guidance included: no guesswork on eligibility or forms</span>
+                <span class="ka-text">PMI-ს განაცხადის წარდგენის სრული მხარდაჭერა: ელიგიბილობისა და ფორმების დადასტურება</span><span class="en">PMI application guidance included: no guesswork on eligibility or forms</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                ჯგუფური პასუხისმგებლობა: ისწავლე ერთი მიზნის მქონე კოლეგებთან ერთად<span class="en">Cohort accountability: learn alongside peers who share your goal</span>
+                <span class="ka-text">ჯგუფური პასუხისმგებლობა: ისწავლე ერთი მიზნის მქონე კოლეგებთან ერთად</span><span class="en">Cohort accountability: learn alongside peers who share your goal</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                PMEC-ის მიერ გაცემული დასრულების სერტიფიკატი (35 PDU-ის ჩათვლა)<span class="en">Official certificate of completion issued by PMEC (35 PDU-eligible hours)</span>
+                <span class="ka-text">PMEC-ის მიერ გაცემული დასრულების სერტიფიკატი (35 PDU-ის ჩათვლა)</span><span class="en">Official certificate of completion issued by PMEC (35 PDU-eligible hours)</span>
               </li>
             </ul>
-            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;">ტრენინგზე განაცხადი<span class="en">Apply for Training</span></a>
+            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;"><span class="ka-text">ტრენინგზე განაცხადი</span><span class="en">Apply for Training</span></a>
           </div>
         </div>
 
@@ -1297,8 +1261,8 @@
         <div class="card" id="mentoring">
           <div class="card-header">
             <div class="card-tag">პერსონალური მენტორინგი &nbsp;|&nbsp; Personal Mentoring</div>
-            <h3>PMP სერტიფიკაციის გზა: მენტორინგი<span class="en">PMP Certification Journey Mentoring</span></h3>
-            <p>ინდივიდუალური ექსპერტ-მენტორინგი სერტიფიკაციის მთელი გზის განმავლობაში, ელიგიბილობის შემოწმებიდან გამოცდის დღემდე და მის მიღმა.<span class="en">One-on-one expert mentoring throughout your entire certification journey, from eligibility check to exam day and beyond.</span></p>
+            <h3><span class="ka-text">PMP სერტიფიკაციის გზა: მენტორინგი</span><span class="en">PMP Certification Journey Mentoring</span></h3>
+            <p><span class="ka-text">ინდივიდუალური ექსპერტ-მენტორინგი სერტიფიკაციის მთელი გზის განმავლობაში, ელიგიბილობის შემოწმებიდან გამოცდის დღემდე და მის მიღმა.</span><span class="en">One-on-one expert mentoring throughout your entire certification journey, from eligibility check to exam day and beyond.</span></p>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -1311,40 +1275,40 @@
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                უფასო ელიგიბილობის შეფასება: PMI-ს მოთხოვნების დადასტურება<span class="en">Free eligibility assessment: confirm your hours and education meet PMI requirements</span>
+                <span class="ka-text">უფასო ელიგიბილობის შეფასება: PMI-ს მოთხოვნების დადასტურება</span><span class="en">Free eligibility assessment: confirm your hours and education meet PMI requirements</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                შენს გრაფიკსა და სუსტ მხარეებზე მორგებული სასწავლო გეგმა<span class="en">Personalized study plan built around your schedule and weak areas</span>
+                <span class="ka-text">შენს გრაფიკსა და სუსტ მხარეებზე მორგებული სასწავლო გეგმა</span><span class="en">Personalized study plan built around your schedule and weak areas</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                PMI-ს განაცხადის გადამოწმება: მენტორი ამოწმებს ყველა ველს გაგზავნამდე<span class="en">PMI application review: your mentor checks every field before you submit</span>
+                <span class="ka-text">PMI-ს განაცხადის გადამოწმება: მენტორი ამოწმებს ყველა ველს გაგზავნამდე</span><span class="en">PMI application review: your mentor checks every field before you submit</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                ორ კვირაში ერთხელ 1:1 საკოუჩინგო სესიები PMP-სერტიფიცირებულ მენტორთან<span class="en">Bi-weekly 1:1 coaching sessions with a PMP-certified mentor</span>
+                <span class="ka-text">ორ კვირაში ერთხელ 1:1 საკოუჩინგო სესიები PMP-სერტიფიცირებულ მენტორთან</span><span class="en">Bi-weekly 1:1 coaching sessions with a PMP-certified mentor</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                რესურსების სახელმძღვანელო: რომელი წიგნები, მოდელური გამოცდები და ინსტრუმენტები მუშაობს<span class="en">Resource guidance: which books, mock exams, and practice tools actually work</span>
+                <span class="ka-text">რესურსების სახელმძღვანელო: რომელი წიგნები, მოდელური გამოცდები და ინსტრუმენტები მუშაობს</span><span class="en">Resource guidance: which books, mock exams, and practice tools actually work</span>
               </li>
               <li>
                 <div class="icon">
                   <svg viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#1A2F5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                მხარდაჭერა გამოცდის დღემდე, დღეს და შემდეგ, გამეორების სტრატეგიის ჩათვლით საჭიროებისამებრ<span class="en">Ongoing support up to and after exam day, including re-attempt strategy if needed</span>
+                <span class="ka-text">მხარდაჭერა გამოცდის დღემდე, დღეს და შემდეგ, გამეორების სტრატეგიის ჩათვლით საჭიროებისამებრ</span><span class="en">Ongoing support up to and after exam day, including re-attempt strategy if needed</span>
               </li>
             </ul>
-            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;">მენტორინგზე განაცხადი<span class="en">Apply for Mentoring</span></a>
+            <a href="#apply" class="btn btn-gold" style="text-align:center;display:block;"><span class="ka-text">მენტორინგზე განაცხადი</span><span class="en">Apply for Mentoring</span></a>
           </div>
         </div>
 
@@ -1356,10 +1320,10 @@
   <section class="why" id="why-pmec">
     <div class="why-inner">
       <div class="why-header">
-        <span class="section-label" style="display:block;text-align:center;margin-bottom:12px;">რატომ PMEC &nbsp;<span style="font-style:italic;opacity:0.55;">Why Choose PMEC</span></span>
-        <h2>შექმნილია პროფესიონალებისთვის, ვინც სერიოზულია გამოცდაზე.<span class="en">Built for professionals who are serious about passing.</span></h2>
+        <span class="section-label" style="display:block;text-align:center;margin-bottom:12px;"><span class="ka-text">რატომ PMEC &nbsp;</span><span class="en">Why Choose PMEC</span></span>
+        <h2><span class="ka-text">შექმნილია პროფესიონალებისთვის, ვინც სერიოზულია გამოცდაზე.</span><span class="en">Built for professionals who are serious about passing.</span></h2>
         <div class="gold-rule centered"></div>
-        <p>ჩვენ არ ვატარებთ გენერალური კურსებს. ჩვენი პროგრამის ყველა ელემენტი განკუთვნილია მომუშავე პროფესიონალების სერტიფიცირებისთვის.<span class="en">We do not run generic courses. Every element of our programme is designed to get working professionals certified.</span></p>
+        <p><span class="ka-text">ჩვენ არ ვატარებთ გენერალური კურსებს. ჩვენი პროგრამის ყველა ელემენტი განკუთვნილია მომუშავე პროფესიონალების სერტიფიცირებისთვის.</span><span class="en">We do not run generic courses. Every element of our programme is designed to get working professionals certified.</span></p>
       </div>
       <div class="why-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
         <div class="why-item">
@@ -1368,8 +1332,8 @@
               <path d="M11 2L13.5 8H20L14.5 12L17 18L11 14L5 18L7.5 12L2 8H8.5L11 2Z"/>
             </svg>
           </div>
-          <h4>PMI-ის სტანდარტების კურიკულუმი<span class="en">PMI-Aligned Content</span></h4>
-          <p>კურიკულუმი ზუსტად შეესაბამება 2025 წლის გამოცდის კონტენტის მონახაზს. განვახლდებით PMI-ის განახლებებთან ერთად.<span class="en">Curriculum matches the 2025 Exam Content Outline exactly. We update when PMI updates.</span></p>
+          <h4><span class="ka-text">PMI-ის სტანდარტების კურიკულუმი</span><span class="en">PMI-Aligned Content</span></h4>
+          <p><span class="ka-text">კურიკულუმი ზუსტად შეესაბამება 2025 წლის გამოცდის კონტენტის მონახაზს. განვახლდებით PMI-ის განახლებებთან ერთად.</span><span class="en">Curriculum matches the 2025 Exam Content Outline exactly. We update when PMI updates.</span></p>
         </div>
         <div class="why-item">
           <div class="why-icon">
@@ -1377,8 +1341,8 @@
               <circle cx="11" cy="8" r="4"/><path d="M4 19c0-3.3 3.1-6 7-6s7 2.7 7 6"/>
             </svg>
           </div>
-          <h4>PMI-სერტიფიცირებული ინსტრუქტორი<span class="en">PMI-Certified Instructor</span></h4>
-          <p>ტრენერს აქვს PMI-CI, კრედენციალი, რომელსაც PMI ანიჭებს უმაღლესი სასწავლო სტანდარტის ინსტრუქტორებს.<span class="en">Your trainer holds PMI-CI — the credential PMI awards to instructors who meet its highest teaching standards.</span></p>
+          <h4><span class="ka-text">PMI-სერტიფიცირებული ინსტრუქტორი</span><span class="en">PMI-Certified Instructor</span></h4>
+          <p><span class="ka-text">ტრენერს აქვს PMI-CI, კრედენციალი, რომელსაც PMI ანიჭებს უმაღლესი სასწავლო სტანდარტის ინსტრუქტორებს.</span><span class="en">Your trainer holds PMI-CI — the credential PMI awards to instructors who meet its highest teaching standards.</span></p>
         </div>
         <div class="why-item">
           <div class="why-icon">
@@ -1386,8 +1350,8 @@
               <rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h16"/><path d="M9 21V9"/>
             </svg>
           </div>
-          <h4>დასაქმებულთა გრაფიკზე მორგებული<span class="en">Built for Busy Schedules</span></h4>
-          <p>საღამოს და შაბათ-კვირის სესიები. სამსახური არ ჩერდება. მომზადებაც არ უნდა შეჩერდეს.<span class="en">Weeknight and weekend sessions. Your job does not stop. Your preparation should not either.</span></p>
+          <h4><span class="ka-text">დასაქმებულთა გრაფიკზე მორგებული</span><span class="en">Built for Busy Schedules</span></h4>
+          <p><span class="ka-text">საღამოს და შაბათ-კვირის სესიები. სამსახური არ ჩერდება. მომზადებაც არ უნდა შეჩერდეს.</span><span class="en">Weeknight and weekend sessions. Your job does not stop. Your preparation should not either.</span></p>
         </div>
         <div class="why-item">
           <div class="why-icon">
@@ -1395,8 +1359,8 @@
               <path d="M12 2v4M12 16v4M4.93 4.93l2.83 2.83M14.24 14.24l2.83 2.83M2 12h4M16 12h4M4.93 19.07l2.83-2.83M14.24 7.76l2.83-2.83"/>
             </svg>
           </div>
-          <h4>პასუხისმგებლობის სისტემა<span class="en">Accountability System</span></h4>
-          <p>ჯგუფური სწავლება და პერსონალური შემოწმებები ნიშნავს, რომ მომზადება შუა გზაზე არ შეჩერდება.<span class="en">Cohort-based learning and personal check-ins mean you will not abandon your preparation halfway.</span></p>
+          <h4><span class="ka-text">პასუხისმგებლობის სისტემა</span><span class="en">Accountability System</span></h4>
+          <p><span class="ka-text">ჯგუფური სწავლება და პერსონალური შემოწმებები ნიშნავს, რომ მომზადება შუა გზაზე არ შეჩერდება.</span><span class="en">Cohort-based learning and personal check-ins mean you will not abandon your preparation halfway.</span></p>
         </div>
         <div class="why-item">
           <div class="why-icon">
@@ -1404,8 +1368,8 @@
               <circle cx="11" cy="11" r="9"/><path d="M11 6v5l3 3"/>
             </svg>
           </div>
-          <h4>ქართული საბაზრო კონტექსტი<span class="en">Georgian Market Context</span></h4>
-          <p>სწავლება ქართულ ენაზე. მაგალითები თბილისის სამუშაო ბაზრიდან. სწავლობ კარიერისთვის, არა გენერალური გამოცდისთვის.<span class="en">Instruction in Georgian. Examples drawn from the Tbilisi job market. You study for your career, not a generic exam.</span></p>
+          <h4><span class="ka-text">ქართული საბაზრო კონტექსტი</span><span class="en">Georgian Market Context</span></h4>
+          <p><span class="ka-text">სწავლება ქართულ ენაზე. მაგალითები თბილისის სამუშაო ბაზრიდან. სწავლობ კარიერისთვის, არა გენერალური გამოცდისთვის.</span><span class="en">Instruction in Georgian. Examples drawn from the Tbilisi job market. You study for your career, not a generic exam.</span></p>
         </div>
       </div>
     </div>
@@ -1414,27 +1378,27 @@
   <!-- ══════════════════════════════════════════════ HOW IT WORKS -->
   <section class="process" id="process">
     <div class="container">
-      <h2 style="font-family:'Montserrat',Arial,sans-serif;">განაცხადიდან სერტიფიკაციამდე შენი გზა<span class="en" style="font-size:0.6em;">Your path from application to certification</span></h2>
+      <h2 style="font-family:'Montserrat',Arial,sans-serif;"><span class="ka-text">განაცხადიდან სერტიფიკაციამდე შენი გზა</span><span class="en">Your path from application to certification</span></h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
-          <h4>განაცხადის შევსება<span class="en">Submit Your Application</span></h4>
-          <p>შეავსე ქვემოთ მოცემული ფორმა. უფასო ელიგიბილობის შემოწმება შედის, ვალდებულება არ არის.<span class="en">Complete the form below. Free eligibility check included, no commitment required.</span></p>
+          <h4><span class="ka-text">განაცხადის შევსება</span><span class="en">Submit Your Application</span></h4>
+          <p><span class="ka-text">შეავსე ქვემოთ მოცემული ფორმა. უფასო ელიგიბილობის შემოწმება შედის, ვალდებულება არ არის.</span><span class="en">Complete the form below. Free eligibility check included, no commitment required.</span></p>
         </div>
         <div class="step">
           <div class="step-num">2</div>
-          <h4>ელიგიბილობის შეფასება<span class="en">Eligibility Assessment</span></h4>
-          <p>ჩვენი გუნდი განიხილავს შენს გამოცდილებას და 48 საათში ადასტურებს PMI-ს მოთხოვნებს.<span class="en">Our team reviews your experience and confirms your PMI application requirements within 48 hours.</span></p>
+          <h4><span class="ka-text">ელიგიბილობის შეფასება</span><span class="en">Eligibility Assessment</span></h4>
+          <p><span class="ka-text">ჩვენი გუნდი განიხილავს შენს გამოცდილებას და 48 საათში ადასტურებს PMI-ს მოთხოვნებს.</span><span class="en">Our team reviews your experience and confirms your PMI application requirements within 48 hours.</span></p>
         </div>
         <div class="step">
           <div class="step-num">3</div>
-          <h4>პროგრამის დაწყება<span class="en">Programme Kickoff</span></h4>
-          <p>შეუერთდი შენს ნაკადს ან დაიწყე 1:1 მენტორინგი. სტრუქტურირებული პირველი დღიდანვე.<span class="en">Join your cohort or begin your 1:1 mentoring. Structured from day one.</span></p>
+          <h4><span class="ka-text">პროგრამის დაწყება</span><span class="en">Programme Kickoff</span></h4>
+          <p><span class="ka-text">შეუერთდი შენს ნაკადს ან დაიწყე 1:1 მენტორინგი. სტრუქტურირებული პირველი დღიდანვე.</span><span class="en">Join your cohort or begin your 1:1 mentoring. Structured from day one.</span></p>
         </div>
         <div class="step">
           <div class="step-num gold">✓</div>
-          <h4>PMP-ის მოპოვება<span class="en">Earn Your PMP</span></h4>
-          <p>ჩააბარე გამოცდა და შეუერთდი საქართველოში სერტიფიცირებული პროექტის ლიდერების მზარდ თემს.<span class="en">Pass the exam and join a growing community of certified project leaders in Georgia.</span></p>
+          <h4><span class="ka-text">PMP-ის მოპოვება</span><span class="en">Earn Your PMP</span></h4>
+          <p><span class="ka-text">ჩააბარე გამოცდა და შეუერთდი საქართველოში სერტიფიცირებული პროექტის ლიდერების მზარდ თემს.</span><span class="en">Pass the exam and join a growing community of certified project leaders in Georgia.</span></p>
         </div>
       </div>
     </div>
@@ -1460,14 +1424,14 @@
 
       <!-- Bio column -->
       <div class="trainer-bio-col">
-        <span class="section-label">შეხვდი ტრენერს &nbsp;<span style="font-style:italic;opacity:0.55;">Meet Your Trainer</span></span>
-        <h2>დაჯილდოვებული. სერტიფიცირებული. საქართველოს პროფესიონალებისთვის.<span class="en">Award-winning. Certified. Built for Georgia's professionals.</span></h2>
+        <span class="section-label"><span class="ka-text">შეხვდი ტრენერს &nbsp;</span><span class="en">Meet Your Trainer</span></span>
+        <h2><span class="ka-text">დაჯილდოვებული. სერტიფიცირებული. საქართველოს პროფესიონალებისთვის.</span><span class="en">Award-winning. Certified. Built for Georgia's professionals.</span></h2>
 
-        <p>ნიკოლოზ მელქაძე არის PMP&#174;-სერტიფიცირებული პროექტის მენეჯერი, PMI-სერტიფიცირებული ინსტრუქტორი და L&amp;D ლიდერი 10+ წლიანი გამოცდილებით თავდაცვის განათლებაში, საერთაშორისო ინსტიტუტებსა და CRM კონსულტაციაში. მართავდა 15-მდე პარალელური პროექტის პორტფოლიოს, ხელმძღვანელობდა 50-კაციანი გუნდებს და კოორდინირებდა საერთაშორისო პარტნიორობებს 5 ქვეყანაში. ფლობს LL.M <em>cum laude</em> გროუნინგენის უნივერსიტეტიდან და აქტიურ კრედენციალებს PMI-სა და CIPD-ისგან.<span class="en">Nikoloz Melkadze is a PMP®-certified project manager, PMI-Certified Instructor, and L&amp;D leader with 10+ years of experience across defense education, international institutions, and CRM consulting.</span></p>
+        <p>ნიკოლოზ მელქაძე არის PMP&#174;-სერტიფიცირებული პროექტის მენეჯერი, PMI-სერტიფიცირებული ინსტრუქტორი და L&amp;D ლიდერი 10+ წლიანი გამოცდილებით თავდაცვის განათლებაში, საერთაშორისო ინსტიტუტებსა და CRM კონსულტაციაში. მართავდა 15-მდე პარალელური პროექტის პორტფოლიოს, ხელმძღვანელობდა 50-კაციანი გუნდებს და კოორდინირებდა საერთაშორისო პარტნიორობებს 5 ქვეყანაში. ფლობს LL.M <em>cum laude</em> <span class="ka-text">გროუნინგენის უნივერსიტეტიდან და აქტიურ კრედენციალებს PMI-სა და CIPD-ისგან.</span><span class="en">Nikoloz Melkadze is a PMP®-certified project manager, PMI-Certified Instructor, and L&amp;D leader with 10+ years of experience across defense education, international institutions, and CRM consulting.</span></p>
 
-        <p>სათავდაცვო ინსტიტუციური მშენებლობის სკოლის დირექტორის მოადგილის თანამდებობაზე ხელმძღვანელობდა წელიწადში 35 პროგრამაზე NATO/EU-ის ინტეროპერაბილობის ინიციატივებს, კოორდინირებდა 26 საერთაშორისო პარტნიორს და 5 მლნ ლარის ბიუჯეტს. ხელმძღვანელობდა NATO-ს 5-წლიანი აკრედიტაციის პროექტს 4 ინსტიტუტში და 2025 წელს <strong>მიენიჭა სამსახურეობრივი მოვალეობის ნიმუშური შესრულების მედალი</strong> საქართველოს თავდაცვის სამინისტროს მიერ.<span class="en">As Deputy Director at the Defence Institutional Building School, he oversaw 35 programs per year across NATO/EU interoperability initiatives and in 2025 was awarded the Medal for Exemplary Service by the Ministry of Defence of Georgia.</span></p>
+        <p>სათავდაცვო ინსტიტუციური მშენებლობის სკოლის დირექტორის მოადგილის თანამდებობაზე ხელმძღვანელობდა წელიწადში 35 პროგრამაზე NATO/EU-ის ინტეროპერაბილობის ინიციატივებს, კოორდინირებდა 26 საერთაშორისო პარტნიორს და 5 მლნ ლარის ბიუჯეტს. ხელმძღვანელობდა NATO-ს 5-წლიანი აკრედიტაციის პროექტს 4 ინსტიტუტში და 2025 წელს <strong>მიენიჭა სამსახურეობრივი მოვალეობის ნიმუშური შესრულების მედალი</strong> <span class="ka-text">საქართველოს თავდაცვის სამინისტროს მიერ.</span><span class="en">As Deputy Director at the Defence Institutional Building School, he oversaw 35 programs per year across NATO/EU interoperability initiatives and in 2025 was awarded the Medal for Exemplary Service by the Ministry of Defence of Georgia.</span></p>
 
-        <p>2016 წლიდან ლექტორი ოთხ ქართულ უნივერსიტეტში და აშშ სახელმწიფო დეპარტამენტის IVLP პროგრამის მონაწილე, ნიკოლოზი ყოველ სესიაზე შემოაქვს საერთაშორისო სტანდარტის სიმკაცრე. ასწავლიდა PMP და Agile/Scrum-ს სტუდენტებს, რომლებმაც შემდეგ ჩააბარეს სერტიფიკაციის გამოცდა, და ახლა ამ ბილიკს PMEC-ის მეშვეობით ქართველი პროფესიონალებისთვის ქმნის.<span class="en">A lecturer at four Georgian universities since 2016, Nikoloz brings international-standard rigor to every session and now builds the same certification track for Georgian professionals through PMEC.</span></p>
+        <p><span class="ka-text">2016 წლიდან ლექტორი ოთხ ქართულ უნივერსიტეტში და აშშ სახელმწიფო დეპარტამენტის IVLP პროგრამის მონაწილე, ნიკოლოზი ყოველ სესიაზე შემოაქვს საერთაშორისო სტანდარტის სიმკაცრე. ასწავლიდა PMP და Agile/Scrum-ს სტუდენტებს, რომლებმაც შემდეგ ჩააბარეს სერტიფიკაციის გამოცდა, და ახლა ამ ბილიკს PMEC-ის მეშვეობით ქართველი პროფესიონალებისთვის ქმნის.</span><span class="en">A lecturer at four Georgian universities since 2016, Nikoloz brings international-standard rigor to every session and now builds the same certification track for Georgian professionals through PMEC.</span></p>
 
         <div class="trainer-credentials">
           <div class="cred-badge" title="Project Management Professional — the globally recognized PM certification">
@@ -1504,15 +1468,15 @@
   <section class="faq-section" id="faq">
     <div class="container">
       <div class="faq-header">
-        <span class="section-label">ხშირი კითხვები &nbsp;<span style="font-style:italic;opacity:0.55;">Common Questions</span></span>
-        <h2>განაცხადის გაკეთებამდე<span class="en">Before you apply</span></h2>
+        <span class="section-label"><span class="ka-text">ხშირი კითხვები &nbsp;</span><span class="en">Common Questions</span></span>
+        <h2><span class="ka-text">განაცხადის გაკეთებამდე</span><span class="en">Before you apply</span></h2>
         <div class="gold-rule centered"></div>
-        <p>ყველაფერი, რაც გადაწყვეტილების მიღებამდე უნდა იცოდე.<span class="en">Everything you need to know before making a decision.</span></p>
+        <p><span class="ka-text">ყველაფერი, რაც გადაწყვეტილების მიღებამდე უნდა იცოდე.</span><span class="en">Everything you need to know before making a decision.</span></p>
       </div>
       <div class="faq-list">
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="PMP კრედენციალი საქართველოს სამუშაო ბაზარზე აღიარებულია?" data-en="Is the PMP credential recognized in the Georgian job market?">
             PMP კრედენციალი საქართველოს სამუშაო ბაზარზე აღიარებულია?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1522,7 +1486,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="რა ღირს პროგრამა? გადახდის განვადება შეიძლება?" data-en="What does the programme cost? Is instalment payment available?">
             რა ღირს პროგრამა? გადახდის განვადება შეიძლება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1532,7 +1496,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="PMP გამოცდისთვის ელიგიბილობის მოთხოვნები რა არის?" data-en="What are the eligibility requirements for the PMP exam?">
             PMP გამოცდისთვის ელიგიბილობის მოთხოვნები რა არის?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1542,7 +1506,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="ტრენინგი ქართულ თუ ინგლისურ ენაზე ტარდება?" data-en="Is training delivered in Georgian or English?">
             ტრენინგი ქართულ თუ ინგლისურ ენაზე ტარდება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1552,7 +1516,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="პროგრამა ონლაინ თუ პირადად ტარდება?" data-en="Is the programme online or in-person?">
             პროგრამა ონლაინ თუ პირადად ტარდება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1562,7 +1526,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-ka="რა მოხდება, თუ პირველ მცდელობაზე ჩავჭრე გამოცდა?" data-en="What if I fail the exam on my first attempt?">
             რა მოხდება, თუ პირველ მცდელობაზე ჩავჭრე გამოცდა?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -1579,10 +1543,10 @@
   <section class="form-section" id="apply">
     <div class="container">
       <div class="form-section-header">
-        <span class="section-label">განაცხადი &nbsp;<span style="font-style:italic;opacity:0.55;">Apply Now</span></span>
-        <h2>დაიწყე სერტიფიკაციის გზა.<span class="en">Start your certification journey.</span></h2>
+        <span class="section-label"><span class="ka-text">განაცხადი &nbsp;</span><span class="en">Apply Now</span></span>
+        <h2><span class="ka-text">დაიწყე სერტიფიკაციის გზა.</span><span class="en">Start your certification journey.</span></h2>
         <div class="gold-rule centered"></div>
-        <p>აირჩიე პროგრამა და შეავსე მოკლე განაცხადი. 48 საათში დაგიკავშირდებით.<span class="en">Select your programme and complete the short application. We will follow up within 48 hours.</span></p>
+        <p><span class="ka-text">აირჩიე პროგრამა და შეავსე მოკლე განაცხადი. 48 საათში დაგიკავშირდებით.</span><span class="en">Select your programme and complete the short application. We will follow up within 48 hours.</span></p>
         <div class="pricing-note">
           <div class="gold-dot"></div>
           საფასური მოთხოვნის საფუძველზე &nbsp;&middot;&nbsp; გადახდის განვადება ხელმისაწვდომია &nbsp;&middot;&nbsp; უფასო ელიგიბილობის შემოწმება
@@ -1591,16 +1555,16 @@
 
       <!-- Programme Tabs -->
       <div class="form-tabs">
-        <button class="form-tab active" onclick="switchTab('training')">
+        <button class="form-tab active" onclick="switchTab('training')" data-ka="35-საათ. PMP ტრენინგი" data-en="35-Hr PMP Training">
           35-საათ. PMP ტრენინგი
         </button>
-        <button class="form-tab" onclick="switchTab('mentoring')">
+        <button class="form-tab" onclick="switchTab('mentoring')" data-ka="სერტ. მენტორინგი" data-en="Cert. Mentoring">
           სერტ. მენტორინგი
         </button>
-        <button class="form-tab" onclick="switchTab('contact')">
+        <button class="form-tab" onclick="switchTab('contact')" data-ka="კითხვა / კონტაქტი" data-en="Enquiry / Contact">
           კითხვა / კონტაქტი
         </button>
-        <button class="form-tab" onclick="switchTab('corporate')">
+        <button class="form-tab" onclick="switchTab('corporate')" data-ka="კორპ. ტრენინგი" data-en="Corp. Training">
           კორპ. ტრენინგი
         </button>
       </div>
@@ -1615,7 +1579,7 @@
               </svg>
             </div>
             <div class="form-intro-text">
-              <h3>განაცხადი: 35-საათიანი PMP გამოცდისთვის მომზადების ტრენინგი<span class="en" style="font-style:italic;font-weight:400;font-size:0.8em;">Apply: 35-Hour PMP Exam Preparation Training</span></h3>
+              <h3><span class="ka-text">განაცხადი: 35-საათიანი PMP გამოცდისთვის მომზადების ტრენინგი</span><span class="en">Apply: 35-Hour PMP Exam Preparation Training</span></h3>
               <p>დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</p>
             </div>
           </div>
@@ -1694,7 +1658,7 @@
               </svg>
             </div>
             <div class="form-intro-text">
-              <h3>განაცხადი: PMP სერტიფიკაციის გზა / მენტორინგი<span class="en" style="font-style:italic;font-weight:400;font-size:0.8em;">Apply: PMP Certification Journey Mentoring</span></h3>
+              <h3><span class="ka-text">განაცხადი: PMP სერტიფიკაციის გზა / მენტორინგი</span><span class="en">Apply: PMP Certification Journey Mentoring</span></h3>
               <p>დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</p>
             </div>
           </div>
@@ -1781,12 +1745,12 @@
               </svg>
             </div>
             <div class="form-intro-text">
-              <h3>კონტაქტი &amp; ზოგადი კითხვა<span class="en" style="font-style:italic;font-weight:400;font-size:0.8em;">Contact &amp; General Inquiry</span></h3>
+              <h3><span class="ka-text">კონტაქტი &amp; ზოგადი კითხვა</span><span class="en">Contact &amp; General Inquiry</span></h3>
               <p>კითხვები პროგრამების, ელიგიბილობის, გრაფიკის ან ფასის შესახებ? ვპასუხობთ 24 საათში.</p>
             </div>
           </div>
           <div class="contact-direct-body">
-            <p>ყველაზე სწრაფი გზა WhatsApp-ია. ასევე შეგიძლია ელ-ფოსტა გამოგზავნო და იმავე დღეს დაგიბრუნდებით.<span class="en">The fastest way to reach us is WhatsApp. You can also send an email and we will get back to you same day.</span></p>
+            <p><span class="ka-text">ყველაზე სწრაფი გზა WhatsApp-ია. ასევე შეგიძლია ელ-ფოსტა გამოგზავნო და იმავე დღეს დაგიბრუნდებით.</span><span class="en">The fastest way to reach us is WhatsApp. You can also send an email and we will get back to you same day.</span></p>
             <div class="contact-options">
               <a href="https://wa.me/995591115300?text=გამარჯობა%2C%20PMEC-ის%20PMP%20პროგრამების%20შესახებ%20გამაჩნია%20კითხვა."
                  target="_blank" rel="noopener noreferrer"
@@ -1812,12 +1776,12 @@
               </svg>
             </div>
             <div class="form-intro-text">
-              <h3>კორპორატიული ტრენინგის მოთხოვნა<span class="en" style="font-style:italic;font-weight:400;font-size:0.8em;">Corporate Training Request</span></h3>
+              <h3><span class="ka-text">კორპორატიული ტრენინგის მოთხოვნა</span><span class="en">Corporate Training Request</span></h3>
               <p>ჯგუფური ნაკადები, in-house ტრენინგი და ინდივიდუალური წინადადებები ორგანიზაციებისთვის, სადაც რამდენიმე თანამშრომლის სერტიფიცირება ხდება.</p>
             </div>
           </div>
           <div class="contact-direct-body">
-            <p>ვმუშაობთ ქართულ კომპანიებთან, საერთაშორისო ორგანიზაციებთან და სამთავრობო ინსტიტუციებთან ჯგუფური PMP სერტიფიკაციის პროგრამების ჩასატარებლად. გამოგვიგზავნე შეტყობინება შენი გუნდის ზომისა და ვადების შესახებ და ჩვენ მოვამზადებთ ინდივიდუალურ წინადადებას.<span class="en">We work with Georgian companies, international organizations, and government institutions. Send us your team size and timeline and we will prepare a tailored proposal.</span></p>
+            <p><span class="ka-text">ვმუშაობთ ქართულ კომპანიებთან, საერთაშორისო ორგანიზაციებთან და სამთავრობო ინსტიტუციებთან ჯგუფური PMP სერტიფიკაციის პროგრამების ჩასატარებლად. გამოგვიგზავნე შეტყობინება შენი გუნდის ზომისა და ვადების შესახებ და ჩვენ მოვამზადებთ ინდივიდუალურ წინადადებას.</span><span class="en">We work with Georgian companies, international organizations, and government institutions. Send us your team size and timeline and we will prepare a tailored proposal.</span></p>
             <div class="contact-options">
               <a href="https://wa.me/995591115300?text=გამარჯობა%2C%20ჩემი%20ორგანიზაციისთვის%20კორპორატიული%20PMP%20ტრენინგის%20განხილვა%20მინდა."
                  target="_blank" rel="noopener noreferrer"
@@ -1844,24 +1808,24 @@
         <div class="atp-note">PMI-ავტორიზებული ტრენინგ-პროვაიდერი &nbsp;·&nbsp; თბილისი, საქართველო</div>
       </div>
       <div class="footer-links">
-        <h5>პროგრამები</h5>
+        <h5 data-ka="პროგრამები" data-en="Programmes">პროგრამები</h5>
         <ul>
           <li><a href="#training">35-საათ. PMP ტრენინგი</a></li>
           <li><a href="#mentoring">სერტ. მენტორინგი</a></li>
-          <li><a href="#apply">განაცხადი</a></li>
+          <li><a href="#apply" data-ka="განაცხადი" data-en="Apply">განაცხადი</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h5>ორგანიზაცია</h5>
+        <h5 data-ka="ორგანიზაცია" data-en="Organisation">ორგანიზაცია</h5>
         <ul>
-          <li><a href="#why-pmec">რატომ PMEC</a></li>
-          <li><a href="#process">როგორ მუშაობს</a></li>
+          <li><a href="#why-pmec" data-ka="რატომ PMEC" data-en="Why PMEC">რატომ PMEC</a></li>
+          <li><a href="#process" data-ka="როგორ მუშაობს" data-en="How It Works">როგორ მუშაობს</a></li>
           <li><a href="#faq">ხშ. კითხვები</a></li>
           <li><a href="mailto:nikolozmelkadze@gmail.com">nikolozmelkadze@gmail.com</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h5>კონტაქტი</h5>
+        <h5 data-ka="კონტაქტი" data-en="Contact">კონტაქტი</h5>
         <ul>
           <li>
             <a href="https://wa.me/995591115300?text=გამარჯობა%2C%20PMEC-ის%20PMP%20ტრენინგი%20მაინტერესებს."
@@ -1890,7 +1854,7 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.827L.057 23.882a.5.5 0 0 0 .617.617l6.088-1.461A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 0 1-5.003-1.372l-.358-.213-3.714.892.908-3.647-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
     </svg>
-    <span>WhatsApp-ზე დაწერე</span>
+    <span data-ka="WhatsApp-ზე დაწერე" data-en="Chat on WhatsApp">WhatsApp-ზე დაწერე</span>
   </a>
 
   <!-- ══════════════════════════════════════════════ JS -->
@@ -1924,6 +1888,40 @@
       document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
       // Open this one unless it was already open
       if (!isOpen) item.classList.add('open');
+    }
+
+    // Language switcher
+    function toggleLang() {
+      const html = document.documentElement;
+      const flag = document.querySelector('#lang-btn .flag');
+      const label = document.getElementById('lang-label');
+      const toEN = html.classList.contains('lang-ka');
+      html.classList.replace(toEN ? 'lang-ka' : 'lang-en', toEN ? 'lang-en' : 'lang-ka');
+      html.lang = toEN ? 'en' : 'ka';
+      flag.textContent = toEN ? '\u{1F1EC}\u{1F1EA}' : '\u{1F1EC}\u{1F1E7}';
+      label.textContent = toEN ? 'ქართული' : 'English';
+      // Swap single-language [data-ka]/[data-en] elements
+      document.querySelectorAll('[data-ka][data-en]').forEach(el => {
+        // Preserve child elements (SVGs, spans)
+        const txt = toEN ? el.dataset.en : el.dataset.ka;
+        if (el.childElementCount === 0) {
+          el.textContent = txt;
+        } else {
+          // Only update text nodes, preserve child elements
+          for (const node of el.childNodes) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+              node.textContent = txt + ' ';
+              break;
+            }
+          }
+        }
+      });
+      // FAQ question buttons: preserve SVG chevron
+      document.querySelectorAll('.faq-q[data-ka][data-en]').forEach(btn => {
+        const svg = btn.querySelector('svg');
+        btn.textContent = (toEN ? btn.dataset.en : btn.dataset.ka) + ' ';
+        if (svg) btn.appendChild(svg);
+      });
     }
 
     // Web3forms AJAX submission
