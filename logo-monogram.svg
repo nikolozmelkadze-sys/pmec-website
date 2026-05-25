@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Version 2: Geometric monogram — square P mark -->
+
+  <!-- Background square with clipped corner -->
+  <polygon points="0,0 64,0 80,16 80,80 0,80" fill="#1A2F5A"/>
+
+  <!-- Gold accent corner -->
+  <polygon points="64,0 80,0 80,16" fill="#D4A843"/>
+
+  <!-- P letterform — bold geometric -->
+  <rect x="18" y="18" width="8" height="44" fill="white"/>
+  <!-- P bowl -->
+  <path d="M26 18 Q54 18 54 33 Q54 48 26 48" fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Gold bottom accent line -->
+  <rect x="0" y="74" width="80" height="6" fill="#D4A843"/>
+</svg>
