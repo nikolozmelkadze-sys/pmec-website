@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikolozmelkadze-sys.github.io/pmec-website/sitemap.xml
