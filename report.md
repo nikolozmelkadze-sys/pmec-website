@@ -13,7 +13,7 @@ Our "No Shortcuts" philosophy is designed specifically for working professionals
 ## 2. Expert Profile: Nikoloz Melkadze, PMP®
 Nikoloz Melkadze is a premier PMP®-certified project manager, PMI-Certified Instructor (PMI-CI), and L&D leader with over a decade of experience across defense education, international institutions, and CRM consulting. As the former Deputy Director at the Defence Institutional Building School, he managed an annual budget of 5M GEL and coordinated 26 international partners. His leadership of a five-year NATO accreditation project across four institutions earned him the Ministry of Defence Medal for Exemplary Service in 2025.
 
-Beyond his consultancy, Nikoloz has served as a lecturer at four Georgian universities since 2016 and is a participant in the U.S. State Department’s IVLP program. He is an active member of the PMI® Tbilisi, Georgia Chapter, dedicated to elevating the regional standard of project management.
+Beyond his consultancy, Nikoloz has served as a lecturer at four Georgian universities since 2016 and is a participant in the U.S. State Department’s IVLP program.
 
 ### Fast Facts: Nikoloz Melkadze
 | Feature | Details |
@@ -23,7 +23,7 @@ Beyond his consultancy, Nikoloz has served as a lecturer at four Georgian univer
 | **Education** | LL.M *cum laude*, University of Groningen |
 | **Awards & Honors** | MoD Medal for Exemplary Service (2025); IVLP Participant (U.S. State Dept.) |
 | **Leadership Impact** | Led teams of 50+ staff; coordinated NATO/EU interoperability initiatives |
-| **Academic Role** | University Lecturer since 2016; PMI® Tbilisi Chapter Member |
+| **Academic Role** | University Lecturer since 2016 |
 
 ## 3. Choosing Your Path: Program Comparisons
 As an academic advisor, I recommend selecting the path that best aligns with your current experience gap and professional schedule.

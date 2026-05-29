@@ -1040,7 +1040,18 @@
     }
     .success-msg p { font-size: 14px; color: var(--text-dim); }
     @media (max-width: 580px) { .wf-row { grid-template-columns: 1fr; } }
-    </style>
+    
+    /* MOBILE ENHANCEMENTS */
+    html, body { overflow-x: hidden; width: 100%; }
+    img { max-width: 100%; height: auto; }
+    @media (max-width: 480px) {
+      .form-iframe-wrap { padding: 16px !important; }
+      .hero { padding-top: 32px !important; }
+      .nav-logo-wrap img { height: 60px !important; }
+      .lang-switcher { margin-left: 10px; }
+    }
+    
+  </style>
 </head>
 
 <body>
