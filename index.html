@@ -175,6 +175,11 @@
   <!-- ═══ Google Search Console Verification ═══ -->
   <meta name="google-site-verification" content="k0tFhXLORX7GPl1TAEQOAACuUQqxs_Fw0I5Ryt5xRGM" />
 
+  <!-- ═══ Favicon & Theme ═══ -->
+  <link rel="icon" type="image/svg+xml" href="logo-monogram.svg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta name="theme-color" content="#0d1424" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
@@ -205,7 +210,7 @@
       --lightgray: rgba(255,255,255,0.07);
       --white:     #ffffff;
       --text:      #c8cdd8;
-      --text-dim:  rgba(200,205,216,0.55);
+      --text-dim:  rgba(200,205,216,0.72);
     }
 
     /* ─── UTILS ─────────────────────────────────────────── */
@@ -284,7 +289,7 @@
       align-items: center;
     }
     .nav-links a {
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.72);
       text-decoration: none;
       font-size: 12px;
       font-weight: 600;
@@ -356,7 +361,7 @@
     }
     .hero-sub {
       font-size: 17px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.66);
       max-width: 520px;
       margin: 0 auto 40px;
       line-height: 1.7;
@@ -387,7 +392,7 @@
     }
     .hero-stat .label {
       font-size: 11px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.55);
       letter-spacing: 0.5px;
       margin-top: 6px;
       display: block;
@@ -750,7 +755,7 @@
     }
     .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-links a {
-      color: rgba(255,255,255,0.35); text-decoration: none;
+      color: rgba(255,255,255,0.55); text-decoration: none;
       font-size: 13px; transition: color 0.15s;
     }
     .footer-links a:hover { color: var(--gold); }
@@ -1017,7 +1022,6 @@
       background: rgba(212,168,67,0.18);
       color: var(--gold);
       border-color: rgba(212,168,67,0.5);
-      border-color: rgba(212,168,67,0.5);
     }
     .lang-toggle .flag { font-size: 15px; line-height: 1; }
     /* wf-en helper for form labels */
@@ -1061,10 +1065,61 @@
     }
     .success-msg p { font-size: 14px; color: var(--text-dim); }
     @media (max-width: 580px) { .wf-row { grid-template-columns: 1fr; } }
+
+    /* ─── MOBILE NAV (hamburger) ────────────────────────── */
+    nav { position: relative; }
+    .nav-burger {
+      display: none;
+      background: none; border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 3px; padding: 9px; cursor: pointer;
+      margin-left: 12px; flex-shrink: 0;
+    }
+    .nav-burger span {
+      display: block; width: 18px; height: 2px;
+      background: rgba(255,255,255,0.85); margin: 4px 0;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      .nav-burger { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: #0d1424;
+        flex-direction: column; align-items: flex-start;
+        gap: 0; padding: 8px 24px 18px;
+        border-bottom: 1px solid rgba(212,168,67,0.25);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.5);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 13px 0; font-size: 13px; }
+      .nav-links .nav-cta a { display: inline-block; padding: 10px 20px; margin-top: 8px; }
+    }
+
+    /* ─── ACCESSIBILITY & MOTION ────────────────────────── */
+    .skip-link {
+      position: absolute; left: -9999px; top: 0; z-index: 1000;
+      background: var(--gold); color: #0d1424; padding: 10px 16px;
+      font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 13px;
+      border-radius: 0 0 4px 0; text-decoration: none;
+    }
+    .skip-link:focus { left: 0; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold); outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
     </style>
 </head>
 
 <body>
+
+  <a class="skip-link" href="#programmes"><span class="ka-text">გადადი კონტენტზე</span><span class="en">Skip to content</span></a>
 
   <!-- ══════════════════════════════════════════════ HEADER -->
   <header>
@@ -1074,7 +1129,7 @@
           <img src="logo.svg" alt="Project Management Excellence Centre" style="height:52px;width:auto;display:block;" />
         </a>
       </div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#programmes" data-ka="პროგრამები" data-en="Programmes">პროგრამები</a></li>
         <li><a href="#why-pmec" data-ka="რატომ PMEC" data-en="Why PMEC">რატომ PMEC</a></li>
         <li><a href="#process" data-ka="როგორ მუშაობს" data-en="How It Works">როგორ მუშაობს</a></li>
@@ -1083,6 +1138,9 @@
       </ul>
       <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">
         <span class="flag">&#127468;&#127463;</span> <span id="lang-label">English</span>
+      </button>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
@@ -1115,17 +1173,17 @@
       <div class="hero-stats">
         <div class="hero-stat">
           <span class="num">35</span>
-          <span class="label">აკრედიტებული საკონტაქტო საათი<br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">satisfies PMI's eligibility requirement</em></span>
+          <span class="label"><span class="ka-text">აკრედიტებული საკონტაქტო საათი</span><span class="en">accredited contact hours</span><br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">satisfies PMI's eligibility requirement</em></span>
         </div>
         <div class="hero-divider"></div>
         <div class="hero-stat">
           <span class="num">3</span>
-          <span class="label">თვე გამოცდამდე მზადყოფნამდე<br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">from first session to certification</em></span>
+          <span class="label"><span class="ka-text">თვე გამოცდამდე მზადყოფნამდე</span><span class="en">months from start to exam-ready</span><br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">from first session to certification</em></span>
         </div>
         <div class="hero-divider"></div>
         <div class="hero-stat">
           <span class="num">1:1</span>
-          <span class="label">პირადი მენტორ-სესიები<br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">with a PMI-Certified Instructor</em></span>
+          <span class="label"><span class="ka-text">პირადი მენტორ-სესიები</span><span class="en">private mentor sessions</span><br><em style="font-style:normal;opacity:0.65;font-size:0.85em;">with a PMI-Certified Instructor</em></span>
         </div>
       </div>
     </div>
@@ -1351,7 +1409,7 @@
 
       <!-- Photo column -->
       <div class="trainer-photo-col">
-        <img class="trainer-avatar" src="trainer.jpg" alt="Nikoloz Melkadze, PMP Trainer" />
+        <img class="trainer-avatar" src="trainer.jpg" alt="Nikoloz Melkadze, PMP Trainer" width="300" height="300" loading="lazy" decoding="async" />
         <div class="trainer-name-block">
           <div class="trainer-fullname">Nikoloz Melkadze</div>
           <span class="trainer-pmp-badge">PMP&#174; &middot; PMI-CI &middot; Assoc. CIPD</span><br/>
@@ -1416,62 +1474,62 @@
       <div class="faq-list">
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="PMP კრედენციალი საქართველოს სამუშაო ბაზარზე აღიარებულია?" data-en="Is the PMP credential recognized in the Georgian job market?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="PMP კრედენციალი საქართველოს სამუშაო ბაზარზე აღიარებულია?" data-en="Is the PMP credential recognized in the Georgian job market?">
             PMP კრედენციალი საქართველოს სამუშაო ბაზარზე აღიარებულია?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">დიახ. PMP არის მსოფლიოში ყველაზე აღიარებული პროექტის მართვის კრედენციალი, რომელიც მიღებულია საერთაშორისო ორგანიზაციებში, NGO-ებში, ქართულ ბანკებში, სატელეკომუნიკაციო კომპანიებსა და სამთავრობო კონტრაქტორებთან. სერტიფიცირებული პროფესიონალები რეგულარულად გვაცნობებენ უფრო მაღალ პოზიციებზა და საერთაშორისო პროექტებზე წვდომის შესახებ.
+          <div class="faq-a"><span class="ka-text">დიახ. PMP არის მსოფლიოში ყველაზე აღიარებული პროექტის მართვის კრედენციალი, რომელიც მიღებულია საერთაშორისო ორგანიზაციებში, NGO-ებში, ქართულ ბანკებში, სატელეკომუნიკაციო კომპანიებსა და სამთავრობო კონტრაქტორებთან. სერტიფიცირებული პროფესიონალები რეგულარულად გვაცნობებენ უფრო მაღალ პოზიციებზე და საერთაშორისო პროექტებზე წვდომის შესახებ.</span>
             <span class="en">Yes. PMP is the most recognized project management credential worldwide, accepted by international organizations, NGOs, Georgian banks, telecoms, and government contractors.</span>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="რა ღირს პროგრამა? გადახდის განვადება შეიძლება?" data-en="What does the programme cost? Is instalment payment available?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="რა ღირს პროგრამა? გადახდის განვადება შეიძლება?" data-en="What does the programme cost? Is instalment payment available?">
             რა ღირს პროგრამა? გადახდის განვადება შეიძლება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">პროგრამის საფასური მოთხოვნის საფუძველზე გეცოდინება და დამოკიდებულია პროგრამასა (35-საათიანი ტრენინგი ან სერტიფიკაციის მენტორინგი) და ფორმატზე. ინდივიდუალური განმცხადებლებისთვის გთავაზობთ მოქნილ გადახდის სქემებს. დაგვიკავშირდი WhatsApp-ით ან ელ-ფოსტით ზუსტი ღირებულებისთვის — ვპასუხობთ 24 საათში.
+          <div class="faq-a"><span class="ka-text">პროგრამის საფასური მოთხოვნის საფუძველზე გეცოდინება და დამოკიდებულია პროგრამასა (35-საათიანი ტრენინგი ან სერტიფიკაციის მენტორინგი) და ფორმატზე. ინდივიდუალური განმცხადებლებისთვის გთავაზობთ მოქნილ გადახდის სქემებს. დაგვიკავშირდი WhatsApp-ით ან ელ-ფოსტით ზუსტი ღირებულებისთვის — ვპასუხობთ 24 საათში.</span>
             <span class="en">Programme fees are available upon request. We offer flexible payment arrangements. Contact us via WhatsApp or email — we respond within 24 hours.</span>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="PMP გამოცდისთვის ელიგიბილობის მოთხოვნები რა არის?" data-en="What are the eligibility requirements for the PMP exam?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="PMP გამოცდისთვის ელიგიბილობის მოთხოვნები რა არის?" data-en="What are the eligibility requirements for the PMP exam?">
             PMP გამოცდისთვის ელიგიბილობის მოთხოვნები რა არის?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">PMI მოითხოვს 4-წლიანი ხარისხი + პროექტის ხელმძღვანელობის 36 თვიანი გამოცდილება, ან სკოლის ატესტატი + 60 თვიანი გამოცდილება. ორივე შემთხვევაში ასევე გჭირდება პროექტის მართვის 35 საათი — რასაც PMEC-ის პროგრამა ასრულებს. თუ დარწმუნებული არ ხარ, შეავსე განაცხადი და ჩვენ ჩავატარებთ უფასო ელიგიბილობის შემოწმებას.
+          <div class="faq-a"><span class="ka-text">PMI მოითხოვს 4-წლიანი ხარისხი + პროექტის ხელმძღვანელობის 36 თვიანი გამოცდილება, ან სკოლის ატესტატი + 60 თვიანი გამოცდილება. ორივე შემთხვევაში ასევე გჭირდება პროექტის მართვის 35 საათი — რასაც PMEC-ის პროგრამა ასრულებს. თუ დარწმუნებული არ ხარ, შეავსე განაცხადი და ჩვენ ჩავატარებთ უფასო ელიგიბილობის შემოწმებას.</span>
             <span class="en">PMI requires a 4-year degree plus 36 months experience, or a diploma plus 60 months. Plus 35 hours of PM education — which PMEC satisfies. Submit an application and we'll do a free eligibility check.</span>
             <br/><a href="blog-pmp-eligibility-georgia.html" style="color:var(--gold);font-size:13px;display:inline-block;margin-top:8px;">→ Full guide: How to qualify for PMP in Georgia</a>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="ტრენინგი ქართულ თუ ინგლისურ ენაზე ტარდება?" data-en="Is training delivered in Georgian or English?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="ტრენინგი ქართულ თუ ინგლისურ ენაზე ტარდება?" data-en="Is training delivered in Georgian or English?">
             ტრენინგი ქართულ თუ ინგლისურ ენაზე ტარდება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">სესიები ტარდება ქართულ ენაზე. სასწავლო მასალები გაიცემა ქართულ და ინგლისურ ენებზე. PMP გამოცდა ხელმისაწვდომია ინგლისურ ენაზე, ამიტომ პროგრამის მანძილზე ვიქნებით გამოცდის ტერმინოლოგიაში ნავარჯიშები.
+          <div class="faq-a"><span class="ka-text">სესიები ტარდება ქართულ ენაზე. სასწავლო მასალები გაიცემა ქართულ და ინგლისურ ენებზე. PMP გამოცდა ხელმისაწვდომია ინგლისურ ენაზე, ამიტომ პროგრამის მანძილზე ვიქნებით გამოცდის ტერმინოლოგიაში ნავარჯიშები.</span>
             <span class="en">Sessions are delivered in Georgian. Materials in both Georgian and English. The exam is in English — we build exam-language familiarity throughout.</span>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="პროგრამა ონლაინ თუ პირადად ტარდება?" data-en="Is the programme online or in-person?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="პროგრამა ონლაინ თუ პირადად ტარდება?" data-en="Is the programme online or in-person?">
             პროგრამა ონლაინ თუ პირადად ტარდება?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">ორივეს ვთავაზობთ. ჯგუფური ნაკადები ტარდება თბილისში (საღამოს და შაბათ-კვირის გრაფიკით). 1:1 მენტორინგ სესიები შეიძლება ჩატარდეს პირადად ან ონლაინ, შენი ადგილმდებარეობისა და სურვილის მიხედვით.
+          <div class="faq-a"><span class="ka-text">ორივეს ვთავაზობთ. ჯგუფური ნაკადები ტარდება თბილისში (საღამოს და შაბათ-კვირის გრაფიკით). 1:1 მენტორინგ სესიები შეიძლება ჩატარდეს პირადად ან ონლაინ, შენი ადგილმდებარეობისა და სურვილის მიხედვით.</span>
             <span class="en">We offer both. Group cohorts in Tbilisi (evenings and weekends). 1:1 sessions in-person or online.</span>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" data-ka="რა მოხდება, თუ პირველ მცდელობაზე ჩავჭრე გამოცდა?" data-en="What if I fail the exam on my first attempt?">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" data-ka="რა მოხდება, თუ პირველ მცდელობაზე ჩავჭრე გამოცდა?" data-en="What if I fail the exam on my first attempt?">
             რა მოხდება, თუ პირველ მცდელობაზე ჩავჭრე გამოცდა?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">PMI-ს ერთწლიანი ელიგიბილობის ფარგლებში დასაშვებია გამოცდის სამამდე მცდელობა. ჩვენი პროგრამა მოიცავს გამოცდის შემდგომ მხარდაჭერას: თუ გჭირდება განმეორება, განვიხილავთ სუსტ სფეროებს და ჩამოვაყალიბებთ მიზნობრივ სტრატეგიას.
+          <div class="faq-a"><span class="ka-text">PMI-ს ერთწლიანი ელიგიბილობის ფარგლებში დასაშვებია გამოცდის სამამდე მცდელობა. ჩვენი პროგრამა მოიცავს გამოცდის შემდგომ მხარდაჭერას: თუ გჭირდება განმეორება, განვიხილავთ სუსტ სფეროებს და ჩამოვაყალიბებთ მიზნობრივ სტრატეგიას.</span>
             <span class="en">PMI allows up to three attempts within one year. We include post-exam support: if you re-sit, we review weak areas and build a targeted strategy.</span>
           </div>
         </div>
@@ -1490,7 +1548,7 @@
         <p><span class="ka-text">აირჩიე პროგრამა და შეავსე მოკლე განაცხადი. 48 საათში დაგიკავშირდებით.</span><span class="en">Select your programme and complete the short application. We will follow up within 48 hours.</span></p>
         <div class="pricing-note">
           <div class="gold-dot"></div>
-          საფასური მოთხოვნის საფუძველზე &nbsp;&middot;&nbsp; გადახდის განვადება ხელმისაწვდომია &nbsp;&middot;&nbsp; უფასო ელიგიბილობის შემოწმება
+          <span class="ka-text">საფასური მოთხოვნის საფუძველზე &nbsp;&middot;&nbsp; გადახდის განვადება ხელმისაწვდომია &nbsp;&middot;&nbsp; უფასო ელიგიბილობის შემოწმება</span><span class="en">Pricing upon request &nbsp;&middot;&nbsp; Instalment plans available &nbsp;&middot;&nbsp; Free eligibility check</span>
         </div>
       </div>
 
@@ -1538,7 +1596,7 @@
             </div>
             <div class="form-intro-text">
               <h3><span class="ka-text">განაცხადი: 35-საათიანი PMP გამოცდისთვის მომზადების ტრენინგი</span><span class="en">Apply: 35-Hour PMP Exam Preparation Training</span></h3>
-              <p>დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</p>
+              <p><span class="ka-text">დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</span><span class="en">About 3 minutes &nbsp;·&nbsp; Free eligibility check &nbsp;·&nbsp; No payment at this stage</span></p>
             </div>
           </div>
           <div class="form-iframe-wrap" style="padding:28px 32px 36px;">
@@ -1595,12 +1653,12 @@
               <button type="submit" class="btn btn-gold" style="width:100%;margin-top:8px;font-size:15px;padding:16px;">
                 განაცხადის გაგზავნა &nbsp;<span style="opacity:0.7;font-weight:400;font-size:0.85em;">Submit Application</span>
               </button>
-              <p style="font-size:12px;color:#888;text-align:center;margin-top:12px;">გადახდა ამ ეტაპზე არ მოთხოვება · No payment at this stage</p>
+              <p style="font-size:12px;color:#888;text-align:center;margin-top:12px;">გადახდა ამ ეტაპზე არ მოითხოვება · No payment at this stage</p>
             </form>
             <div id="success-training" style="display:none;text-align:center;padding:48px 20px;">
               <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.8" style="margin:0 auto 16px;display:block;"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
-              <h3 style="font-family:'Montserrat',sans-serif;color:#1A2F5A;margin-bottom:8px;">გმადლობ განაცხადისთვის!</h3>
-              <p style="color:#666;font-size:14px;">48 საათში დაგიკავშირდებით. <em>We'll follow up within 48 hours.</em></p>
+              <h3 style="font-family:'Montserrat',sans-serif;color:#ffffff;margin-bottom:8px;"><span class="ka-text">გმადლობ განაცხადისთვის!</span><span class="en">Thank you for applying!</span></h3>
+              <p style="color:#c8cdd8;font-size:14px;">48 საათში დაგიკავშირდებით. <em>We'll follow up within 48 hours.</em></p>
             </div>
           </div>
         </div>
@@ -1617,7 +1675,7 @@
             </div>
             <div class="form-intro-text">
               <h3><span class="ka-text">განაცხადი: PMP სერტიფიკაციის გზა / მენტორინგი</span><span class="en">Apply: PMP Certification Journey Mentoring</span></h3>
-              <p>დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</p>
+              <p><span class="ka-text">დაახლ. 3 წუთი &nbsp;·&nbsp; უფასო ელიგიბილობის შემოწმება &nbsp;·&nbsp; ამ ეტაპზე გადახდა არ არის</span><span class="en">About 3 minutes &nbsp;·&nbsp; Free eligibility check &nbsp;·&nbsp; No payment at this stage</span></p>
             </div>
           </div>
           <div class="form-iframe-wrap" style="padding:28px 32px 36px;">
@@ -1682,12 +1740,12 @@
               <button type="submit" class="btn btn-gold" style="width:100%;margin-top:8px;font-size:15px;padding:16px;">
                 განაცხადის გაგზავნა &nbsp;<span style="opacity:0.7;font-weight:400;font-size:0.85em;">Submit Application</span>
               </button>
-              <p style="font-size:12px;color:#888;text-align:center;margin-top:12px;">გადახდა ამ ეტაპზე არ მოთხოვება · No payment at this stage</p>
+              <p style="font-size:12px;color:#888;text-align:center;margin-top:12px;">გადახდა ამ ეტაპზე არ მოითხოვება · No payment at this stage</p>
             </form>
             <div id="success-mentoring" style="display:none;text-align:center;padding:48px 20px;">
               <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.8" style="margin:0 auto 16px;display:block;"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
-              <h3 style="font-family:'Montserrat',sans-serif;color:#1A2F5A;margin-bottom:8px;">გმადლობ განაცხადისთვის!</h3>
-              <p style="color:#666;font-size:14px;">48 საათში დაგიკავშირდებით. <em>We'll follow up within 48 hours.</em></p>
+              <h3 style="font-family:'Montserrat',sans-serif;color:#ffffff;margin-bottom:8px;"><span class="ka-text">გმადლობ განაცხადისთვის!</span><span class="en">Thank you for applying!</span></h3>
+              <p style="color:#c8cdd8;font-size:14px;">48 საათში დაგიკავშირდებით. <em>We'll follow up within 48 hours.</em></p>
             </div>
           </div>
         </div>
@@ -1704,7 +1762,7 @@
             </div>
             <div class="form-intro-text">
               <h3><span class="ka-text">კონტაქტი &amp; ზოგადი კითხვა</span><span class="en">Contact &amp; General Inquiry</span></h3>
-              <p>კითხვები პროგრამების, ელიგიბილობის, გრაფიკის ან ფასის შესახებ? ვპასუხობთ 24 საათში.</p>
+              <p><span class="ka-text">კითხვები პროგრამების, ელიგიბილობის, გრაფიკის ან ფასის შესახებ? ვპასუხობთ 24 საათში.</span><span class="en">Questions about programmes, eligibility, schedule, or pricing? We reply within 24 hours.</span></p>
             </div>
           </div>
           <div class="contact-direct-body">
@@ -1735,7 +1793,7 @@
             </div>
             <div class="form-intro-text">
               <h3><span class="ka-text">კორპორატიული ტრენინგის მოთხოვნა</span><span class="en">Corporate Training Request</span></h3>
-              <p>ჯგუფური ნაკადები, in-house ტრენინგი და ინდივიდუალური წინადადებები ორგანიზაციებისთვის, სადაც რამდენიმე თანამშრომლის სერტიფიცირება ხდება.</p>
+              <p><span class="ka-text">ჯგუფური ნაკადები, in-house ტრენინგი და ინდივიდუალური წინადადებები ორგანიზაციებისთვის, სადაც რამდენიმე თანამშრომლის სერტიფიცირება ხდება.</span><span class="en">Group cohorts, in-house delivery, and tailored proposals for organizations certifying several employees.</span></p>
             </div>
           </div>
           <div class="contact-direct-body">
@@ -1779,6 +1837,7 @@
           <li><a href="#why-pmec" data-ka="რატომ PMEC" data-en="Why PMEC">რატომ PMEC</a></li>
           <li><a href="#process" data-ka="როგორ მუშაობს" data-en="How It Works">როგორ მუშაობს</a></li>
           <li><a href="#faq"><span class="ka-text">ხშ. კითხვები</span><span class="en">FAQ</span></a></li>
+          <li><a href="blog-pmp-eligibility-georgia.html"><span class="ka-text">გზამკვლევი: PMP ელიგიბილობა</span><span class="en">Guide: PMP Eligibility in Georgia</span></a></li>
           <li><a href="mailto:nikolozmelkadze@gmail.com">nikolozmelkadze@gmail.com</a></li>
         </ul>
       </div>
@@ -1843,44 +1902,77 @@
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
       // Close all
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.faq-q');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
       // Open this one unless it was already open
-      if (!isOpen) item.classList.add('open');
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     }
 
-    // Language switcher
-    function toggleLang() {
+    // Mobile menu
+    function toggleMenu() {
+      const burger = document.getElementById('nav-burger');
+      const menu = document.getElementById('nav-menu');
+      const open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.remove('open');
+      document.getElementById('nav-burger').setAttribute('aria-expanded', 'false');
+    }));
+
+    // Language switcher (persists choice; honours ?lang=en)
+    function applyLang(lang) {
       const html = document.documentElement;
-      const flag = document.querySelector('#lang-btn .flag');
-      const label = document.getElementById('lang-label');
-      const toEN = html.classList.contains('lang-ka');
-      html.classList.replace(toEN ? 'lang-ka' : 'lang-en', toEN ? 'lang-en' : 'lang-ka');
-      html.lang = toEN ? 'en' : 'ka';
-      flag.textContent = toEN ? '\u{1F1EC}\u{1F1EA}' : '\u{1F1EC}\u{1F1E7}';
-      label.textContent = toEN ? 'ქართული' : 'English';
-      // Swap single-language [data-ka]/[data-en] elements
-      document.querySelectorAll('[data-ka][data-en]').forEach(el => {
-        // Preserve child elements (SVGs, spans)
-        const txt = toEN ? el.dataset.en : el.dataset.ka;
-        if (el.childElementCount === 0) {
-          el.textContent = txt;
-        } else {
-          // Only update text nodes, preserve child elements
-          for (const node of el.childNodes) {
-            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-              node.textContent = txt + ' ';
-              break;
+      const current = html.classList.contains('lang-en') ? 'en' : 'ka';
+      if (lang !== current) {
+        const toEN = lang === 'en';
+        html.classList.replace(toEN ? 'lang-ka' : 'lang-en', toEN ? 'lang-en' : 'lang-ka');
+        html.lang = lang;
+        // Swap single-language [data-ka]/[data-en] elements
+        document.querySelectorAll('[data-ka][data-en]').forEach(el => {
+          const txt = toEN ? el.dataset.en : el.dataset.ka;
+          if (el.childElementCount === 0) {
+            el.textContent = txt;
+          } else {
+            for (const node of el.childNodes) {
+              if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                node.textContent = txt + ' ';
+                break;
+              }
             }
           }
-        }
-      });
-      // FAQ question buttons: preserve SVG chevron
-      document.querySelectorAll('.faq-q[data-ka][data-en]').forEach(btn => {
-        const svg = btn.querySelector('svg');
-        btn.textContent = (toEN ? btn.dataset.en : btn.dataset.ka) + ' ';
-        if (svg) btn.appendChild(svg);
-      });
+        });
+        // FAQ question buttons: preserve SVG chevron
+        document.querySelectorAll('.faq-q[data-ka][data-en]').forEach(btn => {
+          const svg = btn.querySelector('svg');
+          btn.textContent = (toEN ? btn.dataset.en : btn.dataset.ka) + ' ';
+          if (svg) btn.appendChild(svg);
+        });
+      }
+      const flag = document.querySelector('#lang-btn .flag');
+      const label = document.getElementById('lang-label');
+      if (flag && label) {
+        flag.textContent = lang === 'en' ? '\u{1F1EC}\u{1F1EA}' : '\u{1F1EC}\u{1F1E7}';
+        label.textContent = lang === 'en' ? 'ქართული' : 'English';
+      }
+      try { localStorage.setItem('pmec-lang', lang); } catch (e) {}
     }
+    function toggleLang() {
+      applyLang(document.documentElement.classList.contains('lang-ka') ? 'en' : 'ka');
+    }
+    (function () {
+      let saved = null;
+      try {
+        saved = new URLSearchParams(location.search).get('lang') || localStorage.getItem('pmec-lang');
+      } catch (e) {}
+      if (saved === 'en') applyLang('en');
+    })();
 
     // Web3forms AJAX submission
     async function handleSubmit(e, pane) {
