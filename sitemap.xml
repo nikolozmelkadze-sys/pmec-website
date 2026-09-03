@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nikolozmelkadze-sys.github.io/pmec-website/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://nikolozmelkadze-sys.github.io/pmec-website/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nikolozmelkadze-sys.github.io/pmec-website/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nikolozmelkadze-sys.github.io/pmec-website/"/>
   </url>
   <url>
-  
+    <loc>https://nikolozmelkadze-sys.github.io/pmec-website/blog-pmp-eligibility-georgia.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
